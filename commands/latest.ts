@@ -5,6 +5,7 @@ import { callGithubTags } from './latest/githubtags';
 import { callWikiDump } from './latest/wikidump';
 import { callAS, callC3, callD, callEclipse, /*callElixir,*/ callExifTool, callGo, callIdea, callPython, callRuby, callRustRover, callRvm, callSdlMame, callSublime } from './latest/htmlsources';
 import { callNodejs, callGimp, callXcode, callMame, callDart, callPhp } from './latest/jsonsources';
+import { callAmpcode, callHarper } from './latest/textsources';
 
 export const data = new SlashCommandBuilder()
     .setName('latest')
@@ -17,8 +18,10 @@ export const data = new SlashCommandBuilder()
             { name: 'All', value: 'all' },
             { name: 'All except GitHub', value: 'all-but-github' },
             { name: 'All except GitHub Releases', value: 'all-but-githubreleases' },
+            { name: 'Ampcode', value: 'ampcode' },
             { name: 'GitHub Releases', value: 'githubreleases' },
             { name: 'GitHub Tags', value: 'githubtags' },
+            { name: 'Harper', value: 'harper' },
             { name: 'HTML', value: 'html' },
             { name: 'JSON', value: 'json' },
             { name: 'Wiki Dump', value: 'wikidump' },
@@ -84,13 +87,19 @@ async function latest(interaction: ChatInputCommandInteraction) {
         const sortByAge = interaction.options.getString('sort-by') === 'age';
         console.log(`[latest] sources: ${sourceChoice}, sortByAge: ${sortByAge}`);
 
-        let [useGithubReleases, useGithubTags, useHtml, useJson, useWikiDump] = [false, false, false, false, false];
+        let [useAmpcode, useGithubReleases, useGithubTags, useHarper, useHtml, useJson, useWikiDump] = [false, false, false, false, false, false, false];
         switch (sourceChoice) {
+            case 'ampcode':
+                useAmpcode = true;
+                break;
             case 'githubreleases':
                 useGithubReleases = true;
                 break;
             case 'githubtags':
                 useGithubTags = true;
+                break;
+            case 'harper':
+                useHarper = true;
                 break;
             case 'html':
                 useHtml = true;
@@ -102,19 +111,21 @@ async function latest(interaction: ChatInputCommandInteraction) {
                 useWikiDump = true;
                 break;
             case 'all':
-                [useGithubReleases, useGithubTags, useHtml, useJson, useWikiDump] = [true, true, true, true, true];
+                [useAmpcode, useGithubReleases, useGithubTags, useHarper, useHtml, useJson, useWikiDump] = [true, true, true, true, true, true, true];
                 break;
             case 'all-but-githubreleases':
-                [useGithubTags, useHtml, useJson, useWikiDump] = [true, true, true, true];
+                [useAmpcode, useGithubTags, useHarper, useHtml, useJson, useWikiDump] = [true, true, true, true, true, true];
                 break;
             case 'all-but-github':
-                [useHtml, useJson, useWikiDump] = [true, true, true];
+                [useAmpcode, useHarper, useHtml, useJson, useWikiDump] = [true, true, true, true, true];
                 break;
         }
 
         const sourceNames = [
+            useAmpcode && 'Ampcode',
             useGithubReleases && 'GitHub Releases',
             useGithubTags && 'GitHub Tags',
+            useHarper && 'Harper',
             (useHtml || useWikiDump) && 'HTML',
             useJson && 'JSON'
         ].filter(Boolean);
@@ -178,8 +189,14 @@ async function latest(interaction: ChatInputCommandInteraction) {
 
         const sourcePromises = [];
 
+        if (useAmpcode)
+            sourcePromises.push(callAmpcode().then(async arr => await updateReply([arr], 'Ampcode')));
+
         if (useGithubReleases)
             sourcePromises.push(callGithubReleases(false).then(async arr => await updateReply([arr], 'GitHub Releases')));
+
+        if (useHarper)
+            sourcePromises.push(callHarper().then(async arr => await updateReply([arr], 'Harper')));
 
         if (useGithubTags)
             sourcePromises.push(callGithubTags(false).then(async arr => await updateReply([arr], 'GitHub Tags')));
