@@ -40,6 +40,7 @@ type StringFunctionTuple = [string, (gor: string, jn: string, jt: string) => str
 const ownerRepos: StringFunctionTuple[] = [
     ['apple/swift', xformNameSplit],
     ['audacity/audacity', xformNameSplit],
+    ['steveyegge/beads', xformRepoCapTag],
     ['discordjs/discord.js', xformRepoCapTag],
     /*['elixir-lang/elixir', xformRepoCapTag],*/
     // ['exiftool/exiftool', xformNameSplit],
