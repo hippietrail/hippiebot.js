@@ -1,19 +1,20 @@
 import { Earl } from '../../ute/earl';
 
+// ============================================================================
+// NODE.JS
+// ============================================================================
+
 interface Rel {
     lts: false | string;
     version: string;
     date: string;
 }
 
-export async function callNodejs() {
-    const nodejsEarl = new Earl('https://nodejs.org', '/dist/index.json');
+export function parseNodejs(data: Rel[]): any[] {
     try {
-        const rels = await nodejsEarl.fetchJson() as Rel[];
-
         return [
-            rels.find(rel => rel.lts === false),
-            rels.find(rel => typeof rel.lts === 'string')
+            data.find(rel => rel.lts === false),
+            data.find(rel => typeof rel.lts === 'string')
         ].map(obj => ({
             name: `Node ${obj!.lts === false ? '(Current)' : `'${obj!.lts}' (LTS)`}`,
             ver: obj!.version,
@@ -27,6 +28,15 @@ export async function callNodejs() {
     return [];
 }
 
+export async function callNodejs() {
+    const nodejsEarl = new Earl('https://nodejs.org', '/dist/index.json');
+    return parseNodejs(await nodejsEarl.fetchJson() as Rel[]);
+}
+
+// ============================================================================
+// GIMP
+// ============================================================================
+
 interface GimpJson {
     STABLE: {
         version: string;
@@ -34,14 +44,8 @@ interface GimpJson {
     }[];
 }
 
-export async function callGimp() {
-    const gimpEarl = new Earl('https://gitlab.gnome.org',
-        '/Infrastructure/gimp-web/-/raw/testing/content/gimp_versions.json', {
-        'inline': 'false'
-    });
+export function parseGimp(gj: GimpJson): any[] {
     try {
-        const gj = await gimpEarl.fetchJson() as GimpJson;
-
         if ('STABLE' in gj && gj.STABLE.length > 0 && 'version' in gj.STABLE[0]) {
             const ver = gj.STABLE[0].version;
             const date = new Date(gj.STABLE[0].date);
@@ -67,6 +71,18 @@ export async function callGimp() {
     return [];
 }
 
+export async function callGimp() {
+    const gimpEarl = new Earl('https://gitlab.gnome.org',
+        '/Infrastructure/gimp-web/-/raw/testing/content/gimp_versions.json', {
+        'inline': 'false'
+    });
+    return parseGimp(await gimpEarl.fetchJson() as GimpJson);
+}
+
+// ============================================================================
+// XCODE
+// ============================================================================
+
 interface XcodeJson {
     name: string;
     version: {
@@ -81,11 +97,8 @@ interface XcodeJson {
     links: { notes: { url: string; }; };
 }
 
-export async function callXcode() {
-    const xcodeEarl = new Earl('https://xcodereleases.com', '/data.json');
+export function parseXcode(xcj: XcodeJson[]): any[] {
     try {
-        const xcj = await xcodeEarl.fetchJson() as XcodeJson[];
-
         const rel = xcj.find(obj => obj.name === 'Xcode' && obj.version.release.release === true);
 
         if (rel) {
@@ -110,13 +123,19 @@ export async function callXcode() {
     return [];
 }
 
+export async function callXcode() {
+    const xcodeEarl = new Earl('https://xcodereleases.com', '/data.json');
+    return parseXcode(await xcodeEarl.fetchJson() as XcodeJson[]);
+}
+
+// ============================================================================
+// MAME
+// ============================================================================
+
 interface MameJson { version: string; }
 
-export async function callMame() {
-    const mameEarl = new Earl('https://raw.githubusercontent.com', '/Calinou/scoop-games/master/bucket/mame.json');
+export function parseMame(mamej: MameJson): any[] {
     try {
-        const mamej = await mameEarl.fetchJson() as MameJson;
-
         return [{
             name: 'MAME',
             ver: mamej.version,
@@ -130,16 +149,22 @@ export async function callMame() {
     return [];
 }
 
+export async function callMame() {
+    const mameEarl = new Earl('https://raw.githubusercontent.com', '/Calinou/scoop-games/master/bucket/mame.json');
+    return parseMame(await mameEarl.fetchJson() as MameJson);
+}
+
+// ============================================================================
+// DART
+// ============================================================================
+
 interface DartJson {
     version: string;
     date: string;
 }
 
-export async function callDart() {
-    const dartEarl = new Earl('https://storage.googleapis.com', '/dart-archive/channels/stable/release/latest/VERSION');
+export function parseDart(dartj: DartJson): any[] {
     try {
-        const dartj = await dartEarl.fetchJson() as DartJson;
-
         return [{
             name: 'Dart',
             ver: dartj.version,
@@ -153,16 +178,22 @@ export async function callDart() {
     return [];
 }
 
+export async function callDart() {
+    const dartEarl = new Earl('https://storage.googleapis.com', '/dart-archive/channels/stable/release/latest/VERSION');
+    return parseDart(await dartEarl.fetchJson() as DartJson);
+}
+
+// ============================================================================
+// PHP
+// ============================================================================
+
 interface PhpJson {
     version: string;
     date: string;
 }
 
-export async function callPhp() {
-    const phpEarl = new Earl('https://www.php.net', '/releases/index.php');
-    phpEarl.setSearchParam('json', '');
+export function parsePhp(phpj: PhpJson[]): any[] {
     try {
-        const phpj = await phpEarl.fetchJson() as PhpJson[];
         // we get an object with a key for each major version number, in ascending order
         const latest = Object.values(phpj).pop()!;
         const maj = latest.version.match(/^(\d+)\.\d+\.\d+$/)![1];
@@ -177,4 +208,74 @@ export async function callPhp() {
         console.error(`[PHP]`, error);
     }
     return [];
+}
+
+export async function callPhp() {
+    const phpEarl = new Earl('https://www.php.net', '/releases/index.php');
+    phpEarl.setSearchParam('json', '');
+    return parsePhp(await phpEarl.fetchJson() as PhpJson[]);
+}
+
+// ============================================================================
+// ECLIPSE
+// ============================================================================
+
+interface EclipseBuild {
+    label: string;
+    date: string;
+    path: string;
+    status: string;
+}
+
+interface EclipseJson {
+    releases: EclipseBuild[];
+    stableBuilds: EclipseBuild[];
+    iBuilds: EclipseBuild[];
+    yBuilds: EclipseBuild[];
+}
+
+export function parseEclipse(ej: EclipseJson): any[] {
+    try {
+        if (!ej.releases || ej.releases.length === 0) {
+            return [];
+        }
+
+        // Find the most recent release by date
+        let latestRelease = ej.releases[0];
+        let latestDate = new Date(latestRelease.date);
+
+        for (const release of ej.releases) {
+            const releaseDate = new Date(release.date);
+            if (releaseDate > latestDate) {
+                latestDate = releaseDate;
+                latestRelease = release;
+            }
+        }
+
+        // Extract version from label (e.g., "4.38")
+        const label = latestRelease.label.trim();
+
+        // Extract year-month from date for URL (e.g., "2025-12" from "2025-12-01T14:20Z")
+        const dateStr = latestRelease.date;
+        const yearMonth = dateStr.substring(0, 7); // "2025-12"
+
+        // Construct download link in format: https://www.eclipse.org/downloads/packages/release/{year-month}/r
+        const downloadLink = `https://www.eclipse.org/downloads/packages/release/${yearMonth}/r`;
+
+        return [{
+            name: 'Eclipse',
+            ver: label,
+            link: downloadLink,
+            timestamp: latestDate,
+            src: 'eclipse.org',
+        }];
+    } catch (error) {
+        console.error(`[Eclipse]`, error);
+    }
+    return [];
+}
+
+export async function callEclipse() {
+    const eclipseEarl = new Earl('https://download.eclipse.org', '/eclipse/downloads/data.json');
+    return parseEclipse(await eclipseEarl.fetchJson() as EclipseJson);
 }

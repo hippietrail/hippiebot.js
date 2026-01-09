@@ -2,12 +2,15 @@ import { Earl } from '../../ute/earl';
 import { domStroll, DomNode } from '../../ute/dom';
 import parse from 'html-dom-parser';
 
-export async function callGo() {
+// ============================================================================
+// GO
+// ============================================================================
+
+export function parseGo(body: DomNode[]): any[] {
     const verCmp = (a: string, b: string) => a.localeCompare(b, undefined, { numeric: true, sensitivity: 'base' });
 
-    const goEarl = new Earl('https://go.dev', '/doc/devel/release');
     try {
-        const article = domStroll('Go', false, await goEarl.fetchDom(), [
+        const article = domStroll('Go', false, body, [
             [2, 'html'],
             [3, 'body', { cls: 'Site' }],
             [9, 'main', { id: 'main-content' }],
@@ -42,10 +45,18 @@ export async function callGo() {
     return [];
 }
 
-export async function callRvm() {
-    const rvmEarl = new Earl('https://www.retrovirtualmachine.org', '/changelog/');
+export async function callGo() {
+    const goEarl = new Earl('https://go.dev', '/doc/devel/release');
+    return parseGo(await goEarl.fetchDom());
+}
+
+// ============================================================================
+// RVM
+// ============================================================================
+
+export function parseRvm(body: DomNode[]): any[] {
     try {
-        const article = domStroll('RVM', false, await rvmEarl.fetchDom(), [
+        const article = domStroll('RVM', false, body, [
             [2, 'html'],
             [1, 'body'],
             [2, 'div', { cls: 'mainContent' }],
@@ -74,16 +85,18 @@ export async function callRvm() {
     return [];
 }
 
-export async function callAS() {
-    // note we can use a URL like
-    // https://androidstudio.googleblog.com/search?updated-max=2022-12-26T10:01:00-08:00&max-results=25
-    // we can use just the `max-results` param - it actually only goes up to 24 though
-    const asEarl = new Earl('https://androidstudio.googleblog.com', '/search', {
-        'max-results': 24,
-    });
+export async function callRvm() {
+    const rvmEarl = new Earl('https://www.retrovirtualmachine.org', '/changelog/');
+    return parseRvm(await rvmEarl.fetchDom());
+}
 
+// ============================================================================
+// ANDROID STUDIO
+// ============================================================================
+
+export function parseAS(body: DomNode[]): any[] {
     try {
-        const blog1 = domStroll('AS2a', false, await asEarl.fetchDom(), [
+        const blog1 = domStroll('AS2a', false, body, [
            [2, 'html', { cls: 'v2' }],
            [3, 'body'],
            [15, 'div', { cls: 'cols-wrapper' }],
@@ -163,10 +176,24 @@ export async function callAS() {
     return [];
 }
 
-export async function callElixir() {
-    const elixirEarl = new Earl('https://elixir-lang.org', '/blog/categories.html');
+export async function callAS() {
+    // note we can use a URL like
+    // https://androidstudio.googleblog.com/search?updated-max=2022-12-26T10:01:00-08:00&max-results=25
+    // we can use just the `max-results` param - it actually only goes up to 24 though
+    const asEarl = new Earl('https://androidstudio.googleblog.com', '/search', {
+        'max-results': 24,
+    });
+
+    return parseAS(await asEarl.fetchDom());
+}
+
+// ============================================================================
+// ELIXIR
+// ============================================================================
+
+export function parseElixir(body: DomNode[]): any[] {
     try {
-        const releasesLI = domStroll('Elixir', false, await elixirEarl.fetchDom(), [
+        const releasesLI = domStroll('Elixir', false, body, [
             [2, 'html'],
             [3, 'body', { cls: 'blog' }],
             [1, 'div', { id: 'container' }],
@@ -204,7 +231,7 @@ export async function callElixir() {
             return [{
                 name: 'Elixir',
                 ver: version,
-                link: `${elixirEarl.getOrigin()}${a.attribs!.href}`,
+                link: `https://elixir-lang.org${a.attribs!.href}`,
                 timestamp: new Date(byline.children![0].data!),
                 src: 'elixir-lang.org',
             }];
@@ -216,10 +243,18 @@ export async function callElixir() {
     return [];
 }
 
-export async function callExifTool() {
-    const exifEarl = new Earl('https://exiftool.org', '/history.html');
+export async function callElixir() {
+    const elixirEarl = new Earl('https://elixir-lang.org', '/blog/categories.html');
+    return parseElixir(await elixirEarl.fetchDom());
+}
+
+// ============================================================================
+// EXIFTOOL
+// ============================================================================
+
+export function parseExifTool(dom: DomNode[]): any[] {
     try {
-        const body = domStroll('Exif1', false, await exifEarl.fetchDom(), [
+        const body = domStroll('Exif1', false, dom, [
             [2, 'html'],
             [3, 'body'],
         ])!
@@ -227,7 +262,7 @@ export async function callExifTool() {
         let latestDevRelease = null;
         let latestProdRelease = null;
 
-        const anchors = body.children!.filter(e => e.type === 'tag' && e.name === 'a' && 'name' in e.attribs!);
+        const anchors = body.children!.filter((e: DomNode) => e.type === 'tag' && e.name === 'a' && 'name' in e.attribs!);
         for (const a of anchors) {
             const dateAndVer = a.children![0].children![0].data!.split(' - ');
             const timestamp = new Date(dateAndVer[0]);
@@ -248,7 +283,7 @@ export async function callExifTool() {
                     latestProdRelease = {
                         name: 'ExifTool (production)',
                         ver,
-                        link: `${exifEarl.getUrlString()}`,
+                        link: `https://exiftool.org`,
                         timestamp,
                         src: 'exiftool.org',
                     };
@@ -258,7 +293,7 @@ export async function callExifTool() {
                     latestDevRelease = {
                         name: 'ExifTool (development)',
                         ver,
-                        link: `${exifEarl.getUrlString()}`,
+                        link: `https://exiftool.org`,
                         timestamp,
                         src: 'exiftool.org',
                     };
@@ -277,10 +312,18 @@ export async function callExifTool() {
     return [];
 }
 
-export async function callRuby() {
-    const rubyEarl = new Earl('https://www.ruby-lang.org', '/en/downloads/releases/');
+export async function callExifTool() {
+    const exifEarl = new Earl('https://exiftool.org', '/history.html');
+    return parseExifTool(await exifEarl.fetchDom());
+}
+
+// ============================================================================
+// RUBY
+// ============================================================================
+
+export function parseRuby(body: DomNode[]): any[] {
     try {
-        const relList = domStroll('Ruby', false, await rubyEarl.fetchDom(), [
+        const relList = domStroll('Ruby', false, body, [
             [2, 'html'],
             [3, 'body'],
             [3, 'div', { id: 'page' }],
@@ -295,9 +338,9 @@ export async function callRuby() {
 
         const releases: Release[] = [];
 
-        relList.children!.forEach(ch => {
-            if (ch.type === 'tag' && ch.name === 'tr' && ch.children!.filter((_c, i) => i % 2).every(c => c.type === 'tag' && c.name === 'td')) {
-                const [v, d, , l] = ch.children!.filter((_c, i) => i % 2);
+        relList.children!.forEach((ch: DomNode) => {
+            if (ch.type === 'tag' && ch.name === 'tr' && ch.children!.filter((_c: DomNode, i: number) => i % 2).every((c: DomNode) => c.type === 'tag' && c.name === 'td')) {
+                const [v, d, , l] = ch.children!.filter((_c: DomNode, i: number) => i % 2);
 
                 const rawVer = v.children![0].data!;
                 const rawDate = d.children![0].data!;
@@ -325,7 +368,7 @@ export async function callRuby() {
             .map(min => releases.find(r => r[0] === currMaj && r[1] === min)) as Release[];
 
         return latestOfEach.map(([maj, min, ver, date, relLink]) => {
-            const url = new URL(rubyEarl.url.href);
+            const url = new URL('https://www.ruby-lang.org/en/downloads/releases/');
             url.pathname = relLink;
 
             return {
@@ -343,12 +386,19 @@ export async function callRuby() {
     return [];
 }
 
-// generalized function to work with both IntelliJ IDEA and RustRover
-async function callIntelliJ(debugName: string, linkName: string, regex: RegExp, returnName: string) {
-    const ijEarl = new Earl('https://blog.jetbrains.com', `${linkName}/category/releases/`);
+export async function callRuby() {
+    const rubyEarl = new Earl('https://www.ruby-lang.org', '/en/downloads/releases/');
+    return parseRuby(await rubyEarl.fetchDom());
+}
 
+// ============================================================================
+// INTELLIJ IDEA AND RUSTROVER
+// ============================================================================
+
+// generalized function to work with both IntelliJ IDEA and RustRover
+export function parseIntelliJ(debugName: string, regex: RegExp, returnName: string, dom: DomNode[]): any[] {
     try {
-        const container = domStroll(`${debugName}a`, false, await ijEarl.fetchDom(), [
+        const container = domStroll(`${debugName}a`, false, dom, [
             [2, 'html'],
             [3, 'body'],
             [6, 'div', { id: 'wrapper' }],
@@ -416,18 +466,22 @@ async function callIntelliJ(debugName: string, linkName: string, regex: RegExp, 
 }
 
 export async function callIdea() {
-    return await callIntelliJ('Idea', 'idea', /IntelliJ IDEA (\d+\.\d+(?:\.\d+)?)/, 'IntelliJ IDEA');
+    const ijEarl = new Earl('https://blog.jetbrains.com', '/idea/category/releases/');
+    return parseIntelliJ('Idea', /IntelliJ IDEA (\d+\.\d+(?:\.\d+)?)/, 'IntelliJ IDEA', await ijEarl.fetchDom());
 }
 
 export async function callRustRover() {
-    return await callIntelliJ('RR', 'rust', /IntelliJ Rust for (\d+\.\d+(?:\.\d+)?)/, 'RustRover');
+    const ijEarl = new Earl('https://blog.jetbrains.com', '/rust/category/releases/');
+    return parseIntelliJ('RR', /IntelliJ Rust for (\d+\.\d+(?:\.\d+)?)/, 'RustRover', await ijEarl.fetchDom());
 }
 
-export async function callSdlMame() {
-    const sdlMameEarl = new Earl('https://sdlmame.lngn.net', '/stable/');
+// ============================================================================
+// SDL MAME
+// ============================================================================
 
+export function parseSdlMame(body: DomNode[]): any[] {
     try {
-        const table = domStroll('sdl', false, await sdlMameEarl.fetchDom(), [
+        const table = domStroll('sdl', false, body, [
             [2, 'html'],
             [3, 'body'],
             [3, 'table'],
@@ -473,12 +527,20 @@ export async function callSdlMame() {
     return [];
 }
 
-export async function callSublime() {
+export async function callSdlMame() {
+    const sdlMameEarl = new Earl('https://sdlmame.lngn.net', '/stable/');
+    return parseSdlMame(await sdlMameEarl.fetchDom());
+}
+
+// ============================================================================
+// SUBLIME
+// ============================================================================
+
+export function parseSublime(body: DomNode[]): any[] {
     // https://www.sublimetext.com/download
-    const sublimeEarl = new Earl('https://www.sublimetext.com', '/download');
 
     try {
-        const current = domStroll('sublime', false, await sublimeEarl.fetchDom(), [
+        const current = domStroll('sublime', false, body, [
             [2, 'html'],
             [3, 'body'],
             [3, 'main'],
@@ -516,11 +578,20 @@ export async function callSublime() {
     return [];
 }
 
-export async function callPython() {
-    // https://www.python.org/
-    const pyEarl = new Earl('https://www.python.org');
+export async function callSublime() {
+    // https://www.sublimetext.com/download
+    const sublimeEarl = new Earl('https://www.sublimetext.com', '/download');
+
+    return parseSublime(await sublimeEarl.fetchDom());
+}
+
+// ============================================================================
+// PYTHON
+// ============================================================================
+
+export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> {
     try {
-        const section = domStroll('python', false, await pyEarl.fetchDom(), [
+        const section = domStroll('python', false, dom, [
             [9, 'html', { cls: 'no-js' }],
             [5, 'body', { id: 'homepage' }],
             [1, 'div', { id: 'touchnav-wrapper' }],
@@ -531,7 +602,7 @@ export async function callPython() {
 
         // Check for both the old and new structure of the div containing the row
         // 'row' was section.div(1) but changes to sectionary.div(3) if there's a 'notification-bar'
-        const rowDiv = section.children!.find(child => child.attribs?.class?.includes('row'))!;
+        const rowDiv = section.children!.find((child: DomNode) => child.attribs?.class?.includes('row'))!;
 
         const latestA = domStroll('python', false, rowDiv.children!, [
             [3, 'div', { cls: 'download-widget' }], // also .small-widget
@@ -566,12 +637,20 @@ export async function callPython() {
     return [];
 }
 
+export async function callPython() {
+    // https://www.python.org/
+    const pyEarl = new Earl('https://www.python.org');
+    return parsePython(await pyEarl.fetchDom(), pyEarl);
+}
 
-export async function callD() {
+// ============================================================================
+// D
+// ============================================================================
+
+export function parseD(dom: DomNode[], dEarl: Earl): any[] {
     // https://dlang.org/changelog/
-    const dEarl = new Earl('https://dlang.org', '/changelog/');
     try {
-        const secondLi = domStroll('d', false, await dEarl.fetchDom(), [
+        const secondLi = domStroll('d', false, dom, [
             [3, 'html'],
             [5, 'body'],
             [5, 'div', { cls: 'container' }],
@@ -613,13 +692,22 @@ export async function callD() {
     return [];
 }
 
+export async function callD() {
+    // https://dlang.org/changelog/
+    const dEarl = new Earl('https://dlang.org', '/changelog/');
+    return parseD(await dEarl.fetchDom(), dEarl);
+}
+
+// ============================================================================
+// C3
+// ============================================================================
+
 // TODO only has version number, not date
-export async function callC3() {
+export function parseC3(dom: DomNode[], c3Earl: Earl): any[] {
     // https://c3-lang.org/
-    const c3Earl = new Earl('https://c3-lang.org');
     try {
         // not <html> tag, divs don't have useful ids or classes, mostly style rather than semantic
-        const versionSpan = domStroll('c3', false, await c3Earl.fetchDom(), [
+        const versionSpan = domStroll('c3', false, dom, [
             [3, 'body'],
             [1, 'div'],
             [5, 'div'],
@@ -642,10 +730,23 @@ export async function callC3() {
     return [];
 }
 
-export async function callEclipse() {
-    const eclipseEarl = new Earl('https://download.eclipse.org', '/eclipse/downloads/');
+export async function callC3() {
+    // https://c3-lang.org/
+    const c3Earl = new Earl('https://c3-lang.org');
+    return parseC3(await c3Earl.fetchDom(), c3Earl);
+}
+
+// ============================================================================
+// ECLIPSE (DEPRECATED - NOW IN JSON SOURCES)
+// ============================================================================
+// NOTE: Eclipse changed architecture from static HTML to JavaScript + data.json
+// HTML scraper kept for reference but no longer functional.
+// Use JSON version from jsonsources.ts instead.
+
+/*
+export function parseEclipse(dom: DomNode[], eclipseEarl: Earl): any[] {
     try {
-        const tr = domStroll('eclipse', false, await eclipseEarl.fetchDom(), [
+        const tr = domStroll('eclipse', false, dom, [
             [2, 'html'],
             [3, 'body', { id: 'body_solstice' } ],
             [5, 'main' ],
@@ -677,3 +778,9 @@ export async function callEclipse() {
     }
     return [];
 }
+
+export async function callEclipse() {
+    const eclipseEarl = new Earl('https://download.eclipse.org', '/eclipse/downloads/');
+    return parseEclipse(await eclipseEarl.fetchDom(), eclipseEarl);
+}
+*/

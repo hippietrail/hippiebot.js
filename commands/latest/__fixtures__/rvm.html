@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel="stylesheet" href="/scss/main.css">
+<link rel="prefetch" as="image" href="/img/rvm1.webp">
+  <link rel="prefetch" as="image" href="/img/rvm2.webp">
+  <link rel="prefetch" as="image" href="/img/rvm3.webp">
+  <link rel="prefetch" as="image" href="/img/rvm4.webp">
+  <link rel="prefetch" as="image" href="/img/rvm5.webp">
+  <link rel="prefetch" as="image" href="/img/rvm6.webp">
+  <link rel="prefetch" as="image" href="/img/rvm7.webp">
+
+  <link rel="stylesheet" href="/css/aos.css">
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZBLGNEHLCJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-ZBLGNEHLCJ');
+  </script>
+  
+  
+  <script src="/bin/aos.js"></script>
+  <script src="https://cdn.rvmplayer.org/rvmplayer.cpc6128.min.js"></script>
+  <title>Retro Virtual Machine | </title>
+
+  
+</head><body><nav class="nav">
+  <div class="container">
+    <h1 class="logo">
+      <a href="/"><img src="/img/logotext.png"></a>
+    </h1>
+    <ul id="menu">
+      
+      <li class="menuItem"><a href="/">Home</a></li>
+      
+      <li class="menuItem"><a href="/blog/">Blog</a></li>
+      
+      <li class="menuItem"><a href="/contribute/">Contribute</a></li>
+      
+      <li class="menuItem"><a href="/download/">Download</a></li>
+      
+      <li class="menuItem"><a href="/contact/">Contact</a></li>
+      
+      <li class="menuItem"><a href="/doc/">Documentation</a></li>
+      
+      <li class="menuItem"><a href="/rvmplayer/">RVMPlayer</a></li>
+      
+    </ul>
+    <ul id="menuB">
+      <li><i class="fas fa-bars"></i></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="mainContent">
+<div class="spacer"></div>
+<article class="container content">
+  <h1 id="changelog">Changelog</h1>
+<h2 id="retrovm-v2120-14062025">RetroVM v2.1.20 (14/06/2025)</h2>
+<ul>
+<li>SMS: Fixed a bug that caused the emulator to crash when loading a cartridge.</li>
+<li>Fixed a bug that cause the icons to not be displayed correctly in Intel Graphics cards with the latest drivers.</li>
+<li>ZX Spectrum: Fixed the tape compensation in the .Tap files.</li>
+<li>Linux: Fixed the default extension in the file save dialog.</li>
+</ul>
+<h2 id="retrovm-v2119-09122024">RetroVM v2.1.19 (09/12/2024)</h2>
+<ul>
+<li>Fixed a bug that prevented snapshots from reloading on Amstrad CPC introduced in version 2.1.18</li>
+<li>Fixed the loading of snapshots on zxuno 2048k (zxuno 4.2)</li>
+<li>The blurred background of the &ldquo;Background blur&rdquo; option now respects the saturation, brightness, contrast settings and also works with the green phosphor shader.</li>
+</ul>
+<h2 id="retrovm-v2118-03122024">RetroVM v2.1.18 (03/12/2024)</h2>
+<ul>
+<li>Fixed a recently introduced timing issue in the Pentagon that caused incorrect border rendering</li>
+<li>Fixed memory contention on +2A/+3 models</li>
+<li>Fixed an AY bug that prevented Match Day II 128k and Tai-Pan 128k from loading properly</li>
+<li>AY registers 14 and 15 are now correctly saved in snapshots</li>
+</ul>
+<h2 id="retrovm-v2117-03092024">RetroVM v2.1.17 (03/09/2024)</h2>
+<ul>
+<li>LINUX: Resolved an issue preventing certain ZX Spectrum machines from booting on Linux Intel x64 systems.</li>
+<li>TK90X: Corrected the machine image that incorrectly displayed &ldquo;Compuuter&rdquo;.</li>
+<li>MSX: Fixed a crash that occurred when deleting blocks in .cas files.</li>
+<li>MSX: Implemented write protection for .cas files. These files are now read-only.</li>
+<li>MSX: Restricted cassette creation to only those that support write operations.</li>
+</ul>
+<h2 id="retrovm-v2116-02072024">RetroVM v2.1.16 (02/07/2024)</h2>
+<ul>
+<li>Fixed an issue that prevented the software from being installed on the SD cards of DivMMC / ZX-UNO.</li>
+<li>Minor fixes</li>
+</ul>
+<h2 id="retrovm-v2115-14062024">RetroVM v2.1.15 (14/06/2024)</h2>
+<ul>
+<li>Fixed CSW tape saving issue.</li>
+<li>Reenabled Dinput joystick support on Windows and MacOS.</li>
+</ul>
+<h2 id="retrovm-v2114-30052024">RetroVM v2.1.14 (30/05/2024)</h2>
+<ul>
+<li>Fixed a bug that in versions 2.1.12 and 2.1.13 caused the emulator to crash when adding devices to the ZX Spectrum +2A/+3.</li>
+<li>Fixed state saving on the zxuno that caused it not to load correctly in all v2.1.x versions.</li>
+<li>Fixed an issue in the memory mapper of the ZX Pentagon.</li>
+</ul>
+<h2 id="retrovm-v2113-25052024">RetroVM v2.1.13 (25/05/2024)</h2>
+<ul>
+<li>Fixed an issue where the Amstrad CPC tape motor would not start in warp mode.</li>
+<li>Added a pause at the start of TZX/CDT files to improve compatibility with the Amstrad CPC.</li>
+</ul>
+<h2 id="retrovm-v2112-23052024">RetroVM v2.1.12 (23/05/2024)</h2>
+<ul>
+<li><strong>NEW EXPERIMENTAL VERSION FOR RASPBERRY PI 5/4</strong> (see the <a href="/blog/raspberry">blog for more information</a>)</li>
+<li>Fixed a bug that caused the emulation to freeze on Linux.</li>
+<li>Re-enabled Pulse Audio on Linux.</li>
+<li>Compiled Linux Version against Ubuntu 18.04 to improve compatibility with some distros.</li>
+<li>Re-implemented the Snow Bug in the ZX Spectrum (Thanks to Victor Iborra for the help). It should be pixel-perfect now.</li>
+<li>Fixed a bug in the TZX decoder (Exploding Fist+) (Thanks to Victor Iborra for the help).</li>
+<li>Fixed the GDB 0x19 block in the TZX decoder (Thanks to Victor Iborra for the help).</li>
+<li>Fixed the palette reset issue in the CPC-Plus ASIC.</li>
+<li>Fixed the initial memory bank reset issue in the CPC-Plus ASIC.</li>
+<li>Fixed a bug in the Pentagon memory mapper.</li>
+<li>Fixed the tape motor delay in the Amstrad CPC. All Opera Soft games should work now.</li>
+<li>Fixed window size issues in low resolutions.</li>
+<li>Fixed a bug in the PZX decoder.</li>
+</ul>
+<h2 id="retrovm-v2111-13112023">RetroVM v2.1.11 (13/11/2023)</h2>
+<ul>
+<li>Fixed the bug that caused the window not to close in full screen on Windows.</li>
+<li>Fixed the issue causing some dialog boxes to appear behind the window.</li>
+<li>Hide the annoying debug window again.</li>
+</ul>
+<h2 id="retrovm-v2110-05112023">RetroVM v2.1.10 (05/11/2023)</h2>
+<ul>
+<li>Corrected an issue where the disk drive would malfunction in the Plus 3 when the system was operational for over an hour.</li>
+<li>Resolved the problem with snapshot loading on the ZX Spectrum 48k Issue 2.</li>
+<li>Improved the step-in and step-out functionality of the WD1793; the Insult demo now functions correctly on the Pentagon model.</li>
+<li>Properly reset the cartridge mappers for the MSX system.</li>
+</ul>
+<h2 id="retrovm-v219-09102023">RetroVM v2.1.9 (09/10/2023)</h2>
+<ul>
+<li>Fixed an issue where dragging and dropping a disk into the ZX Pentagon machine would disable write protection.</li>
+<li>Resolved a bug in WD1793 that prevented the Unreal demo from running when write protection was turned off.</li>
+<li>Addressed compilation issues in XCode 15.</li>
+<li>Updated Miniaudio to version 0.11.18.</li>
+<li>Resolved display issues with warp shader stripes on 4K displays.</li>
+<li>Improved drag and drop functionality for .rvmstate files across all machines.</li>
+<li>Fixed instances where the emulator would hang when reading certain .rvmstate files.</li>
+<li>Addressed an issue where the emulator would close unexpectedly when resizing the window on some Nvidia graphics cards.</li>
+<li>Fixed Konami SCC Mapper bug</li>
+</ul>
+<h2 id="retrovm-v218-01092023">RetroVM v2.1.8 (01/09/2023)</h2>
+<ul>
+<li>Fixed the annoying black screen bug on Nvidia cards under Windows.</li>
+<li>Fixed the annoying black flashes bug on AMD cards under Windows.</li>
+<li>Updated romdb for MSX cartridges.</li>
+<li>Fixed a bug in the MSX guess mapper algorithm.</li>
+<li>Improved performance on the Windows version.</li>
+</ul>
+<h2 id="retrovm-v217-24072023">RetroVM v2.1.7 (24/07/2023)</h2>
+<ul>
+<li>Fixed a bug that occurred when launching the emulator on a secondary screen in MacOS.</li>
+<li>Fixed a bug that prevented reading and writing correctly on SD cards larger than 4GB, with the error being more severe on Windows.</li>
+<li>More work on the timings of the TKs (Still not 100% accurate).</li>
+</ul>
+<h2 id="retrovm-v216-01032023">RetroVM v2.1.6 (01/03/2023)</h2>
+<ul>
+<li>Adjusted the playback speed of the cassette on the MSX, ZX 128k, and all Microdigital computers, which was 2% faster than normal (yes, I have users with very keen ears ;) )</li>
+<li>Removed the annoying debug screen in Windows</li>
+<li>Some adjust to the Microdigital ULA contention (Not perfect yet)</li>
+</ul>
+<h2 id="retrovm-v215-27022023">RetroVM v2.1.5 (27/02/2023)</h2>
+<ul>
+<li>Fix sound after load a state in the ZX Spectrum Machines</li>
+<li>Fix HDF file support</li>
+<li>Fixed the category image for the Microdigital Machines</li>
+<li>Fix RVM Hangs when no space left in the explorer window of a cpm disc.</li>
+<li>Fix the timing of the out and in opcodes in the z80 (was incorrect in all the v2.1.x releases)</li>
+<li>Fix some artwork</li>
+</ul>
+<h2 id="retrovm-v214-18012023">RetroVM v2.1.4 (18/01/2023)</h2>
+<ul>
+<li>Possible fix for a bug that caused RVM not to open on Mac if RVM v2.0 had been used before.</li>
+<li>Machine sounds (cassette, disk, etc) respond to the main volume of the emulator now.</li>
+<li>Implemented the differences in the 0x3f port of the Japanese Master System.</li>
+<li>Implemented sprite zoom bug in Master System I VDP</li>
+</ul>
+<h2 id="retrovm-v213-05012023">RetroVM v2.1.3 (05/01/2023)</h2>
+<ul>
+<li>Fixed XMEM when adding it to any Amstrad Plus.</li>
+<li>Fixed a race condition that could occur when flashing a Dandanator CPC.</li>
+<li>Fixed the Multiplay on Windows and Linux.</li>
+<li>Added a submessage to the notification when a gamepad is connected with the device name (to facilitate debugging)</li>
+</ul>
+<h2 id="retrovm-v212-03012023">RetroVM v2.1.2 (03/01/2023)</h2>
+<ul>
+<li>Added a new machine &lsquo;GX-4000 with 128k Mod&rsquo;</li>
+<li>The &lsquo;P&rsquo; key functions as a pause again in the Sega Master System and the Sega SG-1000.</li>
+<li>In the NTSC SMS2, the SMS2 image is now correctly displayed instead of the SMS1 image in the cartridge panel.</li>
+<li>Fixed the port DFXX in the GX4000</li>
+<li>Mapped the GX4000 pause button to the P key and the ESC key</li>
+<li>Mapped alternatively the pause NMI button to the ESC key in the SMS and SG-1000</li>
+<li>Enabled the &lsquo;-ns&rsquo; no shader CLI switch</li>
+<li>Copyright adapted to the new year!</li>
+</ul>
+<h2 id="retrovm-v211-31122022">RetroVM v2.1.1 (31/12/2022)</h2>
+<ul>
+<li>Fixed, the emulator will hang when inserting a disk in drive B of any Amstrad CPC</li>
+<li>Added a message to warn that the emulator must be restarted when adding firmware to the firmware Vault</li>
+<li>Added a message to the joystick emulation notification, with the keys that are used</li>
+</ul>
+<h2 id="retrovm-v210-30122022">RetroVM v2.1.0 (30/12/2022)</h2>
+<h3 id="new-machines">New machines</h3>
+<h4 id="amstrad-cpc">Amstrad CPC</h4>
+<ul>
+<li>Amstrad CPC 464 Plus</li>
+<li>Amstrad CPC 6128 Plus</li>
+<li>Amstrad GX-4000</li>
+</ul>
+<h4 id="zx-spectrum">ZX Spectrum</h4>
+<ul>
+<li>ZX Spectrum 48k NTSC</li>
+<li>ZX Spectrum Pentagon</li>
+<li>Microdigital TK-90X</li>
+<li>Microdigital TK-95</li>
+</ul>
+<h4 id="msx-1">MSX-1</h4>
+<ul>
+<li>Toshiba HX-10P</li>
+<li>Toshiba HX-10S</li>
+<li>Toshiba HX-10D</li>
+</ul>
+<h4 id="colecovision">Colecovision</h4>
+<ul>
+<li>Colecovision PAL</li>
+<li>Colecovision NTSC</li>
+</ul>
+<h4 id="sega-sg-1000">Sega SG-1000</h4>
+<ul>
+<li>Sega SG-1000</li>
+</ul>
+<h4 id="sega-master-system">Sega Master System</h4>
+<ul>
+<li>Master System 1 + FM Japanesse</li>
+<li>Master System 1 NTSC</li>
+<li>Master System 1 PAL</li>
+<li>Master System 2 NTSC</li>
+<li>Master System 2 PAL</li>
+</ul>
+<h3 id="new-chips-emulated">New chips emulated</h3>
+<ul>
+<li>Texas Instruments TMS9918</li>
+<li>Sega Master System VDP</li>
+<li>Texas Instruments SN76489 (PSG)</li>
+<li>Yamaha YM2413</li>
+<li>Western Digital FD1793</li>
+<li>Amstrad ASIC</li>
+</ul>
+<h3 id="new-features">New Features</h3>
+<ul>
+<li>MacOs Version universal (Intel / Apple Silicon)</li>
+<li>App optimized to work on HiDPI displays (4k, retina display) on MacOs, Windows and Linux</li>
+<li>Tape counter</li>
+<li>Zip files support and zip with multiples files support</li>
+<li>New overlay effect</li>
+<li>New LCD on the overlay</li>
+<li>New blur background effect</li>
+<li>Keyboard support for joystick emulation</li>
+<li>New audio engine using miniaudio</li>
+<li>The app no longer uses SDL</li>
+<li>Rewrited from scratch Amstrad CPC emulation, significantly faster</li>
+<li>CRTC-0 and CRTC-1 Selectable in Amstrad CPC machines</li>
+<li>ESXDOS Rom selectable in divmmc and zxuno</li>
+<li>Support for changing internal ROMs in ZX Spectrum machines</li>
+<li>Improved effects on the audio panel</li>
+<li>New machine icons and flags</li>
+<li>Reducd input lag</li>
+<li>Reduced frame tearing</li>
+<li>Support for TSX files in the MSX</li>
+</ul>
+
+</article>
+
+        </div><div class="footer">
+  <div class="container">
+
+    <div class="logo"><img src="/img/logotext.png"></div>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+       | <li><a href="/blog/">Blog</a></li>
+      
+       | <li><a href="/contribute/">Contribute</a></li>
+      
+       | <li><a href="/download/">Download</a></li>
+      
+       | <li><a href="/contact/">Contact</a></li>
+      
+       | <li><a href="/doc/">Documentation</a></li>
+      
+       | <li><a href="/rvmplayer/">RVMPlayer</a></li>
+      
+    </ul>
+
+    <p class="copyright">©2024 - Juan Carlos González Amestoy</p>
+    <p class="copyright">Made in Alacant</p>
+  </div>
+</div>
+<script src="/bin/main.js"></script></body>
+</html>

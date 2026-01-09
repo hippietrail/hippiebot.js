@@ -4,7 +4,11 @@
   "description": "",
   "main": "bot.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "vitest",
+    "test:html": "vitest run commands/latest/htmlsources.test.ts",
+    "test:eclipse-html": "vitest run commands/latest/htmlsources.test.ts -t Eclipse",
+    "test:json": "vitest run commands/latest/jsonsources.test.ts",
+    "test:eclipse-json": "vitest run commands/latest/jsonsources.test.ts -t Eclipse"
   },
   "keywords": [],
   "author": "",
@@ -19,6 +23,8 @@
   "devDependencies": {
     "@types/html-to-text": "^9.0.4",
     "@types/node": "^22.10.2",
-    "@types/source-map-support": "^0.5.10"
+    "@types/source-map-support": "^0.5.10",
+    "typescript": "^5.9.3",
+    "vitest": "^1.0.0"
   }
 }

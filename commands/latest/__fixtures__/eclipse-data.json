@@ -1,0 +1,210 @@
+{
+	"releases": [
+		{
+			"path": "drops4/R-4.38-202512010920",
+			"status": "success",
+			"label": "4.38",
+			"date": "2025-12-01T14:20Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "testResults.php"
+		},
+		{
+			"path": "drops4/R-4.37-202509050730",
+			"status": "success",
+			"label": "4.37",
+			"date": "2025-09-05T11:30Z",
+			"testsCompletion": "6 of 6",
+			"testsPath": "testResults.php"
+		},
+		{
+			"path": "drops4/R-4.36-202505281830",
+			"status": "success",
+			"label": "4.36",
+			"date": "2025-05-28T22:30Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "testResults.php"
+		}
+	],
+	"stableBuilds": [
+		{
+			"path": "drops4/S-4.39M1-202601031800",
+			"status": "success",
+			"label": "4.39M1",
+			"date": "2026-01-03T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		}
+	],
+	"iBuilds": [
+		{
+			"path": "drops4/I20260108-1800",
+			"status": "success",
+			"label": "I20260108-1800",
+			"date": "2026-01-08T23:00Z",
+			"testsCompletion": "4 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20260107-1800",
+			"status": "success",
+			"label": "I20260107-1800",
+			"date": "2026-01-07T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20260106-1800",
+			"status": "success",
+			"label": "I20260106-1800",
+			"date": "2026-01-06T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20260105-1800",
+			"status": "success",
+			"label": "I20260105-1800",
+			"date": "2026-01-05T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20260104-1800",
+			"status": "success",
+			"label": "I20260104-1800",
+			"date": "2026-01-04T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20260103-1800",
+			"status": "success",
+			"label": "I20260103-1800",
+			"date": "2026-01-03T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20251229-1800",
+			"status": "success",
+			"label": "I20251229-1800",
+			"date": "2025-12-29T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20251222-1800",
+			"status": "success",
+			"label": "I20251222-1800",
+			"date": "2025-12-22T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20251215-1800",
+			"status": "success",
+			"label": "I20251215-1800",
+			"date": "2025-12-15T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/I20251208-1800",
+			"status": "success",
+			"label": "I20251208-1800",
+			"date": "2025-12-08T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "testResults.php"
+		},
+		{
+			"path": "drops4/I20251201-1800",
+			"status": "success",
+			"label": "I20251201-1800",
+			"date": "2025-12-01T23:00Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "testResults.php"
+		},
+		{
+			"path": "drops4/I20251129-0640",
+			"status": "success",
+			"label": "I20251129-0640",
+			"date": "2025-11-29T11:40Z",
+			"testsCompletion": "5 of 5",
+			"testsPath": "testResults.php"
+		}
+	],
+	"yBuilds": [
+		{
+			"path": "drops4/Y20260108-1000",
+			"status": "success",
+			"label": "Y20260108-1000",
+			"date": "2026-01-08T15:00Z",
+			"testsCompletion": "1 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20260106-1000",
+			"status": "success",
+			"label": "Y20260106-1000",
+			"date": "2026-01-06T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20260103-1000",
+			"status": "success",
+			"label": "Y20260103-1000",
+			"date": "2026-01-03T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20260101-1000",
+			"status": "success",
+			"label": "Y20260101-1000",
+			"date": "2026-01-01T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20251230-1000",
+			"status": "success",
+			"label": "Y20251230-1000",
+			"date": "2025-12-30T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20251227-1000",
+			"status": "success",
+			"label": "Y20251227-1000",
+			"date": "2025-12-27T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20251225-1000",
+			"status": "success",
+			"label": "Y20251225-1000",
+			"date": "2025-12-25T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20251223-1000",
+			"status": "success",
+			"label": "Y20251223-1000",
+			"date": "2025-12-23T15:00Z",
+			"testsCompletion": "4 of 4",
+			"testsPath": "tests.html"
+		},
+		{
+			"path": "drops4/Y20251220-1000",
+			"status": "success",
+			"label": "Y20251220-1000",
+			"date": "2025-12-20T15:00Z",
+			"testsCompletion": "0 of 4",
+			"testsPath": "tests.html"
+		}
+	]
+}

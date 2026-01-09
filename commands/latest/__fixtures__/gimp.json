@@ -1,0 +1,2271 @@
+{
+    "STABLE":  [
+        {
+            "version": "3.0.6",
+            "date": "2025-10-05",
+            "source": [
+                {
+                    "filename": "gimp-3.0.6.tar.xz",
+                    "sha512": "513fe11083b6560ce7bbe1b56ccbc0d83a4edb33e110508543fc8c8fdf6c60d91f9af60cb4d83926eec490baceb6c9cc5aae43a4d0ae7a04099f4036e50d179c",
+                    "sha256": "246c225383c72ef9f0dc7703b7d707084bbf177bd2900e94ce466a62862e296b"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-10-05",
+                    "filename": "GIMP-3.0.6-x86_64.AppImage",
+                    "sha512": "d85e0f114eb623d09114ced8004b5f5885d5b27bbdb3578451ff2cebb67daa055a53316c71166db0dc2f10b578537622b8f8237b31f6be229bfc710b3b004533",
+                    "sha256": "095c8a29d0a8dd48d7b09cdda7d4e1b69ba677036f4db3bd2e7d90c3f91e62d9",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 13"
+                },
+                {
+                    "date": "2025-10-05",
+                    "filename": "GIMP-3.0.6-aarch64.AppImage",
+                    "sha512": "30d801556dc7990494623248521fe42b278f35c76ce7c04419c3bfceea9ee9a1e80a7fe3b04625453aa37b5c9f7733aedaf52c37025d95ec9be851f8872c8f3b",
+                    "sha256": "ccceb11eac48184dfa506f3b4e40bae6a066950efda540e3fa949f9e69c2555a",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 13"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-10-07",
+                    "filename": "gimp-3.0.6-setup-1.exe",
+                    "sha512": "c626acc8913529710042430d9817b8263dd3aa0e56dffb29e57c6b0f9417a7be9a82671f31b7a13506f05f3e59282e576b7c6a787b6a94dca733a06c66fd958b",
+                    "sha256": "1521ae318ff176d3d428279d52ff5abdf328ddf8644b48de75684e55e1057167",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903",
+                    "revision": 1,
+                    "comment": "Fix Windows Server support."
+                },
+                {
+                    "date": "2025-10-05",
+                    "filename": "gimp-3.0.6-setup.exe",
+                    "sha512": "411dc508c7fd5c770ad2ee26796206c404a48b5626b8a324dd981afa4ed0af8872166a808d964fd3767d153e20a4b00f0af7908a0f71bb1cf44175cae0aab458",
+                    "sha256": "32101c31d32516dc4b9020295b9f9bf994b5372dfc690820d7b533b9bc93d694",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-10-06",
+                    "filename": "gimp-3.0.6-x86_64.dmg",
+                    "sha512": "bddd8b118b776b6248b16a37f02e74282c6ecd7fd95e9d45b6c2132021ccfb2c46591647e1b09346bc918ecc61ff7bdfed0353fce4c8833eb040b1c5bd7ab660",
+                    "sha256": "0267ae09d88e1d4b121810fbdcb91f333944201b0b02e2afdbbfabd1a046a551",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-10-06",
+                    "filename": "gimp-3.0.6-arm64.dmg",
+                    "sha512": "8a5414108d1c054002346a274d41fcdfeb531cbc0171d28a8b520af8eaf0c5e1b3eaeb15b07a782b527c7d22845e30bd5db4aaabe8966f9f6f0613d19f30ae81",
+                    "sha256": "6f4e7f8ed7ebfa80dcb6e0c05f9b1d6bd3d5a991e99abc2f3391cf37bfd97d70",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.0.4",
+            "date": "2025-05-18",
+            "source": [
+                {
+                    "filename": "gimp-3.0.4.tar.xz",
+                    "sha512": "7a83768caae458b75883522c87d5297e9642b64b0516c482804034b8b9acc6af6afc89d1b4a549fd26de3e33816136c31d440f554f66669c8ccd43536260916a",
+                    "sha256": "8caa2ec275bf09326575654ac276afc083f8491e7cca45d19cf29e696aecab25"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-05-18",
+                    "filename": "GIMP-3.0.4-x86_64.AppImage",
+                    "sha512": "f2d96f79cc4cff291700742565499fe825e5f36554e77ff2b5cbc31089c1a8ba79e77b7e8b4898fe40a020dbe24d1c9fa6b6f5954aeb0e5a4d61725e7501c39a",
+                    "sha256": "192e0920424a19730e57517a2f9d885a001c77b3a1cc0878ce4d44a2e294b3cb",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 12"
+                },
+                {
+                    "date": "2025-05-18",
+                    "filename": "GIMP-3.0.4-aarch64.AppImage",
+                    "sha512": "53de3fdb27fb232bb90a37ef31fcd72d1b693a578a3b2a6ab787766c9bc1732f6fcdf55e5c996f010902783c38366c2d4c3d43093d4746b4dbc064623f467049",
+                    "sha256": "86c8a72bbcf7a2a838a591d33e610cf82b73a264084086d9936162affcde41b4",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 12"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-05-18",
+                    "filename": "gimp-3.0.4-setup.exe",
+                    "sha512": "4c072f1a1e00866909a0a8aee0c0876ce1b2598119d0202ca238b383d22e83eca0b099bae9e5ce6ca257bee90f6f26f956e5c303923830392c0ada09f4a40ac1",
+                    "sha256": "385e36fe577cbdbfc71ba79d6c046d6f4eaabc01effd7f067bf15fd98410b2a1",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-05-18",
+                    "filename": "gimp-3.0.4-x86_64.dmg",
+                    "sha512": "31a76f33bab68fc8c5baebd7f07d801810dba764f6324a5a2df32322d26fbbdb884474ce74e29e06573fe8b8579d49b393f70ac49d9ad193900565e4e8521f62",
+                    "sha256": "9a2dc5c194212f9f7b8ab6752c7aaad5c5e38cb211ec526593f4d6d720b76c3f",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-05-18",
+                    "filename": "gimp-3.0.4-arm64.dmg",
+                    "sha512": "9750fee0d4e84c36ace0e61e394f37ea4a74f4aa71797c71662c2e3a29ec0b34eaaab77cb72b19ef6115f26dad29671c8de4f0b57283030dbc2b249007ac119f",
+                    "sha256": "bc3002d9221ebed220b9687378275d139b4fd0ea066fe3a2b5788ef2ee4377f3",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.0.2",
+            "date": "2025-03-23",
+            "source": [
+                {
+                    "filename": "gimp-3.0.2.tar.xz",
+                    "sha512": "e5f72f9f1447ff3ec5ab78bc589831767c00be91a0f337b1ab2d5beee3f79b01464c3de0dc1a518fd72180b4232be5b8d7121d186425a766090842b550f534df",
+                    "sha256": "546ddc30cb2d0e79123c7fcb4d78211e1ee7a6aace91a6a0ad8cbcbf6ea571a2"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-03-25",
+                    "filename": "gimp-3.0.2-setup-1.exe",
+                    "sha512": "dc06b88e4ebdf62394bad10fe2818dfe1b5ad435f3a6e070777be96e01bf46a124edabf9799f728c6abeab40ba75241a0a8c9765f1d0dcf7c4abe476ba6827e6",
+                    "sha256": "0bbddfce63ff99ef3bcc4d8af9f4c6793af9902470722c018476f04c713e440b",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903",
+                    "revision": 1,
+                    "comment": "Fixes impossibility to run Python plug-ins (#13170)"
+                },
+                {
+                    "date": "2025-03-24",
+                    "filename": "gimp-3.0.2-setup.exe",
+                    "sha512": "342bec3dd6c7318f774cb6f3dac8161f4e1570abf7b6203cecdebc32e49a42d5e5bc8e3a0572a58613e8f36810d556e718e5eafdea80eee0d2476a21a654ef02",
+                    "sha256": "7a5eca6cc9cf6cf68b7e674eecf879afc13e657ef59fb7742093a05e9998ffa5",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-03-24",
+                    "filename": "GIMP-3.0.2-x86_64.AppImage",
+                    "sha512": "9c4574bdd2c61a2c470b2d6e1d8493d9dc50bb0167c524ee541eeb78584da20c307e14b69e027bcc9bc288e946a60e30a120bc79c8f75c4456194f6f818cde96",
+                    "sha256": "1f22295ba607b207f2230483ccd92640299f47c132f013a3cf34af3d26c91546",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 12"
+                },
+                {
+                    "date": "2025-03-24",
+                    "filename": "GIMP-3.0.2-aarch64.AppImage",
+                    "sha512": "5fe429b1f34800b7811e736ad8fb6f536d37f414b7f869a41ae756753f8a14ee6f52d085e7fb57ad72fd630c95c576dfcf1ceaa8fcfb263c0633bf48264240a9",
+                    "sha256": "1a328d5163a8712bb3c2253a960b3ef918881bdf69cc5e828b86ccad904556d5",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 12"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-03-24",
+                    "filename": "gimp-3.0.2-x86_64.dmg",
+                    "sha512": "23fd906e590f951d3fb575cd9aa3b66067faa779c3f379d3a404b77e4f3eeaec51812603642e6edcb5d70a1cc4b8df0e78cb159a9c7d4da744d9fcca481ec7ce",
+                    "sha256": "4d35487502c4947e037f30871ff509b16fa361936acd2a2ed00e1d99821da226",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-03-24",
+                    "filename": "gimp-3.0.2-arm64.dmg",
+                    "sha512": "6fc536aa6f0abbf3b3d1edf14cfeeed74d17dc3feacf1f4089b711bc110ef409fa7dfb18720a26d34e6b6b0665cd416ebff3b695c0a9edeee58c2ab1b75da8ec",
+                    "sha256": "847e1d57e937ffd23c3b3a8c0a1ce50e04b1706b75e0184d6f6f6b3f941be9d3",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.0.0",
+            "date": "2025-03-17",
+            "source": [
+                {
+                    "filename": "gimp-3.0.0.tar.xz",
+                    "sha512": "bb75b68054cda06a3fd6e9278fc535914cd1ea4af27d82c8f5e3480233ff4b8f6d6c479ffcd868c4fa3f1980aee741d7cf992273b09d1e862ae2b84164d038a3",
+                    "sha256": "93f1ca3d9d1bd8cac0e52c49fb886cbbe4b28222ee835bf1319e3287901d2d20"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-03-17",
+                    "filename": "GIMP-3.0.0-aarch64.AppImage",
+                    "sha512": "4e1c29873ab818c87d564ae4ee97aa142a6f28b8577873fc0f5078273202df95389a5a679d6d9dc9fc858154fddad88595efba190d851b12efbf57a53955ab24",
+                    "sha256": "8211c655c39721909f35a74fbd7a4017ac5088e2264f91bb86caac05691631fc",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 12"
+                },
+                {
+                    "date": "2025-03-17",
+                    "filename": "GIMP-3.0.0-x86_64.AppImage",
+                    "sha512": "fb5cf39bc7c3f01fdb4a14f5f85d38b48b56b01a38ea0ecd6f6acce75ebb44cbb982a89af11d536e2d9ed7d90c784923aab6825945fb6447957bbef886ef7aad",
+                    "sha256": "f52ebe4988ab818615549ecdffb271e6e20e9c84129035d93aaa4fb41fa5a96a",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 12"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-03-20",
+                    "filename": "gimp-3.0.0-setup-1.exe",
+                    "sha512": "c4d12d764f6bc2531ff2f17d1b240f18350d8dccc9f7341db6372fed85978866dc3707cb5085bf48b3a9f6e933f7017ed9164a4b211e2334ea2fa63dcdb7ced0",
+                    "sha256": "c1101f6fe5103c2986bd39a8c4162b52ea915c1d8066c79a86497329afd01fe4",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903",
+                    "revision": 1,
+                    "comment": "Fixes impossibility to run Python plug-ins (#13170)"
+                },
+                {
+                    "date": "2025-03-17",
+                    "filename": "gimp-3.0.0-setup.exe",
+                    "sha512": "4ed4fd9d3aa10190ae4b66c92f181eff5d8d560871bf5b0bc8151e765967ee590d5d1896afed868ca20405ec17c05a121bd21ee811b293439dbb723fe01bdb80",
+                    "sha256": "ab6f9aa481120097f032c39f07cb70990929878fa65bf4ec6d1669d7a616770a",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-03-18",
+                    "filename": "gimp-3.0.0-x86_64-1.dmg",
+                    "sha512": "58c8fe2db9d7784da5be57831df1d7bed7db22a96640532cf16e6f15b7dcaf33db9ac9ab83683cc58c124900a7a02fc163277d24b0253f13a3839d16833ebb67",
+                    "sha256": "c4403d01af66c9cb141667f417c9dde27788ba4c4d27916bbb51ae7bbd123160",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur",
+                    "revision": 1,
+                    "comment": "Fix missing Colors dockable modules (#13146)"
+                },
+                {
+                    "date": "2025-03-18",
+                    "filename": "gimp-3.0.0-arm64-1.dmg",
+                    "sha512": "bd55770dbdbd8c3d3348fbe8ca6e2808a6edbd5584a9c1204c58078b350a9cef834995cda5741161e7ff5273eea0f78afdb525b985b1c79bfbc50e86ac6ca452",
+                    "sha256": "344d0b9aded2463cf8c49d62b582d5bdfbcee772eae40b908aeb4b01795e3b58",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur",
+                    "revision": 1,
+                    "comment": "Fix missing Colors dockable modules (#13146)"
+                },
+                {
+                    "date": "2025-03-17",
+                    "filename": "gimp-3.0.0-x86_64.dmg",
+                    "sha512": "da609b4d5b36ef32c820481058450bca18d1a83a56898f79783a8722c1395173f4959a19046250e55e580f47444bcb2e423e03535370356ef55903bb16d82f53",
+                    "sha256": "e1f8350b48f777ac3a1bf5c31894bd69dd0f8ef98fc430c40e7e272765722e56",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-03-17",
+                    "filename": "gimp-3.0.0-arm64.dmg",
+                    "sha512": "ceb2bf0b8f266e662e8539d60b37f152e08a9b7bf23cecd38cd8ce16956921a84a58bf5fdb52e4270334341f5dcbcbf13a1758335181e396f2e0ad179c7de367",
+                    "sha256": "01226a0325d94066f6b1a1a73d54425eceaeadd2d0525504b8f559d4068cbf24",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "2.10.38",
+            "date": "2024-05-02",
+            "source": [
+                {
+                    "filename": "gimp-2.10.38.tar.bz2",
+                    "sha512": "343bf1c3bd14bf8e7c7af79c05920faca213da68549127c1d8af53e2e872e55aeaf39a3cfcf578183a34fdc4f98e1c859be63956b0611067186eefd1fdee2aaa",
+                    "sha256": "50a845eec11c8831fe8661707950f5b8446e35f30edfb9acf98f85c1133f856e"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2024-05-22",
+                    "filename": "gimp-2.10.38-x86_64-1.dmg",
+                    "sha512": "c71ad6d5e6419b44766018af84529e7c75f692ad9434b6deaf20b72cb20750027e76fd352c903af686c2d8fe160c15456d3dc6ce35e79c3f67417eed5d21554a",
+                    "sha256": "d2d3ac20c762fe12f0dd0ec8d7c6c2f1f3a43e046ecb4ed815a49afcbaa92b92",
+                    "revision": 1,
+                    "comment": "Fixes a packaging bug because of which GIMP could only run on the latest macOS version.",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 10.13 High Sierra"
+                },
+                {
+                    "date": "2024-05-22",
+                    "filename": "gimp-2.10.38-arm64-1.dmg",
+                    "sha512": "68ae9df015ff384af5e4a4e939eee6c3a89e542d1e71a25e410118b7bc8bb2808ee9fa70cc2e52f503594831965f30104fe798cbe265ae70a28af13f710e224e",
+                    "sha256": "dc1aa78a40695f9f4580ce710960ff411eeef48af45b659b03b51e4cd6cdf4e8",
+                    "revision": 1,
+                    "comment": "Fixes a packaging bug because of which GIMP could only run on the latest macOS version.",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 10.13 High Sierra"
+                },
+                {
+                    "date": "2024-05-05",
+                    "filename": "gimp-2.10.38-x86_64.dmg",
+                    "sha512": "77e0565fdcbce079a2891f1190dd68767928eb5044a78b945cf9f653e0dbb956172a644d6f3822eb3b4f6a3e5c452e923d67c3aa3c298b2c93dd56d86dcc9a2c",
+                    "sha256": "cf0c79201f54b0c8978ba43806199f0d85bb0ac8db3e77f9dc4f6f4393a9d836",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 10.13 High Sierra"
+                },
+                {
+                    "date": "2024-05-05",
+                    "filename": "gimp-2.10.38-arm64.dmg",
+                    "sha512": "3be831adec284b3763754372fcd5b85211ab0807e03e9e06a62625b1703f0fe0a1372f8d20d89f2b6e33e160cc14a1dc5c94d320f7d3a76c58f50fb9a49e1343",
+                    "sha256": "509d544470e61570a645940ebc1229145abdf995829a8ef0f5296c7408e9a2d6",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 10.13 High Sierra"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2024-10-03",
+                    "filename": "gimp-2.10.38-setup-1.exe",
+                    "sha512": "a5b95d96f62b9a361a0d171405f2402da80a9dd221d1d161fd9b5b707ede62a523a95a15e6887da2904f7e105edc40830a9dba6e6f4a801b39d44ed2dfb1e318",
+                    "sha256": "bdcf059c7d4e1b0ab59f8dc5f199ebb60ae0445460bf67ff8e4e438a89cee3d8",
+                    "build-id": "org.gimp.GIMP_official",
+                    "revision": 1,
+                    "comment": "GTK+ patches updated.",
+                    "min-support": "Windows 7"
+                },
+                {
+                    "date": "2024-05-03",
+                    "filename": "gimp-2.10.38-setup.exe",
+                    "sha512": "1bcde8515d79db166dc027979b17f3a1433d69423792c895a08e0cd6d21040640b1d05d6b906f8ea83bcf882b67e3cf162787da8fcc2815540d3a8474a9ca539",
+                    "sha256": "e3515980c9012eed67cf78f1151d216725529e95676c16f5ff7478d46230ddab",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 7"
+                }
+            ]
+        },
+        {
+            "version": "2.10.36",
+            "date": "2023-11-05",
+            "source": [
+                {
+                    "filename": "gimp-2.10.36.tar.bz2",
+                    "sha512": "dbe6152ea6ff99cca59bbf2c88a64fb4ff6b529d98ace7723eadf5dfb0e10d9cbaf2de1e0d5251e9ecf9abca73da9ae1a501f229997802fd4077fb9594f4ba66",
+                    "sha256": "3d3bc3c69a4bdb3aea9ba2d5385ed98ea03953f3857aafd1d6976011ed7cdbb2"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2023-11-13",
+                    "filename": "gimp-2.10.36-x86_64.dmg",
+                    "sha512": "9fec821bcf854035a700e38ec3e3a37844bd1096309600023c771db2d731d8cb7e6c307c02e4094dc3b6d0fc670f4916d2b40122839bfb1037b9f68346cc1525",
+                    "sha256": "9e6e4f9572d1509cbb7f442b01232428adbfa45cb99f92a6d497b2f25ae9327e",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64"
+                },
+                {
+                    "date": "2023-11-13",
+                    "filename": "gimp-2.10.36-arm64.dmg",
+                    "sha512": "39b1085065835563afaa8f6047157e6b6915b325c70a2912b060440eaac84a7f7d80fe7a4b6067cfd6863836fda6bb44c23cbe431b0977c18879fe2272c5ec08",
+                    "sha256": "1d7c3bb07cce6d51fe6d5cd42653e229ed5ac4e13eea063cd4da8e8e9301eb39",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2024-02-29",
+                    "filename": "gimp-2.10.36-setup-1.exe",
+                    "sha512": "eb2e2e5d2c587890e8aad9d4fe91d1f48a979aad793beb7080dfdee5b71e8044c250a4d2a885317aed1a9131391e43f1df2e5295fd3461d02f410cba074d07b3",
+                    "sha256": "5dc0efd3c877c6e8fd8af44944d31997875e38b610f95b30445aea3758dbbe90",
+                    "build-id": "org.gimp.GIMP_official",
+                    "revision": 1,
+                    "comment": "Add missing OpenEXR libraries",
+                    "min-support": "Windows 7"
+                },
+                {
+                    "date": "2023-11-06",
+                    "filename": "gimp-2.10.36-setup.exe",
+                    "sha512": "964e0d6e1b5503fbdc7eea6a53e4d6eda2e65fcb7866f514c6e04abf2e281fa6f062ebc2eff8652ffea516e2724af4d9d4bebaa65f9cb75742b95257e37d6714",
+                    "sha256": "947efa2397f7a17b8e4f4c9689e4ab67f00ca220ac1aa0ae0c1e179ccfc4fc10",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.10.34",
+            "date": "2023-02-21",
+            "source": [
+                {
+                    "filename": "gimp-2.10.34.tar.bz2",
+                    "sha512": "4802ce3758daba868570f1ac97a3f1cb41e1130fcc6376f9bf4c999441f8fd25937aa71b6f726d82d7c780f4153b11d2595bb76bc2356a42266909fbcc0bd34a",
+                    "sha256": "84004642d351b398a4293cd7fd3592044a944f05bb52850ee6068f247c657aa3"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2023-08-13",
+                    "filename": "gimp-2.10.34-setup-2.exe",
+                    "sha512": "e3fc8a473d1e5023c3c8e14be9d6796e2916b24cf185b059892fa32761440e63bf4ab4b08d6808eaffbe1bf6ce97093b79362e0f318e3988f492d514d5303c6b",
+                    "sha256": "20d04d161561ea2967793f47e5403a77471ea1551ca3664cd23af8104c126251",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "revision": 2,
+                    "comment": "Fix security issues in Ghostscript (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9773'>CVE-2023-36664</a>), OpenSSL (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9397'>#9397</a> and <a href='https://www.openssl.org/news/vulnerabilities.html'>more fixed in 3.1.2</a>) and GExiv2 (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/8816'>#8816</a>); babl and GEGL updated; new experimental ARM-64 build in the same all-in-one installer; clean out unused dependencies"
+                },
+                {
+                    "date": "2023-08-07",
+                    "filename": "gimp-2.10.34-setup-1.exe",
+                    "sha512": "7e7b07dffa3c51e8533f4774fa77618570c71a3d8e9454e07d0886e1acded085ea3581f0122d8a0e663459c6e24ba9bc158dbd87579bda4d00b3dffc48aefb3d",
+                    "sha256": "d1c0419ac54b07dd2f2892268d86fd1ac7c08483ece24b1782cd1fad589fd842",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "revision": 1,
+                    "comment": "Fix security issues in Ghostscript (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9773'>CVE-2023-36664</a>) and OpenSSL (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9397'>#9397</a> and <a href='https://www.openssl.org/news/vulnerabilities.html'>more fixed in 3.1.2</a>); babl and GEGL updated; new experimental ARM-64 build in the same all-in-one installer; clean out unused dependencies"
+                },
+                {
+                    "date": "2023-02-27",
+                    "filename": "gimp-2.10.34-setup.exe",
+                    "sha512": "11df645a782436e3c9ae4eb7d44c61e0a82114cd189cd9e6cbf506c1262fcb111fe7e85e156f03fdce363ad0ba1d551b23d9649252224bf205216d4f9fea0f86",
+                    "sha256": "1cf2f422e4ab887415222d736313a38372012c5f3f46a2d2cff18245b22d04cd",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2023-08-18",
+                    "filename": "gimp-2.10.34-3-x86_64.dmg",
+                    "sha512": "842b9641dff22b8fdab8d52376b55fa43f7557f073b01a945807f6de9607e5905b62811b35b4c570aed7b72048f1132f887d560d6e1e7afdf9f3400f15e8bf0b",
+                    "sha256": "03dc1d98eec58e49f0fa2c001e313822ee493efdf5b80f347ca8d0885eb38e15",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 3,
+                    "comment": "Fix security issues in GExiv2 (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/8816'>#8816</a>)"
+                },
+                {
+                    "date": "2023-08-18",
+                    "filename": "gimp-2.10.34-3-arm64.dmg",
+                    "sha512": "5b851802f0aff2ef220d0af76845e3add0874373c483c9732601670f899b9ff9cf5a89e9193134d265916f8bec75084ca79d12027cf92bc45d7c6ae9169b24b4",
+                    "sha256": "037779aab7924ec0faa3c941ecc194ae51bc329321f06203b38c647fde88a205",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 3,
+                    "comment": "Fix security issues in GExiv2 (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/8816'>#8816</a>)"
+                },
+                {
+                    "date": "2023-07-30",
+                    "filename": "gimp-2.10.34-2-x86_64.dmg",
+                    "sha512": "5ebc83f1a3ba6cb6143fa80c226de6c5991687d268d4162f988e18640c5939020f8ef7f4beae820ecc7d6014337105a6bd2e54506ebffb9f5a323218feea75b2",
+                    "sha256": "acaf008ac41a87a9fdc7d810e3a33cb8ef08914a0955a57bfb9701267cfc568e",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 2,
+                    "comment": "Fix security issues in Ghostscript (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9773'>CVE-2023-36664</a>)"
+                },
+                {
+                    "date": "2023-07-30",
+                    "filename": "gimp-2.10.34-2-arm64.dmg",
+                    "sha512": "2b30cfecb64f91fc351a493eef5a71685b9d319e4ee4309b396f7aa1f96ddfbf0f324254d32fea80b4bb93d4f54060da970a2394c7dfcd5e83dc55720ee4586b",
+                    "sha256": "6f858183e81f67871d9beea265cb223b8d8b65921159d8b00b2f19b210528631",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 2,
+                    "comment": "Fix security issues in Ghostscript (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9773'>CVE-2023-36664</a>)"
+                },
+                {
+                    "date": "2023-04-24",
+                    "filename": "gimp-2.10.34-1-x86_64.dmg",
+                    "sha512": "3e27a555c9716e668963043a00632833a1dd3061bd8d29ae7c9662517b6fe7456d0885d14263bdab288672df02391059332835fc09f20166fcb531da6b873dbc",
+                    "sha256": "a64755af34b1ce95d99de5973018b3c131016a111d0c755ac297054276a85407",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 1,
+                    "comment": "Updated Cairo to fix a memory leak (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9278'>issue #9278</a>)"
+                },
+                {
+                    "date": "2023-04-24",
+                    "filename": "gimp-2.10.34-1-arm64.dmg",
+                    "sha512": "4d264ea1994771d8b32e9eb35b5f40f7df4ef0837ac2c58c7e1e4e6dc7e6424de3efa1ff95d73da7071f257c58da9a8b64ca1c11aac63118063dea6cb82d82e6",
+                    "sha256": "208edf433b4423101f48f701324f981c39fb0dfbcaf645d835aeded6ebeac39d",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 1,
+                    "comment": "Updated Cairo to fix a memory leak (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9278'>issue #9278</a>)"
+                },
+                {
+                    "date": "2023-02-27",
+                    "filename": "gimp-2.10.34-x86_64.dmg",
+                    "sha512": "8edea242c3d843326b37e8d67e566a027a96c2b98807f1b553db02025533171b4d328c5b999d41154fabe4c54036f04fa863828f3cab6d827d46eb29e4ff3cb3",
+                    "sha256": "6d228b36eaa70be9dff81b37c3561dce2a62ff8c6fd55f6fc982457768e691da",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64"
+                },
+                {
+                    "date": "2023-02-27",
+                    "filename": "gimp-2.10.34-arm64.dmg",
+                    "sha512": "d839150167128f563a0c4e3ea9b0be7f7cfb97219ef3487a0627ed34ec7d48fbafb95de58a2902a879cd88b0b79a86f2c303356c7f717680763a44dc3238f724",
+                    "sha256": "5561a571fe8dfa176ca526939288322abfa4b5b084eda03013355313350aaf47",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64"
+                }
+            ]
+        },
+        {
+            "version": "2.10.32",
+            "date": "2022-06-12",
+            "source": [
+                {
+                    "filename": "gimp-2.10.32.tar.bz2",
+                    "sha512": "aa999c1ec388154965f84d995a9b5517e9c38608d03a0d0bb6ec9fa55de946f9da106e7d6f7c02052b61d2b6806e7a378e786539f0de5b5ffaa2fcd1bbd9c7f1",
+                    "sha256": "3f15c70554af5dcc1b46e6dc68f3d8f0a6cc9fe56b6d78ac08c0fd859ab89a25"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2022-06-20",
+                    "filename": "gimp-2.10.32-setup-1.exe",
+                    "sha512": "81dbf0d413573da519a5dc5046c408daf5ef3a48c223f8d37e423229c65bc13039db81c51fa2b648cfce0d7b77cc8aac3fd90a1ebfb8617c94ae60d740df3aff",
+                    "sha256": "e4410b5695cfc83bc2a33a124e8689a50c942978d0164e77724407d2a5cefb0d",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Fixes issue #8280: AVIF import",
+                    "revision": 1
+                },
+                {
+                    "date": "2022-06-12",
+                    "filename": "gimp-2.10.32-setup.exe",
+                    "sha512": "328710b285e8822e5e3de68838948881c9ddcf6b8d310a4d5270bc8681f601e566a3c2edf1cf01857a0a8c67fa59d08339d6646cf59e3cbfa9480c121f74982d",
+                    "sha256": "5503c3057a023f781e32e6b8fec83dfc45263b9005e76626b4c43cb257295a67",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2022-11-26",
+                    "filename": "gimp-2.10.32-1-x86_64.dmg",
+                    "sha512": "3fdcf2a01308ac30771d31505a658d41ab9c1a9b50273976c90ff6138f1834ccbfcb088c2c9dc6f80e45d8d1878731ec6f0641942ca721c19e491a6c4f853bf7",
+                    "sha256": "5669ca1f0ce63b0b7c2efd1ac1998116e5ea367b376d453f8341a5d28093f87f",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 1,
+                    "comment": "Updated babl and GEGL (issue #8281); package split in an Intel and Apple Silicon DMG variants"
+                },
+                {
+                    "date": "2022-11-26",
+                    "filename": "gimp-2.10.32-1-arm64.dmg",
+                    "sha512": "d23e6eaecebe1f3ba7aefb083e2bc4ac83ee9c93cdee8e55faf11d1974581588254670e25383fb658820997f7f44ac6454c7419f7d3e714d5788d8dc9a884c2f",
+                    "sha256": "4c3ae0ce49920fa3a8dd247888cd90fba8fd4a216f8759e8daa14754d25a5ed7",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 1,
+                    "comment": "Updated babl and GEGL (issue #8281); first Apple Silicon DMG package for stable GIMP branch"
+                },
+                {
+                    "date": "2022-06-12",
+                    "filename": "gimp-2.10.32-x86_64.dmg",
+                    "sha512": "fc23a83c1c4a3c93424c8616c39b183c366f39fb3e72b5751e7a43660a8f5c4ce1603805d8c537619f1bb305a2c8a2f29d3a759455fe4672ae7e5a1868302d48",
+                    "sha256": "e5547fc01168270bd1ba5380cff610966da229e44f311138f12168cb2f34d3c8",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.10.30",
+            "date": "2021-12-19",
+            "source": [
+                {
+                    "filename": "gimp-2.10.30.tar.bz2",
+                    "sha512": "02ca9e8846dc2ae856f720b92f3c6af69984cf0b3ce85ba5a67479e5c3c813315a0551b7d011dcf7a6c83dc771e550cc31041126bbea0be3fd483176e0eb2851",
+                    "sha256": "88815daa76ed7d4277eeb353358bafa116cd2fcd2c861d95b95135c1d52b67dc"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2021-12-19",
+                    "filename": "gimp-2.10.30-setup.exe",
+                    "sha512": "72b303c720dc791b85063bb141b75a33fb32be6a98f45a1e3c0642823eb35c2d82a2470ec63b0207a3d0ee6aa7592e593326bc92c447c6956a4616cf6da97ef0",
+                    "sha256": "5b8db574966d2427fa02202b591173905f64806559e37fbdca4654e55b568c8e",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2021-12-19",
+                    "filename": "gimp-2.10.30-x86_64.dmg",
+                    "sha512": "8368621a76485a9e30b7ec3b557a74ac0700b36f64525f94d9b0c576070f1901223953376af6a0d3e5600015dca1a9d8b66a8abc84a058b79e4da61092d07861",
+                    "sha256": "6f9e0384882bc176699e4f85950971c264c21328d98226f8c7fe9da7e55b932c",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.10.28",
+            "date": "2021-09-14",
+            "source": [
+                {
+                    "filename": "gimp-2.10.28.tar.bz2",
+                    "sha512": "587f6f46741672f0700fd642a5b779694d2d8bc8ad70e7677ccdbfc2266dc62203ed347d6aaffaa4b8e7d84a84a25f7d5a51507dfd64b21b4c05970856d3ab94",
+                    "sha256": "4f4dc22cff1ab5f026feaa2ab55e05775b3a11e198186b47bdab79cbfa078826"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2021-09-16",
+                    "filename": "gimp-2.10.28-setup.exe",
+                    "sha512": "413669d4b466c4eccfe367258ffb5a729e4b7e72b4ed0cf60a35d98c633f4e10282d3102cbf89bfe57eb5945104c9cf716124908773375813e207282789a4dfa",
+                    "sha256": "2c2e081ce541682be1abdd8bc6df13768ad9482d68000b4a7a60c764d6cec74e",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2021-11-16",
+                    "filename": "gimp-2.10.28-x86_64.dmg",
+                    "sha512": "0c94a8f79daab07603850504f9de6484f69151bfee68e3f4bdc38925c595c3561fd3c4480f566f10a7ccd743f5a92f1fe512dcd885f7de604c7f37d4f15456e0",
+                    "sha256": "8cf0db374dcaba6fb0e1184ff8c6a3c585aa1814189ed4b97ba51780469f0805",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Backported fix for invisible selection (marching ants) on Big Sur (issue #5952)."
+                }
+            ]
+        },
+        {
+            "version": "2.10.24",
+            "date": "2021-03-28",
+            "source": [
+                {
+                    "filename": "gimp-2.10.24.tar.bz2",
+                    "sha512": "828350ad5c53b8409463c24693821d78a1940f18c221249ae7b864ad9db5cf01ab41d6ec5bbefd96115f0e91809ecdc61451d71881b56b07920c442f4a514936",
+                    "sha256": "bd1bb762368c0dd3175cf05006812dd676949c3707e21f4e6857435cb435989e"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2021-04-07",
+                    "filename": "gimp-2.10.24-setup-3.exe",
+                    "sha512": "07808653d098da659b098e30b4f8c2d8a00fc5bf5a8489da7a6835e4c2da2dbc88aa4a7ab1d38108b49ccedbeb02815d8e93598b224e5096f401e35a1b5aed35",
+                    "sha256": "5e9eabe5739523a9fc347b4614d919418f3335e7aab082a65f71705421e85e04",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Backported GLib fix for very slow file dialogs (issue #913) and custom GTK2 fix for non-functional Wacom Airbrush finger wheel (issue #6394).",
+                    "revision": 3
+                },
+                {
+                    "date": "2021-04-01",
+                    "filename": "gimp-2.10.24-setup-2.exe",
+                    "sha512": "98ce37c1b5ccbbdcb5ad37f1c9d7fa82abaae4a09ed6c4a2bd05eb2b42fb729db541ddcb179c18ba84d45c933a6bba4307b9ec4390ab3fd382239ed453f8b209",
+                    "sha256": "f83bd00e51712c65ee2f20f95687946f78e1b9ce1f5ccf1f7223f2ebe9dcd544",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Custom GTK fixes for issues like drag&drop with certain screen grabbers (issue #1082), tiny SVG icons (issue #1563) and pasting images from some other applications (issue #3481).",
+                    "revision": 2
+                },
+                {
+                    "date": "2021-03-30",
+                    "filename": "gimp-2.10.24-setup-1.exe",
+                    "sha512": "47eda547ff158cbdc9c2698d8daa0b70e2ed8f3b8b0e5c9b66b1dfeed0a1b43c2cc897f2bb76f0650f3d578268992bb11d4deae042715cba175e8354dc8e7893",
+                    "sha256": "84a542d717217f5fb996a18093c4424136978ebbf3815db2ee3c5daa8dcafc0b",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Fixes issue #6664: Script-Fu crashes on 64-bit systems.",
+                    "revision": 1
+                },
+                {
+                    "date": "2021-03-30",
+                    "filename": "gimp-2.10.24-setup.exe",
+                    "sha512": "68ddb55029a4f7dc607da8719fdc4fa4593f5eef3dac95af7cb031734a73265fe601c1d80190731c0076172c968948b5c1476f8e17b79512a9827b3669e82d5d",
+                    "sha256": "1706243b916f3458297a7602522620f51601b70cc35ab63bccf8c898d6fe0b71",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Known issue #6664: Script-Fu crashes on 64-bit systems."
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2021-07-27",
+                    "filename": "gimp-2.10.24-x86_64.dmg",
+                    "sha512": "42839566b23ac7d03590eade70305b2982745a779ba8268def8a75ad93d02eac117d49a2759fe01222f4e581fcea44eaa681d3477599d0db594e886d2c496974",
+                    "sha256": "d835afd64b4a617516a432a4ff78454594f5147786b4b900371a9fa68252567a",
+                    "min-support": "macOS 10.9 Mavericks",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.10.22",
+            "date": "2020-10-04",
+            "source": [
+                {
+                    "filename": "gimp-2.10.22.tar.bz2",
+                    "sha512": "13841ac4a186df47e4155095ca888a903b2db9e25a73fbb834fe981ccf915cb67a3e08506e5c13b6c5f35e27b1de24befbccf871e438b1a35f67f069bebd8fd0",
+                    "sha256": "2db84b57f3778d80b3466d7c21a21d22e315c7b062de2883cbaaeda9a0f618bb"
+                }
+            ],
+            "windows": [
+                 {
+                    "date": "2020-10-06",
+                    "filename": "gimp-2.10.22-setup.exe",
+                    "sha512": "7162ee337e89cc6b371412bbc1471c583d46bd36653c8550d7c352451d5442a394cb760769d19d0d1beb109dc9bfee3b56daacba8d20ea6394010a15def656dd",
+                    "sha256": "f7851c348584ce432dfd8e69b74a168c7dec33ebfddc29c96ad2d6b83aded083",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2021-01-31",
+                    "filename": "gimp-2.10.22-x86_64-3.dmg",
+                    "sha512": "70e800dab4be29169ca2fa8beddf32f5516987be47876d740685e416f751cc62dcc05eb09426d05cc84ce14184fff5a6a1f4b8afc3a7815971d74a4498a2fc2c",
+                    "sha256": "844dc06731cbd8ccaa6ffd4e0c74ad49ed1ecb6ae65db71988102acb6c219d56",
+                    "min-support": "macOS 10.9 Mavericks",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment" : "Performance improvements on Big Sur and on previous macOS versions",
+                    "revision": 3
+                },
+                {
+                    "date": "2021-01-16",
+                    "filename": "gimp-2.10.22-x86_64-2.dmg",
+                    "sha512": "a37f00ee2f05c699344ff57b8ece686be80b4ac7101fb36c1fe386c1b55d7fa3b82d747afd180ef39865ab1a827b5ad008afb871a112b7691c0441b39281cee4",
+                    "sha256": "08ab7f6578b2852aaefd62e66a017f0a05794569d0f5449487371a00e5979586",
+                    "min-support": "macOS 10.9 Mavericks",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment" : "Some performance improvements on Big Sur, possible regressions reported on older macOS (use <a href='https://download.gimp.org/gimp/v2.10/macos/gimp-2.10.22-x86_64-1.dmg'>Revision 1</a> instead if it's your case)",
+                    "revision": 2
+                },
+                {
+                    "date": "2020-12-24",
+                    "filename": "gimp-2.10.22-x86_64-1.dmg",
+                    "sha512": "5eb3f3870fb3c8945a280d81ac74fe558d78af66103a13d948332cf023a5e94ebc18e9b4f2bc0f12078e742f0ffc366cd2cb2e8cfd8a6668c32f5a6e51668b04",
+                    "sha256": "c57f0203a89bd347c5b5958a79754debf33a9b458bdba68fa0788e22f4cc8fae",
+                    "min-support": "macOS 10.9 Mavericks",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment" : "GIMP 2.10.22 build for macOS - has known performance issues on Big Sur",
+                    "revision": 1
+                },
+                {
+                    "date": "2020-12-20",
+                    "filename": "gimp-2.10.22-x86_64.dmg",
+                    "sha512": "6826b45e14955d1bf1edf03de2494f6dc9833ab54388e12969a5b34f41d216152a28b4b9c4c56b0485d80f6b918c3eb6c61f1d69e9b6c72f3ca3604bddf00e54",
+                    "sha256": "8e3b2bf8ad9c095324c1c7df2e03aaa3e1edf432efbda67baad5dbb780a95280",
+                    "min-support": "macOS 10.9 Mavericks",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment" : "GIMP 2.10.22 build for macOS - not notarized yet, so you'll see the 'Can't be opened because Apple cannot check it for malicious software' dialog"
+                },
+                {
+                    "filename": "gimp-2.10.22-x86_64-experimental.dmg",
+                    "sha512": "20e9956f112709ac9de734184ae5ebd8112a8b5b1270da2d1e897146c3e9d16ff40cea6e270b61f4304d54a60e699d609b41b75f787b2f8a6e3475dd584561ad",
+                    "sha256": "ae83a5d90e057902b85a8fbeff0765df2fee90a996d6323ca5521c7aeac6a73b",
+                    "min-support": "macOS 10.9 Mavericks",
+                    "comment": "Experimental GIMP 2.10.22 build for macOS - not notarized yet, so you'll see the 'Can't be opened because Apple cannot check it for malicious software' dialog"
+                }
+            ]
+        },
+        {
+            "version": "2.10.20",
+            "date": "2020-06-07",
+            "source": [
+                {
+                    "filename": "gimp-2.10.20.tar.bz2",
+                    "sha512": "7cd0b1833af87a167fdfee59fb491a72727fe3071c21c0de1813adb0f8272a92473e1e300517395b1b4593c8cb6781ee30f7a63966756e5a7f523a164308aba6",
+                    "sha256": "e12f9f874b1a007c4277b60aa81e0b67330be7e6153e5749ead839b902fc7b3c"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2020-06-11",
+                    "filename": "gimp-2.10.20-setup-1.exe",
+                    "sha512": "d2f0374ea60f70cc69879dc9762b0cb7327cc010b80cfc39b92789bebc107cbcc8590e99df613e4402259f30585e9bb746a1d909f933571802cfc06ca2970e07",
+                    "sha256": "430b1a709cd89b5cddb857032a7a5b93199d076ff8cd83ebdd0112330b65ba51",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Slightly faster and smaller due to optimized build parameters",
+                    "revision": 1
+                },
+                {
+                    "date": "2020-06-09",
+                    "filename": "gimp-2.10.20-setup.exe",
+                    "sha512": "8565216aba181b6eeeeb1bb985b91d7bff2767177551537f35a7373dc2c831f716b9fc9ded2562a05c903034468cf42c2451ca7d4c7d9dd518fef3a56321eedc",
+                    "sha256": "de68eafd3bf88bb868e015e3613b7415fcfe94cc20946c0b64ccd37f94e22017",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.10.18",
+            "date": "2020-02-23",
+            "source":[
+                {
+                        "filename": "gimp-2.10.18.tar.bz2",
+                        "sha512": "88990f2d70508b22f4acadeab6b687e20af19b765ebc6f245d0c99b3dd853fcd3d237c3b7607e50133aa95a1d71931069029dfd7ee94441ff419c542c141bc9f",
+                        "sha256": "65bfe111e8eebffd3dde3016ccb507f9948d2663d9497cb438d9bb609e11d716"
+                }
+            ],
+            "windows": [
+                {
+                        "date": "2020-03-24",
+                        "filename": "gimp-2.10.18-setup-2.exe",
+                        "sha512": "c79d5a363b7593ada194b389181ae3abe9b0595d26cee86d218c24784cc9ec3b3c516fff3fa30c1cc105bc253062b1b03b83c9326497c89ba43478c0558b0dfc",
+                        "sha256": "bf6ce59587e63e1e8bab923e7dfdaa0f2c8bd3ac4d0ced602f3c063f9e32465c",
+                        "min-support": "Windows 7",
+                        "comment": "Fixes <a href='https://gitlab.gnome.org/GNOME/gegl/-/issues/231'>GEGL issue #231</a>, which caused corrupted images once the swap file size reached 2 GiB",
+                        "build-id": "org.gimp.GIMP_official",
+                        "revision": 2
+                },
+                {
+                        "date": "2020-03-08",
+                        "filename": "gimp-2.10.18-setup-1.exe",
+                        "sha512": "8886ada94230ff43f0e404543931b24add7c56cf09d1d01382336f1249334af198b036628502b0109d2938c0df17610387fdb50d2138de9463016a86a9e37293",
+                        "sha256": "3afe61d57dab032a087ddd45853bc52e967f706505a1aab953e7527586407b5b",
+                        "min-support": "Windows 7",
+                        "comment": "Fixes issue #4758, a libopenblas-related problem in foreground extraction on 32-bit MS Windows platforms",
+                        "build-id": "org.gimp.GIMP_official",
+                        "revision": 1
+                },
+                {
+                        "date": "2020-02-23",
+                        "filename": "gimp-2.10.18-setup.exe",
+                        "sha512": "cffb5c56b957f980890e5f6fc7cd313a2631c57ad10c4901d7da79d287b4f631594c4d1f4b654d439d2253bdd243c6e46a530038b658101cb5dd0d365f6308e2",
+                        "sha256": "e34d5f5f4fb7a0ff0f01e31e813a5ffe08e8423201e97efdc56117a5950173f2",
+                        "min-support": "Windows 7",
+                        "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.10.16",
+            "date": "2020-02-20",
+            "source":[
+                {
+                        "filename": "gimp-2.10.16.tar.bz2",
+                        "sha512": "07e2c3d6a6e0f54fd221b5eb5e29fd22fca4100f57ed7b8c3d5c561cad02167dae2e4892be8fdbacd6fc5ca2f2d6a892af7403444894bb5ea8190cd98e0e4bc4",
+                        "sha256": "cbf9fe9534b913a9487b00cd9710cbc569bfd71fdd2f8c321547701a7d70cbeb"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.16-setup.exe",
+                        "sha512": "56a0b802162cd6462a497fbac04a08ae455e23c769d7882ead2c99cb9ce6c1bc393377df59f599e06549646bfa1585b5abc09368b84be40c929e31a22f8a9e21",
+                        "sha256": "b68abecdca74b1f118fa88848dba323a4145918c9d2d89cdd886c3d8b203c52c",
+                        "min-support": "Windows 7"
+                }
+            ]
+        },
+        {
+            "version": "2.10.14",
+            "date": "2019-10-28",
+            "source": [
+                {
+                        "filename": "gimp-2.10.14.tar.bz2",
+                        "sha512": "acbd095361d9211a5a23474693dd170ed76bf4ea5b1df69791f1d975ef5cdaba1e5fb9f5be9f592a360db5826d71eaaf464005075397cb6630070fe32833c030",
+                        "sha256": "df9b0f11c2078eea1de3ebc66529a5d3854c5e28636cd25a8dd077bd9d6ddc54"
+                }
+            ],
+            "macos": [
+                {
+                        "filename": "gimp-2.10.14-x86_64-1.dmg",
+                        "sha512": "62c3e528be26d038016b1aaa89304ab34e0106adb926d430159c1181fb23611d9761bce40fbebfed67724932028dd845d9c401d7ebab423b19e49d4471d2fa66",
+                        "sha256": "52654d85f894834f6c134c724beff3eddf212a1bda317299314322cfeff97e52",
+                        "min-support": "macOS 10.9 Mavericks"
+                 },
+                {
+                        "filename": "gimp-2.10.14-x86_64.dmg",
+                        "sha512": "9ea67ddc126431d7bec2bf094725c3818c8091fed531f71ff8c322d378c32df0c940f759b23df69139c45aa5b38455b34e2c09d4f6252c8d1a698016a350a952",
+                        "sha256": "60631e39a1042c38cc281bc3213a76be109fb909b9671fb03c55cf5cf31ea632",
+                        "min-support": "macOS 10.9 Mavericks"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.14-setup-3.exe",
+                        "sha512": "dbdbf1b917d591dce82ec41e3ca004a7aba8d837ff8ee9aacf45c09158e45ee9e6cf636ea4bab256e9d164a6982962d897bea7685eb1aea14860b911b1e7cef4",
+                        "sha256": "e892450123f00aaa672f31f532ebdccfbba8b444862281cade047f7fcb5aa503",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.14-setup-2.exe",
+                        "sha512": "9f69a0be2acd87b305427dafde1e7f6799097b22cecbfc2a0598187855c2069ffd3373c6261b7e126967559ad4c4560fc18a277e8a50125ddec9f0552c4569f0",
+                        "sha256": "e8ce941a68360829bae15b7a406d21154a149618f73a7e4077ee12e0c42d5ae5",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.14-setup-1.exe",
+                        "sha512": "a69802ce942c015f45b3024fe78d19a112e294e3a8dbb51f235f14f9066c170a4f494e94219b278089c6ad195d03457e22fc365a616233c4f4c437b62f7a64eb",
+                        "sha256": "ddc8f6ae9a7fb2625b72149caa31113fc275f9b49105b3e96f89fb4164f1efe6",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.14-setup.exe",
+                        "sha512": "df569306d4f4bc91a0e5c1ef952f929ac725acab8ceb4be1a229af0b14df6a2907e4b5c4a4eded4161ef03bf1881654b425bc10005a0aacb12f4f99d99e85340",
+                        "sha256": "6de7f8722a0601e821c6cbfe3fc8b5055fb32d59d2b64fbdbd19f7dcf5a4b8e9",
+                        "min-support": "Windows 7"
+                }
+           ]
+        },
+        {
+            "version": "2.10.12",
+            "date": "2019-06-12",
+            "source": [
+                {
+                        "filename": "gimp-2.10.12.tar.bz2",
+                        "sha512": "dd4af3f0fa6fca815d254b7f42aeff15412c38294f1f5bd491563e2b597fcb868e6adff9001b196a68e01cf49bde61cbb153b662b8da1aa1b4b1f7285879659f",
+                        "sha256": "7d80b58e0784120d57d327294f6a1fda281ff51a61935c2cd764da281acaac71"
+                }
+            ],
+            "macos": [
+                {
+                        "filename": "gimp-2.10.12-x86_64.dmg",
+                        "sha512": "9feb2450ad73fee8e49b42c4ca1e438f2fc4b3cb1f434e38a88ae7e1f369735236a4fb39a1ccd8d3e5d8c5443b905e6c645d7bc7087c5e6d1ce158a16a8ff61e",
+                        "sha256": "8b964ad3dbbe31d0fa48fb834aa4c17fc0eb81becbc4595a57b04e3d4fc6efeb",
+                        "min-support": "macOS 10.9 Mavericks"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.12-setup-3.exe",
+                        "sha512": "c9bc794dc741c8e5ca7ada8fdb4bf85af02a3248cf5ac9073325755c82e102b7a6217ffea853f4f8bdd0c9723de312444f88c7f3a5727182995c3c2f4c576120",
+                        "sha256": "90038ea1895b2fe2a63fe6f69fc2115161b9af6a509e96ee08371138260de45e",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.12-setup-2.exe",
+                        "sha512": "de25b1324447cfbd071addef90c6e0657120b1c546b97a769bebebd0a8876791849cbb514a32a4f42716dc72aa4c71161f86b3636a7c338fc61efff66475e072",
+                        "sha256": "6cd67baf381c7950ec0a46f6ea9b9a6c9191e29fff09a575ce7c7af6d223b613",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.12-setup-1.exe",
+                        "sha512": "b6adeeaf26202cb35c031ca74908ebd32d6bfd282fb05949254a8cb4be4233cfabd8cd923854b8ba29688bda83272fff1df6b918886dd240d69fa2a8777881e0",
+                        "sha256": "1e624ac9f082ed7fa7dadf67c249a6aa7c208e156a7d92cff63437e63a644bfb",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.12-setup.exe",
+                        "sha512": "0832319258593f328b0a1b6a962653cd40f8400b44ffd2442da1c985609ec86a7220a0f2c5f2aecec7e39cfe61f5e10567c5ada93de4b1772dfa29839e731acd",
+                        "sha256": "40bf733beb554e0a5f5ab5b82e75c035eefd715b00cc0eaf1cd57ba8a7e2ab6f",
+                        "min-support": "Windows 7"
+                }
+            ]
+        },
+        {
+            "version": "2.10.10",
+            "date": "2019-04-07",
+            "source": [
+                {
+                        "filename": "gimp-2.10.10.tar.bz2",
+                        "sha512": "87caab9643a018e741e5e51c61220b7b282a66ed5bb723750cdf4139950f98c9ab246f4d6450420531d0e878c4561150efc4063cda896f08b25669bac4d1d172",
+                        "sha256": "12d1f243265c7aee1f2c6e97883a5c90ddc0b19b4346cf822e24adbb6c998c77"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.10-setup.exe",
+                        "sha512": "6737aaef48c0e49c1d84274bd7d40198a2e0f8a2e3b1bfe5a32ea5bac212a2e9d8b8451e55999d6fae15dc13d45e9435743cc04d8d0151c30f75574dc9a9023c",
+                        "sha256": "c20024cce6a04005c1a515cf189339e30dc4b0115eaec37ba4b639b2f0d06fca",
+                        "min-support": "Windows 7"
+                }
+            ],
+            "macos": [
+                {
+                        "filename": "gimp-2.10.10-x86_64.dmg",
+                        "sha512": "135707131738e4cec15969e01ac177c01720f2f726d93a679492f707d9cd1e6bbcb19a6c65d8479959b92d2f7871624132c7d5b2670259988f3c5628a168ccea",
+                        "sha256": "343beabe02de11b1988c13d1157a732fbb6edf32f7f10b3654c780a75b729bed",
+                        "min-support": "macOS 10.9 Mavericks"
+                }
+            ]
+        },
+
+        {
+            "version": "2.10.8",
+            "date": "2018-11-08",
+            "source": [
+                {
+                        "filename": "gimp-2.10.8.tar.bz2",
+                        "sha512": "b458dd710b786152f95a8e48a0727b71cac549fccb31ac9e1e6ac3c617652079773ce7076401f8ade750ed38bdc78dfdec3317423f4c4e9c931f78002bd7454e",
+                        "sha256": "d849c1cf35244938ae82e521b92b720ab48b8e9ed092d5de92c2464ef5244b9b"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.8-setup-2.exe",
+                        "sha512": "f7f7943cd93416b06e233665fcc65417fe149f3422b0b995f0f268c74452adfedd33913acdcbbf8f0380b2bcb44e0108e687ea73ef5342f7b49c6d57e975c1b2",
+                        "sha256": "1924d0d50804bad898e9bed7cdfa9f4e093a3cff7efd75b60ec517b27b673958",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.8-setup-1.exe",
+                        "sha512": "345c682bdbf20eb5dee5bd41c481c0f825265a10edc56665ffa34cea8d39fdc2fecd2673482bd4eb7187253a3d2686ef9063aa18af7426513d2164e3a6f3eb66",
+                        "sha256": "ab4f2bcae9ddaaea16e387ce4dd01d98fe01b6f7cfdf4ea0841e9c04d304ec19",
+                        "min-support": "Windows 7"
+                }
+            ],
+            "macos": [
+                {
+                        "filename": "gimp-2.10.8-x86_64-2.dmg",
+                        "sha512": "cb00bdc39bd936e0fcbbaf1895ff9aadb09064b8a3ad6734e56d62882b9f4e28116613f17af304ead1fcf18acdd570d2ef927a57b428d8b8821698ebe6881efd",
+                        "sha256": "8ee527bfd5b4ac6a9b62dff3b0f0da6e4721b3dac208f29446cdeea6967d4f13",
+                        "min-support": "macOS 10.9 Mavericks"
+                },
+                {
+                        "filename": "gimp-2.10.8-x86_64-1.dmg",
+                        "sha512": "30febd39a2513f79b382f95809d2bbfc97e320e85717627b430a821b91f9f139c89b304d94481e798f1e17017ee8a80efd8d2f7ceb31f00dbd3b538f5cea002f",
+                        "sha256": "b80a9b6d76ac5037386d8c51a1b4f58958bec99f6e2c117de1925a4105c5a1f4",
+                        "min-support": "macOS 10.9 Mavericks"
+                },
+                {
+                        "filename": "gimp-2.10.8-x86_64.dmg",
+                        "sha512": "3cfee570c3d8cb59aa7ecbaf802f01b56642ad33adc26e99d5924f253ead8b1e6b45a1d68a7f0ee0a2dfb5366609cc096aa8402a52a23015aa7c7dee93ba21e6",
+                        "sha256": "c2a7171d0fcbc451987e4ce2026b7486e5c2e3d2641dfcdad6928d6df4c1c666",
+                        "min-support": "macOS 10.9 Mavericks"
+                }
+            ]
+        },
+
+        {
+            "version": "2.10.6",
+            "date": "2018-08-19",
+            "source": [
+                {
+                        "filename": "gimp-2.10.6.tar.bz2",
+                        "sha512": "1330ec756ec5f57243435e66aeb5f6214a9783e26763be6679714010a631e47dbb8b5f610195587af29261d2183332a4a4c6202acafc3f2837ae7a6b7f9a30c2",
+                        "sha256": "4ec8071f828e918384cf7bc7d1219210467c84655123f802bc55a8bf2415101f"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.6-setup.exe",
+                        "sha512": "5353a52f5ab319e04a8725fd5b57d5be5da1ab769b2f66489ea91e73faa7f4a016de60900c5fd422531b8abcddb93d6b5ddc00c9bb9cd310e27eccf432cf6dcc",
+                        "sha256": "6037b8c5b1d806f97d4ca1a4facebf8b6001c927d61296d651c131e1358ea283",
+                        "min-support": "Windows 7"
+                }
+            ],
+            "macos": [
+                {
+                        "filename": "gimp-2.10.6-x86_64.dmg",
+                        "sha512": "354b02c0761f38d356ca5afce6891e6f62824bca95877f4dc7636ec2ad01940b71a8d30a15c4f5f5e2a2e66a0cc22e79a1e50afc7a1cc28d21e8d34ab1fa6ce9",
+                        "sha256": "52fe241b69d5353c546ffac008d89328fa3126d8f2557642c4661ba68e4ad6c8",
+                        "min-support": "macOS 10.9 Mavericks"
+                }
+            ]
+        },
+
+        {
+            "version": "2.10.4",
+            "date": "2018-07-04",
+            "source": [
+                {
+                        "filename": "gimp-2.10.4.tar.bz2",
+                        "sha512": "9d0cc8d97b82423687b579907edaab6044f19a8207426edf4f7428de23fa82481112bb0a53b06bb7037b68d92336517b1eddef4600519707e7feedb64e5414f7",
+                        "sha256": "ffb0768de14a2631b3d7ed71f283731441a1b48461766c23f0574dce0706f192"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.4-setup-2.exe",
+                        "sha512": "f3f6b2cbeac6712f603840da5ec97f547c83aee8b87409a28b5f4544a70683a98d92525b2063b36e6b059ce8d176de35018b525e4c19cf23ff80688bcd000db6",
+                        "sha256": "6dd552c76d9135707605449ffcee2f72c976a762962bdfe960204df643a554a2",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.4-setup-1.exe",
+                        "sha512": "85d359a15f9fe1713172b68c89c477dc8823366d774a27028ec50f36e9d9c0f10abd00a6534062b679434d89d30a232bcf647673bf4762f42615e1fdf0ac10a1",
+                        "sha256": "608c12c66bccadbd46dd519b38337ebcda0cc6fc845bc3c8a943de43dccabfa9",
+                        "min-support": "Windows 7"
+                },
+                {
+                        "filename": "gimp-2.10.4-setup.exe",
+                        "sha512": "9fa3c7d75b542bfb397cf77f94217c4048e544b26e6ea49688fc337759b9c955ff996190b999a905011b13d4f8ed3d9cc4cb4a2eb2af2c2fb13cd04f0c265e3e",
+                        "sha256": "23602c4a5c99eb4e9135e8df0a3f9cda6f4006c9a2223a55d1f241c1d3339520",
+                        "min-support": "Windows 7"
+                }
+            ],
+            "macos": [
+                {
+                        "filename": "gimp-2.10.4-x86_64.dmg",
+                        "sha512": "40a41c9c006020229e733d9de9fad48d2d1a5c082ab59805f4f5f87f2bc1a128f695792579a095957c1a1f944ca7ef7b029ff5d4f6da84f37afa550f3a9a92e3",
+                        "sha256": "f7b73608b9f476f168962d34f8de09b6f3bb80c98f03159cdd98145f54f9696b",
+                        "min-support": "OS X Yosemite"
+                }
+            ]
+        },
+
+        {
+            "version": "2.10.2",
+            "date": "2018-05-20",
+            "source": [
+                {
+                        "filename": "gimp-2.10.2.tar.bz2",
+                        "sha512": "6e351294e018a9f879993700355bdf5f10bccc6862604ae1950c4d235d32cdfcd6a0195b37377819adeef53ab3d24f32ed1de60cba6bafe58608ed0906a6fbcf",
+                        "sha256": "1cb0baaecdefe44d371a15f2739a1bcbce4682336b4ccf8eb7b587ce52c333eb"
+                }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.2-setup.exe",
+                        "sha512": "695017d87298f4b4aca8e25d823cc0bcd7e3f071899c8daea123c9d3549fc85c1bb89261a405f21849c31fda69e1c801642fff34e679aad7a1dd348b7378b381",
+                        "sha256": "2c18134e0cd0805af3fc0cd2f042031aed8caace1d0dbddb6aff34b40f3ed8a8",
+                        "min-support": "Windows 7"
+                }
+            ]
+        },
+
+        {
+            "version": "2.10.0",
+
+            "date": "2018-04-27",
+            "source": [
+                {
+                        "filename": "gimp-2.10.0.tar.bz2",
+                        "sha512": "a87cf5b3604addcf9d5e50f3d9d1acbbce8ed9e2a025e19bda37ce941acb471fa5e0fe8f71a74671581fce47aaa36a11b94dd96621465168630b97209d0d02fa",
+                        "sha256": "7fcc96fb88cb0a0595d2610f63a15dec245bb37bf9db527d37a24fb75e547de2",
+                        "md5": "5e91357ede5a5d5cb0db981ff8f9726c"
+                    }
+                ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.0-setup-2.exe",
+                        "sha512": "a23f3e981ded25968ae6871660d99ae3b7d9cfa40de3a74efacfa48e4f392189180bfa8be1d55d50d8fa55f8c36a6e3613b3d07434508ddb5acba0a907e5a0a5",
+                        "sha256": "ce28b8951318f4f3a54c7009dc783c13be8db90e074c0bb024635daa91b0bbe7",
+                        "md5": "7a8dd908073745ffb2816c3f0010466c",
+                        "min-support": "Windows 7"
+                    },
+                {
+                        "filename": "gimp-2.10.0-setup-1.exe",
+                        "sha512": "cbe158f3f6b8341d8a74497d33fe65befab979b07aa5ab27e45f929bbe9e5d47da5d67c565a424d3d384c215d9348f1b5af09095f06e9c46d5afac126687f28f",
+                        "sha256": "76819fad10db52844bcf3d1f6a5cfbf1671b3eff783e63149af7218c8d191bf5",
+                        "md5": "47a9b0595a07bb1e744afab61c5cf8d2"
+                    },
+                {
+                        "filename": "gimp-2.10.0-setup.exe",
+                        "sha512": "5c50bc4db14f315d608af2d634a2cacb6b5f440d71939c81d987fe2982c3e2824a6580b97092615ac818c9259dab010f3815b9e401a80e647a262a41af4bb129",
+                        "sha256": "f4e8fc7813a0b5a797f614d25400eb829c3238546d7fc5940b60553dc46937ca",
+                        "md5": "25290028ce4878991b6a06804979303f"
+                    },
+                {
+                        "filename": "gimp-2.10.0-x64-setup.exe",
+                        "sha512": "78605e1ac1fe99186d2770aaedc7238e03016d2dbe9376b4c5a22c1623ce46f4078d986e7ba68bbceab298b8e393f5820c8a7ba2e071e988907fbb0bbbf637db",
+                        "sha256": "1babc967a37ad4692d0c2cfb76309c381bab0f4208077e9e2f38c8deec5e0a44",
+                        "md5": "ca990683d398cb85a0f6d970f183bf68"
+                    }
+                ]
+        },
+
+        {
+            "version": "2.8.22",
+            "date": "2017-05-11",
+            "source": [
+                {
+                    "filename": "gimp-2.8.22.tar.bz2",
+                    "md5": "7e4fd7a53b1d3c32dff642ab1a94b44d"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.22-x86_64.dmg",
+                    "md5": "2d314ae82f686ea15a681c32b5891e20"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.22-setup.exe",
+                    "md5": "8e54225029a44ab6ef1fde09686fec7b"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.20",
+            "source": [
+                {
+                    "filename": "gimp-2.8.20.tar.bz2",
+                    "md5": "d405640c426b234d6efc36fb4f5bae57"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.20-x86_64.dmg",
+                    "md5": "ba69e3b399c6903180265d60ed2c49b2"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.20-setup.exe",
+                    "md5": "df90eaa5ababdbc4f2e7e0432ba36fe7"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.18",
+            "source": [
+                {
+                    "filename": "gimp-2.8.18.tar.bz2",
+                    "md5": "5adaa11a68bc8a42bb2c778fee4d389c"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.18-setup.exe",
+                    "md5": "510bb11abc72443f431226523fa21b6f"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.18-x86_64-1.dmg",
+                    "md5": "b86d3b884011b931408c6233d71ee41a"
+                },
+                {
+                    "filename": "gimp-2.8.18-x86_64.dmg",
+                    "md5": "81c62ee2a2708568a26db1d3c200c4ab"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.16",
+            "source": [
+                {
+                    "filename": "gimp-2.8.16.tar.bz2",
+                    "md5": "30e0a1b7c18b0e3415f4ac54567252ac"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.16-setup-6.exe",
+                    "md5": "22603259dca51701db129fcfa5c41337"
+                },
+                {
+                    "filename": "gimp-2.8.16-setup-4.exe",
+                    "md5": "3dbad964d5fe1d2a065bc9cbea0ee1a0"
+                },
+                {
+                    "filename": "gimp-2.8.16-setup-3.exe",
+                    "md5": "792d139e651963771091c1b93988cef8"
+                },
+                {
+                    "filename": "gimp-2.8.16-setup-2.exe",
+                    "md5": "f64f32ba01284f8ad7c15c1b8ac12554"
+                },
+                {
+                    "filename": "gimp-2.8.16-setup-1.exe",
+                    "md5": "961bba1aa7aa5346607fb76537b50647"
+                },
+                {
+                    "filename": "gimp-2.8.16-setup.exe",
+                    "md5": "a2095f250fd3a776757ccddc477312d0"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.16-x86_64-1.dmg",
+                    "md5": "2c454d4a15af2aa2e114936287f8e4edaece31cd"
+                },
+                {
+                    "filename": "gimp-2.8.16-x86_64.dmg",
+                    "md5": "037cd8fe13b7892da623853c972efeed2d40667d"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.14",
+            "source": [
+                {
+                    "filename": "gimp-2.8.14.tar.bz2",
+                    "md5": "233c948203383fa078434cc3f8f925cb"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.14-setup-1.exe",
+                    "md5": "9a6f7af81b4ea15b89089a723fc25ec3"
+                },
+                {
+                    "filename": "gimp-2.8.14-setup.exe",
+                    "md5": "7854adf749a86b60535bd2e0e03be804"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.14.dmg",
+                    "md5": "94bcc3f3831d849e6d22ec11d9f58c2ab3891afb"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.12",
+            "source": [
+                {
+                    "filename": "gimp-2.8.12.tar.bz2",
+                    "md5": "47fefa240c38cfb1016b57ad6324378d"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.10",
+            "source": [
+                {
+                    "filename": "gimp-2.8.10.tar.bz2",
+                    "md5": "84c964aab7044489af69f7319bb59b47"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.10-setup.exe",
+                    "md5": "c14fc68cd6b89313da3266210bc73b1f"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.10-dmg-1.dmg",
+                    "md5": "d4610fb4d9164179112a7b1d0cb43387887301c8"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.8",
+            "source": [
+                {
+                    "filename": "gimp-2.8.8.tar.bz2",
+                    "md5": "ef2547c3514a1096931637bd6250635a"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.8-setup.exe",
+                    "md5": "b13d0477220a217adc871934d3d67b78"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.6",
+            "source": [
+                {
+                    "filename": "gimp-2.8.6.tar.bz2",
+                    "md5": "12b3fdf33d1f07ae79b412a9e38b9693"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.4",
+            "source": [
+                {
+                    "filename": "gimp-2.8.4.tar.bz2",
+                    "md5": "392592e8755d046317878d226145900f"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.4-setup.exe",
+                    "md5": "c7a117e7370406448bd32fc99ba5c593"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.4-nopython-dmg-1.dmg",
+                    "md5": "f478ffd8c865bb67b50b6c75f2a68278544d6f79"
+                }
+             ]
+        },
+
+        {
+            "version": "2.8.2",
+            "source": [
+                {
+                    "filename": "gimp-2.8.2.tar.bz2",
+                    "md5": "b542138820ca3a41cbd63fc331907955"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.2-setup-1.exe",
+                    "md5": "64cb169bb7cfac115805b686cb1b2141"
+                }
+            ],
+            "macos": [
+                {
+                    "filename": "gimp-2.8.2-dmg-2.dmg",
+                    "md5": "f9acaf794c7055e9ab3d5699963c684bbaf55f59"
+                },
+                {
+                    "filename": "gimp-2.8.2-dmg-1.dmg",
+                    "md5": "503c6fe45e79f069c2013c00c24846a27664b70c"
+                }
+            ]
+        },
+
+        {
+            "version": "2.8.0",
+            "source": [
+                {
+                    "filename": "gimp-2.8.0.tar.bz2",
+                    "md5": "28997d14055f15db063eb92e1c8a7ebb"
+                }
+            ],
+            "windows": [
+                {
+                    "filename": "gimp-2.8.0-setup.exe",
+                    "md5": "631dbbcf6ffcd5249d30a6cde934d35f"
+                }
+            ]
+        }
+    ],
+    "DEVELOPMENT":  [
+        {
+            "version": "3.2.0-RC2",
+            "date": "2025-12-14",
+            "source": [
+                {
+                    "filename": "gimp-3.2.0-RC2.tar.xz",
+                    "sha512": "b6b201b4f76966f96ab201761a61b4040907d31850c8786d3824d9aac14f04ae53697b74e5c9fee69640c4843fc1b7810a8990b19ba3d7a8131d8783aa5b6d0b",
+                    "sha256": "4954b60ee337e39ed7ebf8af7512141b36c12a3835951405a2cdcd6126110b48"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-12-14",
+                    "filename": "GIMP-3.2.0-RC2-x86_64.AppImage",
+                    "sha512": "d8785ee94e89657b8008019936c52ba837fb1d64031fef6f5eae2fe660dec3c685a3f20f87a1717a0654f3102469e58f5f0833be2a0a60afc7db7a1e3bd62f10",
+                    "sha256": "206a0b4fea4af63e9767d825428e9d4e2e7dfbc0a150caa7b695dbc9e9609c95",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 13"
+                },
+                {
+                    "date": "2025-12-14",
+                    "filename": "GIMP-3.2.0-RC2-aarch64.AppImage",
+                    "sha512": "e3957bd0ac0e5d6b2d2c69f34fea462d127fe944387a3645b878dd88bfc62ffb06d5b111cfe5b9ce3da952fd68626d3049573cc7c1f0555bb7d984a9fb48a8ef",
+                    "sha256": "02da0bb267da4036bd129f7d5d8c1927c3ccc0deae4e7c7410cda4cd53b4e78e",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 13"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-12-15",
+                    "filename": "gimp-3.2.0-RC2-x86_64.dmg",
+                    "sha512": "acf25322e65713af6c8c912b6c843a59ebc2ad290f9e808b27fe0a7b1d83016eca04305bca5e1902cff25d1a5988bba0b1fa69c58d102801e10df4ccfbf0f4f6",
+                    "sha256": "e51c791efce6982e2ac4b6d709f031b12d9df147515d788a15038b02f5cd59bb",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-12-15",
+                    "filename": "gimp-3.2.0-RC2-arm64.dmg",
+                    "sha512": "f2793ea193f4e280d26a706653a61e4d98fd9de7319a3af8bf848b3b4b5ca890b5b2678c069d8f4c7692d5f20ee3990f6482ad7bb2a30e00ef78266c52665f14",
+                    "sha256": "dd44429067db3a7926a18bfc6b09f53d6896cac2c5792706721562b76649173f",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-12-15",
+                    "filename": "gimp-3.2.0-RC2-setup.exe",
+                    "sha512": "93c4350b162f88852f992b4f0f7824b14573c5640d7a9bf48e59a5450b32d35e5835eeca0eeaaff735d3d7fbfcf14a500f39e2082abc5f991a4f611b917b0ec6",
+                    "sha256": "b7fa77276dcbd18c1373e3ca317ba63b9a491c12fd8465eb742ca028c08a08f8",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ]
+        },
+        {
+            "version": "3.2.0-RC1",
+            "date": "2025-11-17",
+            "source": [
+                {
+                    "filename": "gimp-3.2.0-RC1.tar.xz",
+                    "sha512": "4184896aa808b1348dfc61eb9d03f4f90ac4febb3d4369e7966b893984079a0f6dd16f8ffc2b6dc362c2b72983aba657206c69dd584bf93bfb0aae4d2aa9cfc7",
+                    "sha256": "24256eca2c658238e2979dac42c6b12a9a1f9b7b439a8e736e457a57e7adf7d9"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-11-17",
+                    "filename": "gimp-3.2.0-RC1-setup.exe",
+                    "sha512": "cf2effe69102eb33a908c91e1b9b55cf13246ce546470f09837facaa4315a809e7b728a5e5bb58959759b0c40dcc6ddbd22115cc5a66e085cc3452acba0f7b05",
+                    "sha256": "26edf72d3b5705b5b7f3cf4bfeaf7271f484b1b84fcb8837f56def1008dbc259",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-11-18",
+                    "filename": "GIMP-3.2.0-RC1-x86_64.AppImage",
+                    "sha512": "c58ff984b6f2020bcf2bbef2422361776ad979937b958570716c796e6581692572bfea6066a5a80b6204d811833f9b73127b7f3de05efc81c2216f61f1dedffa",
+                    "sha256": "6bb0a8fea07aff00e05027801d55f71dd9214feb5be9085ea901760b4e80b9fd",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 13"
+                },
+                {
+                    "date": "2025-11-18",
+                    "filename": "GIMP-3.2.0-RC1-aarch64.AppImage",
+                    "sha512": "08e7861d43f4cd6e3ce923ac49c5f47cb2fc7028146cc1b01a90e862203cafc61edeaa4b11f5aafc7a7c9969c89f226501c05542ffba6afea558bbde9fb99b6d",
+                    "sha256": "d513f714f05b3bd38194d9146a903942d866ce76847d9c391662a6f0ead2f1e1",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 13"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-11-19",
+                    "filename": "gimp-3.2.0-RC1-x86_64.dmg",
+                    "sha512": "1ef37a7aeeae5faa20a4d4ba93828877d50e3fdc9e91040cc058f2bc5442a7ca2d44ec2a99586d82baab411f3ba21364b601f5d518f6719a5c0cfb1a9cccbc17",
+                    "sha256": "93dd67864e83372072dade12cffc3a0a0395c639d2fb9f4902f2b8dda59b656a",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-11-19",
+                    "filename": "gimp-3.2.0-RC1-arm64.dmg",
+                    "sha512": "f6d05f644c474f658a903e57d1c2ee2e00c61dffdfc3fd3f5cfdb1ff4855f86b0462fd59c1f3c6cb92a882778c64b91c7cb952572da9dc45c03e76ad1f3cb72a",
+                    "sha256": "7a9b232d62127e8250ca01ace66c54e95d9e34328a55a7c5ed9a18b2d54de474",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.1.4",
+            "date": "2025-08-31",
+            "source": [
+                {
+                    "filename": "gimp-3.1.4.tar.xz",
+                    "sha512": "cfd9c80f2ccd6e3980b98cd764f15c4c84c10d341dcad0153df0f8559606f5eea5b931faf914f7ea9a4544095e123a8a8f986231362f11a50b5ec5f9752cadf7",
+                    "sha256": "060df415a85bb18bfeca65dceb7377b191b47832f2b608a6fc433e08da2cbcb7"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-08-31",
+                    "filename": "GIMP-3.1.4-x86_64.AppImage",
+                    "sha512": "30d14220dfda6d3b5f22557c11e65c8cf078c2ff9494ceb2d03582c52dcfe5d7c5362b45ee3c0fcddd308284ec46b89e2ff612a1e38628bb701349ce7a4ee2b7",
+                    "sha256": "04fec547e2fa9cb097099efaeb763ab4d62541784470808600dc7e58cf451d52",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 12"
+                },
+                {
+                    "date": "2025-08-31",
+                    "filename": "GIMP-3.1.4-aarch64.AppImage",
+                    "sha512": "561eeabf07116df9b2c5139e8cba3602afcb330407bc2f8ab7098d3e9f1d1e8cb9899268f57d3d508d9ea1a919674c4277948d25d23b19d070bcb056d93e07f3",
+                    "sha256": "de637e475e07facd495c2fdc3d4e11cada0ec79d7358837b8fe0d89e0211532e",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 12"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-08-31",
+                    "filename": "gimp-3.1.4-setup.exe",
+                    "sha512": "0a88bb20f842478c84fd89e357a7acb6fa52fbeeb620093006647a7143c4eee60b10fd2ac757cad5b5428ce263b8a9156b9d72a613e3245f2271004541595bc4",
+                    "sha256": "89359bec1348bc19729c25b52f08111dd97b32a8c9e8b51aa117a84a76ac4476",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-09-06",
+                    "filename": "gimp-3.1.4-x86_64.dmg",
+                    "sha512": "c3d23592b421c42731a442f0766b65d6e372eba927086229489ef00dcc4a4d64e6f623786f0ffe5e4c7e3a5f718b0d3fbb5ad05e215c04ea9fafda45e97c4d30",
+                    "sha256": "9729519640cb60491e03e908c890f147d90da4219c18b40b9afca939e37d49d7",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-09-01",
+                    "filename": "gimp-3.1.4-arm64.dmg",
+                    "sha512": "29aef87e73a50f3dfe12d43d2365bd902ae249245dd2d70bdb5afb34f52fa2692310145ca09ae53567d7d22c9ef5ef73f67616d6bfe1424aa213c71037b9a324",
+                    "sha256": "9b35a6eccc46845e3298b46afd25787833c816be75a3688c2e4ae826f4866748",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.1.2",
+            "date": "2025-06-22",
+            "source": [
+                {
+                    "filename": "gimp-3.1.2.tar.xz",
+                    "sha512": "1e0ccd7a5726fec78297e9e1d7c9e6d95838e078228e93cad55590badbafead1f63829f9ba9cfdba4885d6afe54e1626a488d0ad2feae19a72950d2c352fef3b",
+                    "sha256": "330b1634bec07dc34bec4e7e4109765b7b864a39a3702f6899de4738f2e38c2a"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-06-23",
+                    "filename": "GIMP-3.1.2-x86_64.AppImage",
+                    "sha512": "17d03fa16a96e3b92f09a779825a0b1b847c2e9292e53c620424c489dfc5610644a00fe8c8fd2cbe6890dfed5b834a5d1c645612aea03114fcb71d5dfa9696aa",
+                    "sha256": "2bf2aa683b06a458721bf4bb1e7b8aeb2b8bf580d462617c32470c5fbbfd83d0",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 12"
+                },
+                {
+                    "date": "2025-06-23",
+                    "filename": "GIMP-3.1.2-aarch64.AppImage",
+                    "sha512": "082c204bdb9dfea30a393e780ce8ff55577853f8ef7dba63e2cf625a48d835fbdaba2033c43fe96ba18efe7d1accd56b563166b8dd4626c4bf0ddc632d1cb2e9",
+                    "sha256": "8f6a4c2b8706c1df8a3b05e6f69e46dc12335caba78fa251519aabf87acc52d4",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 12"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-06-23",
+                    "filename": "gimp-3.1.2-setup.exe",
+                    "sha512": "b09bf05946d70db2572c4652ee4504bb77ae4b03f318d1fe6952215f192f40dcc4fb36dbf270fee6fe7a2e271147d0127a37dd4549df8b3c033e8dc71a723321",
+                    "sha256": "7540c9b0bac1fde9c458d692718475284dbfb93a2ef243a23738095df48f95e1",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-06-23",
+                    "filename": "gimp-3.1.2-x86_64.dmg",
+                    "sha512": "5d7ad310404421a51fd45c9e2a3ed0a8bc081181eba3ec51b65985a7f03384059802d22f9e4f92b5c6f45fe17eaac5f387db6486daa9a3be81d242aa85b16d38",
+                    "sha256": "1ad39cc39f5cb31dbec63f181126c464aca7560a1807c569f31af6511176d020",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-06-23",
+                    "filename": "gimp-3.1.2-arm64.dmg",
+                    "sha512": "044346715b9547868186093c3ec0c6e0c5f10e87fdbf7f6f31b3706313299c738aa452e25d2278fabc8fe16563ab2df5c858bd11c3560fb990a66fce6a76f73c",
+                    "sha256": "9bea79707c158a6f831dd54e954e463317b5a998d5979410a3fb0276536b0187",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.0.0-RC3",
+            "date": "2025-02-09",
+            "source": [
+                {
+                    "filename": "gimp-3.0.0-RC3.tar.xz",
+                    "sha512": "f6da664aadc312cdfac248fb1d3d8eb681aff50b8b0dee6f5c23cfa768eb4899386f470d19e797d0b1ee24746c88c7c12b609c3dc091acd2a625baf0b028285f",
+                    "sha256": "61fb527cf22d093a3f3501884796ababd3c30dd7f0e354dbdc041bef0f7e38ec"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2025-02-10",
+                    "filename": "gimp-3.0.0-RC3-setup.exe",
+                    "sha512": "80730127acfa575b1052a6decf79f8e87183ab014cfce6af4d3711ac697858870229b2c6267464da3d0890ab1ac4360294456942d9d36a2e07b5924ff3423c85",
+                    "sha256": "5845a53cd4ffa954abb91e404feea5b41afa50df3dcbd13c90e5ee17e4ddaa86",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-02-10",
+                    "filename": "gimp-3.0.0-RC3-x86_64.dmg",
+                    "sha512": "b63cc196a323737d6adacd79d2707a36d83d343fea9c4cbf3514e0a9c38ee3d54b24d00a509cd792da2f4c82842fcb39de0c9aa594b22f0ca8f88ff1448f422a",
+                    "sha256": "bfa713b6f1aef0fea6243f47bede2552b58c9b0417ace3597f1e3c4763b39aab",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-02-10",
+                    "filename": "gimp-3.0.0-RC3-arm64.dmg",
+                    "sha512": "e8f38efd899a591626a3159071979535edb7075c4f1598810d1dd132f012cd23a17a284378984e53d97acab3e1be41c4ef57ca68c5f3092c29c9aafc31e0cd7b",
+                    "sha256": "eb55392e09c4ce6c46eb43f401b59997670b4e99c859b4a73c56db15b3ba7fad",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ],
+            "appimage": [
+                {
+                    "date": "2025-02-10",
+                    "filename": "GIMP-3.0.0-RC3-x86_64.AppImage",
+                    "sha512": "2cfa32e8ddfc5e35fe420e34b5e1627926919a54fcad349aa32c12a8b1b4f9bc341035490305238af84fbf1045a6c210d6f391b63dcaeab6393c82d53f1fb813",
+                    "sha256": "383f625ed37a2d6d2e5c22baad2f3e3b6c50d3cd519eb6e09069903783bcac7a",
+                    "build-id": "org.gimp.GIMP_official.AppImage.x86_64",
+                    "min-support": "Debian 12"
+                },
+                {
+                    "date": "2025-02-10",
+                    "filename": "GIMP-3.0.0-RC3-aarch64.AppImage",
+                    "sha512": "51f0e46eaa9483a23b6e247cea65015d334e9b8066fe3569e225086ab1dbbfbadb48a8788cdf27d12fb98d7df6fff20a60d9de889c2070620a0a765d862c3a53",
+                    "sha256": "30cd785eb7f5edd0441e64221fdb91e9c413b67cdfaf086d80c5edd5f41abc89",
+                    "build-id": "org.gimp.GIMP_official.AppImage.aarch64",
+                    "min-support": "Debian 12"
+                }
+            ]
+        },
+        {
+            "version": "3.0.0-RC2",
+            "date": "2024-12-27",
+            "source": [
+                {
+                    "filename": "gimp-3.0.0-RC2.tar.xz",
+                    "sha512": "c0a6e096d954f3048cb68fe4ff71dd2f49c802f800014ab8a3089a0e097e7d6f595e5716230c06e7edfddba948f0d01da14800935aa6ceb9dc2e12fb7f19d7e6",
+                    "sha256": "f4d2f96df180ce5543f8b2b35707b9bf11459f00f726ca73da2f406d686d9db7"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2024-12-27",
+                    "filename": "gimp-3.0.0-RC2-setup.exe",
+                    "sha512": "3b4e4047600c37f39777d15d7c3afe81b4238bac3825f07e78cfa9bd6cd3c5a2c3ba157b5a48b75efd0223b663d4e4839ae09c0cfbbfa92c6cffbc2f9687e2d9",
+                    "sha256": "d071760d71568eff06e34cbd8d4ec3da5c49ca00d89eb9286378a45db0872e5a",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2025-01-13",
+                    "filename": "gimp-3.0.0-RC2-x86_64.dmg",
+                    "sha512": "999e6c6dd1d184cca3a110d3e2898d9d2bdc4fd25c3afd5addbbfb3b2486f7b9d0a5e1ad4a1b07170edecad3a1d1a07b015881fbb321045878259b5d388cb149",
+                    "sha256": "6ea7d1f9235aff328ed54960e09144ca370040eae73da11f0f622a3fcc40ac6e",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2025-01-13",
+                    "filename": "gimp-3.0.0-RC2-arm64.dmg",
+                    "sha512": "375e53c979a8bbb5c9d3ee7bb28fe6746f175e729fe58144c692486737207d01cc89265c91dcb26dbbd25c0bdb363156a0c97880a64c0a641677de0afb1cd4ff",
+                    "sha256": "a0e91fb827b335a15ec1c9bd7252408a28278158e138b682ab2284776223836f",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "3.0.0-RC1",
+            "date": "2024-11-04",
+            "source": [
+                {
+                    "filename": "gimp-3.0.0-RC1.tar.xz",
+                    "sha512": "844896976b66b0498ba9149c7176f5442b2305fd3dc51fce7ff92eb05b7b0f86f16d0bd16e50a3c43ab2c6b9be4e610dbbfc50a99c84a62a4de80a6937d43985",
+                    "sha256": "b3d0b264c5e38e789faaf3417003397f3240014c59c7f417f9ca3bd39c5ffb66"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2024-11-05",
+                    "filename": "gimp-3.0.0-RC1-setup.exe",
+                    "sha512": "33707c2b399784d6aacb9c648ab5e87ba37242022f13ef4fb70e86782988ba4560b60c207bbb5c2f29525bfb1e73a5047be7dec4f3517ad049312dc8ca8a2362",
+                    "sha256": "b8b88c2cfcdcd31aad6127e4183ef166cb2c652e29dd9dad5f97c6b877b4cd86",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2024-11-06",
+                    "filename": "gimp-3.0.0-RC1-x86_64.dmg",
+                    "sha512": "6f352c2149836835ac3d5bc4c9b1fc0cd7f9ee88318c9806d7041221002386a23599653140467329e255cf9d263312fc202eaa426885e10f5c45f321fd5ee8cc",
+                    "sha256": "82e7d191c343ee71b09d4fd2faeed5374560949d87e1f5b6aceae8a711cdecf9",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 11 Big Sur"
+                },
+                {
+                    "date": "2024-11-06",
+                    "filename": "gimp-3.0.0-RC1-arm64.dmg",
+                    "sha512": "d19363affd1232f13a53b17db2b50f84482d6de930c8efeda18178a7cc557feee373d823aa947652148a5283a2ecd7e7e71be03af0de6e0d6e4fe3b230bcf03f",
+                    "sha256": "bc0f834690cbd030e6ec1598ebc2d987de6b35da4651ed93d5b8b2be2c4dfd54",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 11 Big Sur"
+                }
+            ]
+        },
+        {
+            "version": "2.99.18",
+            "date": "2024-02-17",
+            "source": [
+                {
+                    "filename": "gimp-2.99.18.tar.xz",
+                    "sha512": "151ccd0322601e76ed0198b40832ab0b6c138428f2e75806dd558e29c9b3437d9226a243142bf4a86113fa5ea4f5965b99cf7cd0ab0ecb7bdfc48036de35a9c6",
+                    "sha256": "8c1bb7a94ac0d4d0cde4d701d8b356387c2ecd87abbd35bbf7d222d40f6ddb6e"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2024-02-19",
+                    "filename": "gimp-2.99.18-setup.exe",
+                    "sha512": "5527d264d79130b0b5f17f5b53be4346b7f8812be186b78b903be2e8f554a237b36a4ef04379597bee960b1d9c694dc87d49885b0371c15abfa5050477182b3d",
+                    "sha256": "2a09a05407a0dbf160f96a1ebb6455e6ffbe920bfb4c62adbb1cd83b116b7e1c",
+                    "build-id": "org.gimp.GIMP_official",
+                    "min-support": "Windows 10 1903"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2024-02-19",
+                    "filename": "gimp-2.99.18-x86_64.dmg",
+                    "sha512": "1965317110c54c7e155fc353dfd3ab45094a5b9d0e20bab9448dbab3f2b74e1ddf40fade5490ca6518f11e867545c969ee7cb9fe1d882ddab68348f10ce0b06a",
+                    "sha256": "196582ee69a8b3fdc075ff4aaf01bc1bc6975adac89650da12f80087b642e9ee",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "min-support": "macOS 10.13 High Sierra"
+                },
+                {
+                    "date": "2024-02-19",
+                    "filename": "gimp-2.99.18-arm64.dmg",
+                    "sha512": "3b1b7c7e7c6f032fd71eb4ee0ee57a76d70d9dd5f7dd5eaabf80985b4fab05d140590b983b753372018ae9d7f6276efa46e917474b1c19c8d8666c7e193c2794",
+                    "sha256": "bb042d5647413ea5d374ac82092e3b6aa1602d72d7c8822d31c25c0a4b6bdf15",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "min-support": "macOS 10.13 High Sierra"
+                }
+            ]
+        },
+        {
+            "version": "2.99.16",
+            "date": "2023-07-05",
+            "source": [
+                {
+                    "filename": "gimp-2.99.16.tar.xz",
+                    "sha512": "b0da0529b000a7309c9d601977518cd19a7bf50ab41952fa36b83c027042d6901c39d0a6870c16e8a8ad3318207c93d34ee3d50d0e5f35bcabeaa17d91e060ee",
+                    "sha256": "6b4496edee447339f923276755247eadb64ec40d8aec241d06b62d1a6eb6508d"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2023-07-05",
+                    "filename": "gimp-2.99.16-setup.exe",
+                    "sha512": "6f89491b793cb267cf539031fcb1175de7335df1d68aa3567061b6b4e5bb4008b0c85feced40d3c925971d6e389dc58780bcb860c2a38783c3cd08cd66afde4b",
+                    "sha256": "b7d33e32e66d6cc21dd1742c3e37ce8b3150272782feb314665f726386a5bcb7",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2023-08-14",
+                    "filename": "gimp-2.99.16-2-x86_64.dmg",
+                    "sha512": "106dd742de7f3aa5b9f855d1524f5ee3814c53c9e1f414d06c155036437464b161b1f330c6a3eeafa263fb706421f34b3844c0a1a2da8bf3c3341d0f1194b077",
+                    "sha256": "c50f875de3fe84f8b370517b461fd2ee3fc70a68c690ca132a7eaaaabe75f43d",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 2,
+                    "comment": "Fix security issues in GExiv2 (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/8816'>#8816</a>) and a <a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9818'>crash in macOS 10.13</a>"
+                },
+                {
+                    "date": "2023-08-14",
+                    "filename": "gimp-2.99.16-2-arm64.dmg",
+                    "sha512": "2ccb7d344e79b5abddbaa41ca8677966cce4d7fa51aab719d6f2d92a8e2b153e82a28f21618b6abc98a4898c837f67b310295e370bc428d3fd6089f2983e5696",
+                    "sha256": "1e58a7a31b8fe5e5e18775ab82569664aca3355421606cc62343ec746e376e29",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 2,
+                    "comment": "Fix security issues in GExiv2 (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/8816'>#8816</a>) and a <a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9818'>crash in macOS 10.13</a>"
+                },
+                {
+                    "date": "2023-07-30",
+                    "filename": "gimp-2.99.16-1-x86_64.dmg",
+                    "sha512": "80693d05b93b31bdf76fa6ff14b946a0b0d56fa184107cddec5c9bd557df2eaee53c80e098b879ec08481ebc3263f65a0893f17845ccb1cc47706a1bce9b20a3",
+                    "sha256": "7723084943e9d5d41331a5655754cc105c2d2e796c767c45c403461b22cf9aa0",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 1,
+                    "comment": "Fix security issues in Ghostscript (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9773'>CVE-2023-36664</a>)"
+                },
+                {
+                    "date": "2023-07-30",
+                    "filename": "gimp-2.99.16-1-arm64.dmg",
+                    "sha512": "94d38e6746a3f0bb0796888daa3957601368baa2992611b1d01cb9110bbe3d280148167dd962d958822cfbcbf0af98f66f35be3f51b3d5fe6916fb1f52aacd56",
+                    "sha256": "35c9d613d3079b09eb2c5902d7523bb9f61a20bf17e849bc8072c1efda24fc07",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 1,
+                    "comment": "Fix security issues in Ghostscript (<a href='https://gitlab.gnome.org/GNOME/gimp/-/issues/9773'>CVE-2023-36664</a>)"
+                },
+                {
+                    "date": "2023-07-11",
+                    "filename": "gimp-2.99.16-x86_64.dmg",
+                    "sha512": "3f217f57f29942c2488f10437aa1a051f6d76720c9ebe499ddf03008ff134ebdec8c26fcc120981bd01f053b4aef7a4b38d7e9adc4a2f1653a15baa6155b46f2",
+                    "sha256": "ab3e6bf67c85a84039a540de24edc1f2b4eaf42acad503b8a212742896e4b40d",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64"
+                },
+                {
+                    "date": "2023-07-11",
+                    "filename": "gimp-2.99.16-arm64.dmg",
+                    "sha512": "7bfea2676965a1f2efc12fe5553bdd4782224950219919e7ccf4c143f4dcc0a2460575577acf697b42a9d59fc3ca4cdf6b709cbf4e8639e5fa05ebe8e4c92620",
+                    "sha256": "78a9454d7592529319a7020d87b1dacd80949274cf37ef73131031fb5c464d4c",
+                    "min-support": "macOS 10.13 High Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64"
+                }
+            ]
+        },
+        {
+            "version": "2.99.14",
+            "date": "2022-11-13",
+            "source": [
+                {
+                    "filename": "gimp-2.99.14.tar.xz",
+                    "sha512": "6ea3ca27cb0c830042ad42789d3017989dda195ebbdff38793afbee720f2986d489bec39c077b84889c847c0afc1bc7a2fec2e916574ae08aec42019715cb204",
+                    "sha256": "313a205475d1ff03c5c4d9602f09f5c975ba6c1c79d8843e2396f9fe2abdf7a8"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2022-11-16",
+                    "filename": "gimp-2.99.14-setup.exe",
+                    "sha512": "3ddd46f52b373679007e9a596bb2f051edb48d6b1b11ee080b626451a99c4bed03efb8cd5c74e6691e74e58795eb1bb8e859cf37860c9c1188907146300eec36",
+                    "sha256": "a604d8498d4a5230229f16f29f71ac7e6ddb3ac8fe36c99c08e3680dcba995b5",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2022-12-26",
+                    "filename": "gimp-2.99.14-1-x86_64.dmg",
+                    "sha512": "34f691434794efe00a9aff5fa28c7bf5a0e23cbf0979ecf76b7f0772a87ec708f864faeea5f7a0452f9865f304da39612cbbbc3958590521304313ed9de74951",
+                    "sha256": "7db834058f8763d1a8e8a12a5d74718b0577499dc88a33fb2321de39effacf01",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64",
+                    "revision": 1,
+                    "comment": "Fixes unresponsive interface in macOS Ventura (issue #8784)"
+                },
+                {
+                    "date": "2022-12-26",
+                    "filename": "gimp-2.99.14-1-arm64.dmg",
+                    "sha512": "5a877c7cdb3978dd10d10325c1012b3cb9a9448b0b32e22959cc9528c13485c9b948eac359af6d304438736da02514d9accc34cba6d76a081ba2d69bf9735e57",
+                    "sha256": "c9d934cf88ec6be7453bfde2e284a6e0a0d98de4a2e4af74f0a736bcfd5ab8ff",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64",
+                    "revision": 1,
+                    "comment": "Fixes unresponsive interface in macOS Ventura (issue #8784)"
+                },
+                {
+                    "date": "2022-11-15",
+                    "filename": "gimp-2.99.14-x86_64.dmg",
+                    "sha512": "6d4edc241608e1025f5328c17f8ddbe3cd055bb1bf6630dee377a94066ca8e67d0c0e8ca5fd9197c6d4113b4aa155fe165666e576afc27e3f375ac391e37c8df",
+                    "sha256": "cc3cb7e63aaa16bfb51eaa553d2466fa2935e7282378b50c9e9156d4f2dab3f8",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.x86_64"
+                },
+                {
+                    "date": "2022-11-15",
+                    "filename": "gimp-2.99.14-arm64.dmg",
+                    "sha512": "dc31141b895d2c98c9a3d9036c7733305cf4b21f94db34fdb656b5fd8d3ac4eb4a7163b929968bc54ba4dec3fb4688ea57fd6b2db3a9712bdb7b191447665878",
+                    "sha256": "2c23f9d1706514f4017ed2f90531931bfeedaacbef84e29e59c4d490e196c796",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official.arm64"
+                }
+            ]
+        },
+        {
+            "version": "2.99.12",
+            "date": "2022-08-21",
+            "source": [
+                {
+                    "filename": "gimp-2.99.12.tar.xz ",
+                    "sha512": "4b87dd40eccc39c560e69a90b4042b1b19506e9ae52e5079ace442325b54bf7c47477662197da8f7655c12aad16e08bae60d11cf269684b8aa291e978d246917",
+                    "sha256": "7ba1b032ea520d540e4acad3da16d8637fe693743fdb36e0121775eea569f6a3"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2022-08-23",
+                    "filename": "gimp-2.99.12-setup.exe",
+                    "sha512": "c1f0f20a8f8972d2154368e78a11fdf6b2c26ec39709f019e75d5131a452a04a02cdc3493de5c4508390e4d370dd965b943cb166d0ab32fec6b8af78e5d615d7",
+                    "sha256": "cb6ed7af28dd3e489c4697a85e815391e2f1bf2caadce50258cb660a35ea8241",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2022-02-24",
+                    "filename": "gimp-2.99.12-x86_64.dmg",
+                    "sha512": "0b86d866af764d4bcc0ba1bf9e25af2ee5733b5e978bfa4f2674024fe7da79f58629712b7d3e87f0fab84cc56c8dc8c00ef58232bc44fa9a3f6eb7b9d8a2ffb0",
+                    "sha256": "5c6f2e1ec98e8fa9d78af86e1c5e0e47ce0453d49402b666abbbdf020750f6a9",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.99.10",
+            "date": "2022-02-22",
+            "source": [
+                {
+                    "filename": "gimp-2.99.10.tar.bz2 ",
+                    "sha512": "898c1e1ffd2270ccc965db9a8263e04d95455535361b47f92256b4028808e1e91eb1924cf6cef7ff9e988194ebbc67535bd9cfbf0243159824e58551a2b91ba3",
+                    "sha256": "9e08f1c4a455e8dd4dd0579fe289419e38c835db38e3c0d40cd1137fb0112f29"
+                }
+            ],
+            "windows": [
+                {
+                    "date": "2022-03-25",
+                    "filename": "gimp-2.99.10-setup-2.exe",
+                    "sha512": "2ef8edd0a5fdece04cf5dec1389179a15504f95008a74a90ebacc0af624786750523df4428d40d5bf68137193ba0837e460b8245f4c47d0a15550ce1d99f32bb",
+                    "sha256": "7506574ac384ebf0b18f5a0f3e306e6b5285dffdb2b373972c4cb0842f5e19b9",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Updated babl to fix crash because of wrong SIMD detection (issue #7919)",
+                    "revision": 2
+                },
+                {
+                    "date": "2022-02-28",
+                    "filename": "gimp-2.99.10-setup-1.exe",
+                    "sha512": "32d038866f1e7795f924637ef7e10f163961142fa4a6e81f890a97937f0f69416ae4381dfcdd13d9f7ec463627b2125b9aaca3ea218a48a245d407c7cdc419cd",
+                    "sha256": "2b36a901360efdfecdd96f4d48ced05a25b9bba87de18a57f3e064521c002520",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "Release notes are properly shown in Welcome dialog.",
+                    "revision": 1
+                },
+                {
+                    "date": "2022-02-23",
+                    "filename": "gimp-2.99.10-setup.exe",
+                    "sha512": "c35ef9c0684d87e1106a2a1151c3a01c9ef8d2fa21d9395a4c14ba902c4f76fcd1ac48840ce908b8cf66a6e74da7e16b8c1b8ab3a3524dc20a676096d9a86f12",
+                    "sha256": "8be114237859dcf00c67f01b3d1aa9430cc687fe3843f5bcee427b3e121295e5",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2022-02-23",
+                    "filename": "gimp-2.99.10-x86_64.dmg",
+                    "sha512": "2a024dd010661d7e67f0553879c9d33ca4324285884f886604667585b255a0416a569f73c4c258bb391b32e8f11c8ce308d1505071fb1933978c4f043f4c3040",
+                    "sha256": "b8b1365bbe553828bb2a124fa826863950f1d50f302c0652f5e1a751267ef186",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.99.8",
+            "date": "2021-10-19",
+            "source": [
+                {
+                    "filename": "gimp-2.99.8.tar.bz2 ",
+                    "sha512": "c603d9a315c21c9da716cc1d8c0c784061e7d0eac4b3d28467aabc3c63c950da0a52649e498049e0b8475933ef93d721a2b8423811b47b00c9490485d316345e",
+                    "sha256": "dd916bd3474ef2efc652a0510280977ab8ea95e3d95d918394b0662261c32aae"
+                }
+            ],
+            "windows": [
+                 {
+                    "date": "2021-10-19",
+                    "filename": "gimp-2.99.8-setup.exe",
+                    "sha512": "58f210ae806e91f863ad3c041f55d45f2640a62431c2e2e4706c609a9f78561d3bdad0a9f67f9009e4fa7fd7abe0702b9537ba5c0cc55291888d8a6c1397e052",
+                    "sha256": "c8ba9ad9e9325244042237a4e05ae1e46cc31b0226d287aefcf836e6c8f216db",
+                    "min-support": "Windows 7",
+                    "build-id": "Unknown"
+                }
+            ],
+            "macos": [
+                {
+                    "date": "2021-12-04",
+                    "filename": "gimp-2.99.8-x86_64.dmg",
+                    "sha512": "b6c285a98a7d7b77b5663bf94d5edd4753558438fa32fa2f73029f6c215107e50eae8b8067a53f3204edd212bdf28fe5dbdf39f88f80147695334218712882e1",
+                    "sha256": "b7636a00f5103fc3df3627f01f9946285a040ec84b68df1f332f9fdc68f43641",
+                    "min-support": "macOS 10.12 Sierra",
+                    "build-id": "org.gimp.GIMP_official",
+                    "comment": "First development release for macOS in 2.99 series"
+                }
+            ]
+        },
+        {
+            "version": "2.99.6",
+            "date": "2021-04-26",
+            "source": [
+                {
+                    "filename": "gimp-2.99.6.tar.bz2 ",
+                    "sha512": "51ada696693ac51624ba222d1fff54d39bdc72a06de54f7c244b89740b77f7205aab44f1cec90785ca4196cab32f817e7390b4287a30f5024606163f24222961",
+                    "sha256": "8d264b28445a3df2b940f30ee0b89b469255e975e8563b889fd57fb2f58f66a0"
+                }
+            ],
+            "windows": [
+                 {
+                    "date": "2021-05-05",
+                    "filename": "gimp-2.99.6-setup.exe",
+                    "sha512": "37cc5bdbe55fe44d4e5b54fc86b64ce7c0f54aa5d70b8093c72af96278982d6eac417956bf46e1df1af9aef1f128109e5415a254ced992644e9a41b2537891b6",
+                    "sha256": "24f46ef167463935e4a320a33bb91cd86a901d26d953b4e0a6eda2aa958117bc",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.99.4",
+            "date": "2020-12-25",
+            "source": [
+                {
+                    "filename": "gimp-2.99.4.tar.bz2 ",
+                    "sha512": "1abb6851f4c6af440d75d09c55dcb6bf6485739de1960fb536035935729331221265beef589386da685ad8ffbe83e0f0699cf2db55589953deae4d82aa99154b",
+                    "sha256": "df25c149c78f265181809d7685a9470a62c3c2f08c05e8498a4d5c86a048a5b2"
+                }
+            ],
+            "windows": [
+                 {
+                    "date": "2020-12-27",
+                    "filename": "gimp-2.99.4-setup-1.exe",
+                    "sha512": "2b9eeeca89ae4de50e519d16cddc53d5f682c21cebd19ad3f256361b1bba50e0ae7c9d76c36cbf392e265758931a58d00951789da3f301987632847d41fb005a",
+                    "sha256": "243bd00741de1e25a91ec1ae5af13d9a1acf6dacd1486840274e1dce0a79ab90",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official",
+                    "revision": 1,
+                    "comment": "⚠️<strong>Warning</strong>: JPEG, PNG, TIFF and FLI export are not working!⚠️<br/>Update: adds the Paint Select tool in the Playground preferences"
+                 },
+                 {
+                    "date": "2020-12-25",
+                    "filename": "gimp-2.99.4-setup.exe",
+                    "sha512": "9d89da8d38786d6d9916acc45109db90364d980788c567308585059cbcf3b8cb05dbe9ce616326e108b77c07f83d1d1d2bcfd9035092235726a8fc74549bf682",
+                    "sha256": "3ecd4e88972e8f4d38f70d73b6236c3433c9ea2a60dfd0c9e2395b83280092ed",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        {
+            "version": "2.99.2",
+            "date": "2020-10-25",
+            "source": [
+                {
+                    "filename": "gimp-2.99.2.tar.bz2 ",
+                    "sha512": "0a773ab01427abfb1b7690e855a041dc4883630fc827ce9d83169ccc5b4f925ecb9a0a16928a9c0ed0592c2c351ced5832e212d3115475c0f7a6092822adc194",
+                    "sha256": "39dc99a1581bbaafa9d6686bf246f7be12b0788ebfc37d185dea5bdae9c3ae73"
+                }
+            ],
+            "windows": [
+                 {
+                    "date": "2020-10-29",
+                    "filename": "gimp-2.99.2-setup.exe",
+                    "sha512": "ebcc8a96cb6d743812967ee150e39ecfcbb36a566df3c36b00a7d78869c1133dab7a31a677f696a22f68da582f08bdeff232d1cf682c9cf1414a125a661f5d8a",
+                    "sha256": "885eb0f59872c8a83ed4fcec5fc17e031f7a0c9c74a65320a4d6c7638131054e",
+                    "min-support": "Windows 7",
+                    "build-id": "org.gimp.GIMP_official"
+                }
+            ]
+        },
+        
+        {
+            "version": "2.10.0-RC2",
+            "date": "2018-04-17",
+            "source": [
+                {
+                        "filename": "gimp-2.10.0-RC2.tar.bz2 ",
+                        "md5": "46aa8b38d8c00fcc912ebb389f653fec"
+                    }
+            ],
+            "windows": [
+                {
+                        "filename": "gimp-2.10.0-RC2-x64-setup.exe",
+                        "md5": "6199bf303ef3f731d0da336e0afcb62b"
+                    }
+                ],
+            "flatpak": {
+                "i386": [
+                    {
+                        "filename": "gimp-2.10.0-RC2-i386.flatpak",
+                        "md5": "d1d2fcffa4c6ed6575bb67133250796a"
+                    }
+                ],
+                "x86_64": [
+                    {
+                        "filename": "gimp-2.10.0-RC2-x86_64.flatpak",
+                        "md5": "ee30a0982b2956f6904bdd4b0f834aa8"
+                    }
+                ]
+            }
+        },
+
+        {
+            "version": "2.10.0-RC1",
+            "date": "2018-03-26",
+            "source": [
+                {
+                        "filename": "gimp-2.10.0-RC1.tar.bz2",
+                        "md5": "e8892481e70c4ee3c204b6aa484f4eba"
+                    }
+            ],
+            "windows": [
+                 {
+                         "filename": "gimp-2.10.0-RC1-x64-setup.exe",
+                        "md5": "93dd18d80354db82435eb9c2055d0c83"
+                    }
+            ]
+        },
+
+        {
+            "version": "2.9.8",
+            "date": "2017-12-12",
+            "source": [
+                {
+                        "filename": "gimp-2.9.8.tar.bz2",
+                        "md5": "bade4163fb5b7a2063e1db570f27242f"
+                    }
+            ],
+            "windows": [
+                 {
+                         "filename": "gimp-2.9.8-x64-setup.exe",
+                        "md5": "33389c3402c02f0b702370162e2026ca"
+                    }
+            ]
+        },
+
+        {
+            "version": "2.9.6",
+            "date": "2017-08-24",
+            "source": [
+                {
+                        "filename": "gimp-2.9.6.tar.bz2",
+                        "md5": "b2d5b5619630288c882a35118e2241e5"
+                    }
+            ],
+            "windows": [
+                 {
+                         "filename": "gimp-2.9.6-x64-setup.exe",
+                        "md5": "b5ecff201cade29721fa670420b12222"
+                    }
+            ]
+        },
+
+        {
+            "version": "2.9.4",
+            "source": [
+                {
+                        "filename": "gimp-2.9.4.tar.bz2",
+                        "md5": "6b3d425a7949110eeb532badedf721f3"
+                    }
+            ]
+        },
+
+        {
+            "version": "2.9.2",
+            "source": [
+                {
+                        "filename": "gimp-2.9.2.tar.bz2",
+                        "md5": "aa8a846a497e3328c5b7d2fd33f5cf63"
+                    }
+            ]
+        }
+
+    ],
+    "NIGHTLY": [
+        {
+            "version": "2.9.7",
+            "source": [
+
+            ],
+            "windows": [
+
+            ]
+        }
+    ]
+}

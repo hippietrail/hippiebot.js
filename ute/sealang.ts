@@ -4,7 +4,13 @@ import { domStroll } from '../ute/dom';
 // SEAlang uses a self-signed certificate that throws an exception by default in fetch()
 // So we turn off the NODE_TLS_REJECT_UNAUTHORIZED environment variable before and make
 // sure we turn it back on afterwards no matter if the request succeeds, fails, or an exception is thrown
-export async function seaLang(lang: string, word: string) {
+export async function seaLang(lang: string, word: string): Promise<number | null> {
+    const [link, num] = await seaLangInternal(lang, word);
+    console.log(`[sea] ignoring link: ${link}`);
+    return num;
+}
+
+async function seaLangInternal(lang: string, word: string): Promise<[string | null, number | null]> {
     const childNum = lang === 'thai' ? 6 : 4;   // lao and vietnamese both use child #4
 
     const seaEarl = new Earl('https://sealang.net', `/${lang}/search.pl`, {
@@ -27,6 +33,7 @@ export async function seaLang(lang: string, word: string) {
         'hyphenateSyls': '0',
         'redundantData': '0',
     });
+    const link = seaEarl.getUrlString();
 
     process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 
@@ -54,11 +61,11 @@ export async function seaLang(lang: string, word: string) {
                 const matt = lines[0].trim().match(/^(Nothing|(\d+) items?) found/);
 
                 if (matt) {
-                    if (matt[1] === 'Nothing') return 0;
-                    return Number(matt[2]);
+                    if (matt[1] === 'Nothing') return [link, 0];
+                    return [link, Number(matt[2])];
                 }
             }
         }
     }
-    return null;
+    return [link, null];
 }

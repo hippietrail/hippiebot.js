@@ -3,8 +3,8 @@ import { ago } from '../ute/ago';
 import { callGithubReleases } from './latest/githubreleases';
 import { callGithubTags } from './latest/githubtags';
 import { callWikiDump } from './latest/wikidump';
-import { callAS, callC3, callD, callEclipse, /*callElixir,*/ callExifTool, callGo, callIdea, callPython, callRuby, callRustRover, callRvm, callSdlMame, callSublime } from './latest/htmlsources';
-import { callNodejs, callGimp, callXcode, callMame, callDart, callPhp } from './latest/jsonsources';
+import { callAS, callC3, callD, /*callEclipse,*/ /*callElixir,*/ callExifTool, callGo, callIdea, callPython, callRuby, callRustRover, callRvm, callSdlMame, callSublime } from './latest/htmlsources';
+import { callNodejs, callGimp, callXcode, callMame, callDart, callPhp, callEclipse } from './latest/jsonsources';
 import { callAmpcode, callHarper } from './latest/textsources';
 
 export const data = new SlashCommandBuilder()
@@ -208,6 +208,7 @@ async function latest(interaction: ChatInputCommandInteraction) {
                 callXcode(),
                 //callMame(),   // doing it another way
                 callDart(),
+                callEclipse(),
                 // callPhp(),   // not interested for now
             ]).then(async arr => await updateReply(arr, 'JSON')));
         }
@@ -217,7 +218,6 @@ async function latest(interaction: ChatInputCommandInteraction) {
                 callAS(),
                 callC3(),
                 callD(),
-                callEclipse(),
                 // callElixir(),    // not interested for now
                 callExifTool(),
                 callGo(),

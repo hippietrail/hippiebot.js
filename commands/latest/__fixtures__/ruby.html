@@ -1,0 +1,2651 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+
+  
+    
+    
+  <title>Ruby Releases | Ruby</title>
+    
+  
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  
+  
+
+  
+
+  <meta name="description" content="This page lists individual Ruby releases.{: .summary}For information about the current maintenance status of the variousRuby branches see the[Branches page](...">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.ruby-lang.org/en/downloads/releases/">
+  <meta property="og:title" content="Ruby Releases | Ruby">
+  <meta property="og:description" content="This page lists individual Ruby releases.{: .summary}For information about the current maintenance status of the variousRuby branches see the[Branches page](...">
+  <meta property="og:image" content="https://www.ruby-lang.org/images/og-image.png">
+  <meta property="og:site_name" content="Ruby Programming Language">
+  <meta property="og:locale" content="en">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:url" content="https://www.ruby-lang.org/en/downloads/releases/">
+  <meta name="twitter:title" content="Ruby Releases | Ruby">
+  <meta name="twitter:description" content="This page lists individual Ruby releases.{: .summary}For information about the current maintenance status of the variousRuby branches see the[Branches page](...">
+  <meta name="twitter:image" content="https://www.ruby-lang.org/images/twitter-card-square.png">
+
+  <!-- Schema.org -->
+  <meta itemprop="name" content="Ruby Releases | Ruby">
+  <meta itemprop="description" content="This page lists individual Ruby releases.{: .summary}For information about the current maintenance status of the variousRuby branches see the[Branches page](...">
+  <meta itemprop="image" content="https://www.ruby-lang.org/images/og-image.png">
+
+  <link rel="stylesheet" type="text/css" href="/stylesheets/compiled.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Sans+KR:wght@100..900&family=Noto+Sans+SC:wght@100..900&family=Noto+Sans+TC:wght@100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Material+Icons&family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..24,200..700,0,0&display=swap" rel="stylesheet">
+  <link rel="canonical" href="https://www.ruby-lang.org/en/downloads/releases/">
+
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
+  <link rel="icon" href="/images/icon-192.png" type="image/png" sizes="192x192">
+  <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+  
+    <link href="" rel="alternate" title="" type="application/rss+xml">
+
+
+  <!-- Apply theme immediately to prevent flash -->
+  <script>
+    (function() {
+      const theme = localStorage.getItem('theme-preference') || 'auto';
+      if (theme === 'dark') {
+        document.documentElement.classList.add('dark');
+      } else if (theme === 'light') {
+        document.documentElement.classList.remove('dark');
+      } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.documentElement.classList.add('dark');
+      }
+    })();
+  </script>
+
+  <!-- Detect icon font loading to prevent FOUT -->
+  <script>
+    (function() {
+      if (document.fonts && document.fonts.load) {
+        document.fonts.load('24px "Material Symbols Rounded"').then(function() {
+          document.documentElement.classList.add('fonts-loaded');
+        }).catch(function() {
+          document.documentElement.classList.add('fonts-loaded');
+        });
+      } else {
+        document.documentElement.classList.add('fonts-loaded');
+      }
+    })();
+  </script>
+
+  <script type="text/javascript" src="/javascripts/navigation-toggle.js" defer></script>
+  <script type="text/javascript" src="/javascripts/header-navigation.js" defer></script>
+  <script type="text/javascript" src="/javascripts/toc.js" defer></script>
+  <script type="text/javascript" src="/javascripts/theme-toggle.js" defer></script>
+  
+</head>
+
+
+
+<body>
+  
+
+<header class="fixed top-0 left-0 right-0 w-full bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-700 z-50">
+  <div class="container mx-auto">
+    <div class="flex items-center justify-between h-20 lg:px-4">
+      <!-- Logo -->
+      <div class="flex items-center gap-2">
+        <a href="/en/" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img src="/images/header-ruby-logo.svg" alt="Ruby" class="h-10 w-10 sm:h-12 sm:w-12">
+          <span class="text-3xl sm:text-4xl font-extrabold font-logo text-stone-900 dark:text-stone-50">Ruby</span>
+        </a>
+      </div>
+
+      <!-- Desktop Navigation -->
+      <nav class="hidden lg:flex items-stretch gap-1 h-20">
+        
+        <!-- Simple link (no dropdown) -->
+        <a href="/en/documentation/installation/"
+           class="flex items-center px-3 xl:px-5 h-full text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          Install
+        </a>
+        
+        <!-- Simple link (no dropdown) -->
+        <a href="/en/documentation/"
+           class="flex items-center px-3 xl:px-5 h-full text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          Docs
+        </a>
+        
+        <!-- Simple link (no dropdown) -->
+        <a href="/en/libraries/"
+           class="flex items-center px-3 xl:px-5 h-full text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          Libraries
+        </a>
+        
+        <!-- Simple link (no dropdown) -->
+        <a href="/en/community/ruby-core/"
+           class="flex items-center px-3 xl:px-5 h-full text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          Contribution
+        </a>
+        
+        <!-- Simple link (no dropdown) -->
+        <a href="/en/community/"
+           class="flex items-center px-3 xl:px-5 h-full text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          Community
+        </a>
+        
+        <!-- Simple link (no dropdown) -->
+        <a href="/en/news/"
+           class="flex items-center px-3 xl:px-5 h-full text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+          News
+        </a>
+        
+      </nav>
+
+      <!-- Right section: Language selector + Theme toggle + Mobile menu button -->
+      <div class="flex items-center gap-0.5 sm:gap-2">
+        <!-- Language Selector -->
+        
+
+
+
+
+
+  
+
+  
+
+  
+    
+    
+
+<div class="relative group">
+  <button class="flex items-center gap-1 px-3 py-1.5 text-sm border border-stone-300 dark:border-stone-600 rounded-md hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors">
+    <span class="text-stone-700 dark:text-stone-300">
+      
+      English<span class="hidden sm:inline"> (<span lang="und-Latn">en</span>)</span>
+      
+    </span>
+    <span class="icon-dropdown text-base" aria-hidden="true"></span>
+  </button>
+
+  <!-- Language dropdown -->
+  <div class="absolute right-0 mt-1 w-56 max-h-[80vh] overflow-y-auto bg-white dark:bg-stone-800 rounded-lg shadow-lg border border-stone-200 dark:border-stone-700 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+    <div class="py-2">
+      
+      <a href="/bg/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="bg">Български</span>
+          (<span lang="und-Latn">bg</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/de/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="de">Deutsch</span>
+          (<span lang="und-Latn">de</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/en/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm bg-stone-100 dark:bg-stone-700 text-stone-900 dark:text-stone-50 font-medium hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="en">English</span>
+          (<span lang="und-Latn">en</span>)
+        </span>
+        
+        <span class="icon-check" aria-hidden="true"></span>
+        
+      </a>
+      
+      <a href="/es/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="es">Español</span>
+          (<span lang="und-Latn">es</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/fr/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="fr">Français</span>
+          (<span lang="und-Latn">fr</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/id/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="id">Indonesia</span>
+          (<span lang="und-Latn">id</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/it/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="it">Italiano</span>
+          (<span lang="und-Latn">it</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/ja/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="ja">日本語</span>
+          (<span lang="und-Latn">ja</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/ko/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="ko">한국어</span>
+          (<span lang="und-Latn">ko</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/pl/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="pl">polski</span>
+          (<span lang="und-Latn">pl</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/pt/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="pt">Português</span>
+          (<span lang="und-Latn">pt</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/ru/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="ru">Русский</span>
+          (<span lang="und-Latn">ru</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/tr/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="tr">Türkçe</span>
+          (<span lang="und-Latn">tr</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/uk/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="uk">Українська</span>
+          (<span lang="und-Latn">uk</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/vi/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="vi">Tiếng Việt</span>
+          (<span lang="und-Latn">vi</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/zh_cn/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="zh-CN">简体中文</span>
+          (<span lang="und-Latn">zh_cn</span>)
+        </span>
+        
+      </a>
+      
+      <a href="/zh_tw/downloads/releases/"
+         class="flex items-center justify-between px-4 py-2 text-sm text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+        <span>
+          <span lang="zh-TW">繁體中文</span>
+          (<span lang="und-Latn">zh_tw</span>)
+        </span>
+        
+      </a>
+      
+    </div>
+  </div>
+</div>
+
+
+        <!-- Theme Toggle -->
+        <button id="theme-toggle"
+                type="button"
+                aria-label="Theme: Auto"
+                title="Theme: Auto (System)"
+                class="ml-1 sm:ml-0 p-2 text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors">
+          <span class="icon-theme-auto text-xl" aria-hidden="true"></span>
+        </button>
+
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-toggle" class="lg:hidden p-2 text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md">
+          <span class="icon-menu" aria-hidden="true"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Navigation Menu -->
+  <div id="mobile-menu" class="hidden lg:hidden border-t border-stone-200 dark:border-stone-700">
+    <nav class="container mx-auto px-4 py-4">
+      
+      <a href="/en/documentation/installation/"
+         class="block px-5 py-2 text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors mb-2">
+        Install
+      </a>
+      
+      <a href="/en/documentation/"
+         class="block px-5 py-2 text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors mb-2">
+        Docs
+      </a>
+      
+      <a href="/en/libraries/"
+         class="block px-5 py-2 text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors mb-2">
+        Libraries
+      </a>
+      
+      <a href="/en/community/ruby-core/"
+         class="block px-5 py-2 text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors mb-2">
+        Contribution
+      </a>
+      
+      <a href="/en/community/"
+         class="block px-5 py-2 text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors mb-2">
+        Community
+      </a>
+      
+      <a href="/en/news/"
+         class="block px-5 py-2 text-sm font-bold text-stone-900 dark:text-stone-300 hover:text-semantic-text-hovered dark:hover:text-ruby-400 hover:bg-stone-100 dark:hover:bg-stone-800 rounded-md transition-colors mb-2">
+        News
+      </a>
+      
+    </nav>
+  </div>
+</header>
+
+
+  <div id="page" class="pt-20">
+    
+
+
+
+
+<!-- Mobile Navigation Panel (collapsible, full width) -->
+
+<div class="md:hidden bg-stone-50 dark:bg-stone-800 border-b border-stone-200 dark:border-stone-700">
+  <!-- Navigation toggle header -->
+  <button id="nav-toggle" class="flex items-center justify-between w-full px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+    <span class="flex items-center gap-2 text-sm font-bold text-stone-900 dark:text-stone-100">
+      <span class="icon-menu text-base relative top-0.5" aria-hidden="true"></span>
+      <span id="nav-section-title"></span>
+    </span>
+    <span id="nav-chevron" class="icon-dropdown text-base text-stone-500 dark:text-stone-400 transition-transform"></span>
+  </button>
+
+  <!-- Navigation content panel -->
+  <div id="nav-mobile-panel" class="hidden border-t border-stone-200 dark:border-stone-700">
+    <div class="px-4 pb-6">
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      
+        
+        
+        
+
+
+
+
+
+<div class="md:bg-transparent md:dark:bg-transparent md:p-0 md:border-0">
+  
+  <div class="mb-1 hidden md:block border-b border-stone-200 dark:border-stone-700 pb-3">
+    <h3 class="text-xs font-semibold text-stone-500 dark:text-stone-400">Install</h3>
+  </div>
+
+  
+  <nav class="space-y-0">
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/documentation/installation/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Installing Ruby
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Downloads
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/releases/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-semantic-text-link font-bold transition-colors"
+       >
+      <span class="">
+        Releases
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/branches/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Branches
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/mirrors/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Mirrors
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+
+  
+    
+    <div class="pt-6 mt-6 border-b border-stone-200 dark:border-stone-700 pb-6">
+      <h4 class="text-xs font-semibold text-stone-500 dark:text-stone-400 mb-4 pl-1">Package Managers</h4>
+      <ul class="space-y-2 list-disc pl-5 marker:text-stone-400 dark:marker:text-stone-500">
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://github.com/rbenv/rbenv"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      rbenv<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://rvm.io/"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      RVM<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://rubyinstaller.org/"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      RubyInstaller for Windows<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://bundler.io/"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      Bundler<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+      </ul>
+    </div>
+  
+
+
+
+    
+  </nav>
+
+  
+  
+  <div class="pt-6">
+    <p class="pl-1">
+      <a href="/en/feeds/news.rss" target="_blank" rel="noopener noreferrer" class="text-sm font-normal text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 transition-colors inline-flex items-center gap-1">
+        <span class="icon-rss-feed" aria-hidden="true"></span>
+        Recent News (RSS)<span class="icon-external text-xs" aria-hidden="true"></span>
+      </a>
+    </p>
+  </div>
+  
+</div>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container px-4 md:px-6 lg:px-8 py-6 md:py-8 lg:py-12">
+  
+    <!-- Other pages: 3-column layout -->
+    <div class="flex flex-col md:flex-row gap-6 md:gap-8 lg:gap-8">
+      <!-- Desktop Navigation (hidden on mobile) -->
+      <div class="hidden md:block md:w-40 lg:w-44 xl:w-56 flex-shrink-0 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto">
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+      
+        
+        
+        
+
+
+
+
+
+<div class="md:bg-transparent md:dark:bg-transparent md:p-0 md:border-0">
+  
+  <div class="mb-1 hidden md:block border-b border-stone-200 dark:border-stone-700 pb-3">
+    <h3 class="text-xs font-semibold text-stone-500 dark:text-stone-400">Install</h3>
+  </div>
+
+  
+  <nav class="space-y-0">
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/documentation/installation/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Installing Ruby
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Downloads
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/releases/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-semantic-text-link font-bold transition-colors"
+       >
+      <span class="">
+        Releases
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/branches/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Branches
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+  
+
+
+
+
+
+
+  
+
+
+  <div class="border-b border-stone-200 dark:border-stone-700">
+    <a href="/en/downloads/mirrors/"
+       class="flex items-center justify-between py-4 pl-1 text-base group text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-bold transition-colors"
+       >
+      <span class="">
+        Mirrors
+        
+      </span>
+      <svg class="w-3 h-3 text-stone-400 dark:text-stone-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+      </svg>
+    </a>
+  </div>
+
+
+
+
+    
+      
+
+
+  
+
+  
+    
+    <div class="pt-6 mt-6 border-b border-stone-200 dark:border-stone-700 pb-6">
+      <h4 class="text-xs font-semibold text-stone-500 dark:text-stone-400 mb-4 pl-1">Package Managers</h4>
+      <ul class="space-y-2 list-disc pl-5 marker:text-stone-400 dark:marker:text-stone-500">
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://github.com/rbenv/rbenv"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      rbenv<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://rvm.io/"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      RVM<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://rubyinstaller.org/"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      RubyInstaller for Windows<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+          
+
+
+
+
+
+
+          
+
+
+  <li class="list-item">
+    <a href="https://bundler.io/"
+       class="block py-1 text-sm text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 font-normal transition-colors"
+       target="_blank" rel="noopener noreferrer">
+      Bundler<span class="icon-external text-xs inline-block align-baseline ml-0.5" aria-hidden="true"></span>
+    </a>
+  </li>
+
+
+        
+      </ul>
+    </div>
+  
+
+
+
+    
+  </nav>
+
+  
+  
+  <div class="pt-6">
+    <p class="pl-1">
+      <a href="/en/feeds/news.rss" target="_blank" rel="noopener noreferrer" class="text-sm font-normal text-stone-900 dark:text-stone-100 hover:text-semantic-text-link-hovered dark:hover:text-ruby-400 transition-colors inline-flex items-center gap-1">
+        <span class="icon-rss-feed" aria-hidden="true"></span>
+        Recent News (RSS)<span class="icon-external text-xs" aria-hidden="true"></span>
+      </a>
+    </p>
+  </div>
+  
+</div>
+
+      </div>
+
+      <!-- Main content and TOC wrapper -->
+      <div class="flex-1 min-w-0 flex flex-col gap-6">
+
+      <!-- TOC Section (Mobile/Tablet) -->
+      <div class="lg:hidden mb-6 md:ml-4">
+        
+
+<!-- Mobile/Tablet TOC (collapsible) -->
+<div class="toc-wrapper bg-stone-50 dark:bg-stone-800 rounded-lg border border-stone-200 dark:border-stone-700 overflow-hidden lg:bg-transparent lg:dark:bg-transparent lg:border-0 lg:rounded-none lg:overflow-visible">
+  <!-- TOC toggle header (mobile only) -->
+  <button id="toc-toggle" class="lg:hidden flex items-center justify-between w-full px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+    <span class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100">
+      <span class="icon-lists" aria-hidden="true"></span>
+      Table of Contents
+    </span>
+    <span id="toc-chevron" class="icon-dropdown text-stone-500 dark:text-stone-400 transition-transform" aria-hidden="true"></span>
+  </button>
+
+  <!-- Desktop heading (desktop only) -->
+  <h3 class="hidden lg:flex font-bold text-stone-900 dark:text-stone-100 items-center gap-2 mb-6">
+    <span class="icon-lists" aria-hidden="true"></span>
+    Table of Contents
+  </h3>
+
+  <!-- TOC content panel -->
+  <div id="toc-mobile-panel" class="hidden lg:block border-t border-stone-200 dark:border-stone-700 lg:border-0">
+    <div class="px-4 pt-4 pb-6 lg:px-0 lg:pt-0 lg:pb-0">
+      <div class="toc-content not-prose">
+        <!-- TOC will be dynamically generated here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+
+      <!-- Main content -->
+      <article id="content-wrapper" class="prose md:px-4 lg:px-6">
+        
+<h1>Ruby Releases</h1>
+
+
+
+        <div id="content">
+          <p class="summary">This page lists individual Ruby releases.</p>
+
+<p>For information about the current maintenance status of the various
+Ruby branches see the
+<a href="../branches/">Branches page</a>.</p>
+
+<h3 id="ruby-releases-by-version-number">Ruby releases by version number</h3>
+
+<p>This is a list of Ruby releases.
+The shown dates correspond to the publication dates of the
+English versions of release posts and may differ from the
+actual creation dates of the source tarballs.</p>
+
+<table class="release-list">
+<tr>
+<th>Release Version</th>
+<th>Release Date</th>
+<th>Download URL</th>
+<th>Release Notes</th>
+</tr>
+
+
+<tr>
+<td>Ruby 4.0.0</td>
+<td>2025-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.0.tar.gz">download</a></td>
+<td><a href="/en/news/2025/12/25/ruby-4-0-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 4.0.0-preview3</td>
+<td>2025-12-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.0-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2025/12/18/ruby-4-0-0-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.8</td>
+<td>2025-12-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.8.tar.gz">download</a></td>
+<td><a href="/en/news/2025/12/17/ruby-3-4-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 4.0.0-preview2</td>
+<td>2025-11-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/4.0/ruby-4.0.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2025/11/17/ruby-4-0-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.10</td>
+<td>2025-10-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.10.tar.gz">download</a></td>
+<td><a href="/en/news/2025/10/23/ruby-3-3-10-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.7</td>
+<td>2025-10-07</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.7.tar.gz">download</a></td>
+<td><a href="/en/news/2025/10/07/ruby-3-4-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.6</td>
+<td>2025-09-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.6.tar.gz">download</a></td>
+<td><a href="/en/news/2025/09/16/ruby-3-4-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.9</td>
+<td>2025-07-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.9.tar.gz">download</a></td>
+<td><a href="/en/news/2025/07/24/ruby-3-3-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.9</td>
+<td>2025-07-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.9.tar.gz">download</a></td>
+<td><a href="/en/news/2025/07/24/ruby-3-2-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.5</td>
+<td>2025-07-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.5.tar.gz">download</a></td>
+<td><a href="/en/news/2025/07/15/ruby-3-4-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.4</td>
+<td>2025-05-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.4.tar.gz">download</a></td>
+<td><a href="/en/news/2025/05/14/ruby-3-4-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.5.0-preview1</td>
+<td>2025-04-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.5/ruby-3.5.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2025/04/18/ruby-3-5-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.3</td>
+<td>2025-04-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.3.tar.gz">download</a></td>
+<td><a href="/en/news/2025/04/14/ruby-3-4-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.8</td>
+<td>2025-04-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.8.tar.gz">download</a></td>
+<td><a href="/en/news/2025/04/09/ruby-3-3-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.8</td>
+<td>2025-03-26</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.8.tar.gz">download</a></td>
+<td><a href="/en/news/2025/03/26/ruby-3-2-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.7</td>
+<td>2025-03-26</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.7.tar.gz">download</a></td>
+<td><a href="/en/news/2025/03/26/ruby-3-1-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.2</td>
+<td>2025-02-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.2.tar.gz">download</a></td>
+<td><a href="/en/news/2025/02/14/ruby-3-4-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.7</td>
+<td>2025-02-04</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.7.tar.gz">download</a></td>
+<td><a href="/en/news/2025/02/04/ruby-3-2-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.7</td>
+<td>2025-01-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.7.tar.gz">download</a></td>
+<td><a href="/en/news/2025/01/15/ruby-3-3-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.1</td>
+<td>2024-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.1.tar.gz">download</a></td>
+<td><a href="/en/news/2024/12/25/ruby-3-4-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.0</td>
+<td>2024-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.0.tar.gz">download</a></td>
+<td><a href="/en/news/2024/12/25/ruby-3-4-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.0-rc1</td>
+<td>2024-12-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2024/12/12/ruby-3-4-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.6</td>
+<td>2024-11-05</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.6.tar.gz">download</a></td>
+<td><a href="/en/news/2024/11/05/ruby-3-3-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.6</td>
+<td>2024-10-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.6.tar.gz">download</a></td>
+<td><a href="/en/news/2024/10/30/ruby-3-2-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.0-preview2</td>
+<td>2024-10-07</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2024/10/07/ruby-3-4-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.5</td>
+<td>2024-09-03</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.5.tar.gz">download</a></td>
+<td><a href="/en/news/2024/09/03/3-3-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.5</td>
+<td>2024-07-26</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.5.tar.gz">download</a></td>
+<td><a href="/en/news/2024/07/26/ruby-3-2-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.4</td>
+<td>2024-07-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.4.tar.gz">download</a></td>
+<td><a href="/en/news/2024/07/09/ruby-3-3-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.3</td>
+<td>2024-06-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.3.tar.gz">download</a></td>
+<td><a href="/en/news/2024/06/12/ruby-3-3-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.2</td>
+<td>2024-05-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.2.tar.gz">download</a></td>
+<td><a href="/en/news/2024/05/30/ruby-3-3-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.6</td>
+<td>2024-05-29</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.6.tar.gz">download</a></td>
+<td><a href="/en/news/2024/05/29/ruby-3-1-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.4.0-preview1</td>
+<td>2024-05-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.4/ruby-3.4.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2024/05/16/ruby-3-4-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.1</td>
+<td>2024-04-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.1.tar.gz">download</a></td>
+<td><a href="/en/news/2024/04/23/ruby-3-3-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.4</td>
+<td>2024-04-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.4.tar.gz">download</a></td>
+<td><a href="/en/news/2024/04/23/ruby-3-2-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.5</td>
+<td>2024-04-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.5.tar.gz">download</a></td>
+<td><a href="/en/news/2024/04/23/ruby-3-1-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.7</td>
+<td>2024-04-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.7.tar.gz">download</a></td>
+<td><a href="/en/news/2024/04/23/ruby-3-0-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.3</td>
+<td>2024-01-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.3.tar.gz">download</a></td>
+<td><a href="/en/news/2024/01/18/ruby-3-2-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.0</td>
+<td>2023-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0.tar.gz">download</a></td>
+<td><a href="/en/news/2023/12/25/ruby-3-3-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.0-rc1</td>
+<td>2023-12-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2023/12/11/ruby-3-3-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.0-preview3</td>
+<td>2023-11-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2023/11/12/ruby-3-3-0-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.0-preview2</td>
+<td>2023-09-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2023/09/14/ruby-3-3-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.3.0-preview1</td>
+<td>2023-05-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.3/ruby-3.3.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2023/05/12/ruby-3-3-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.2</td>
+<td>2023-03-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.2.tar.gz">download</a></td>
+<td><a href="/en/news/2023/03/30/ruby-3-2-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.4</td>
+<td>2023-03-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.4.tar.gz">download</a></td>
+<td><a href="/en/news/2023/03/30/ruby-3-1-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.6</td>
+<td>2023-03-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.6.tar.gz">download</a></td>
+<td><a href="/en/news/2023/03/30/ruby-3-0-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.8</td>
+<td>2023-03-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.8.tar.gz">download</a></td>
+<td><a href="/en/news/2023/03/30/ruby-2-7-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.1</td>
+<td>2023-02-08</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.1.tar.gz">download</a></td>
+<td><a href="/en/news/2023/02/08/ruby-3-2-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.0</td>
+<td>2022-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0.tar.gz">download</a></td>
+<td><a href="/en/news/2022/12/25/ruby-3-2-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.0-rc1</td>
+<td>2022-12-06</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2022/12/06/ruby-3-2-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.3</td>
+<td>2022-11-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.3.tar.gz">download</a></td>
+<td><a href="/en/news/2022/11/24/ruby-3-1-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.5</td>
+<td>2022-11-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.5.tar.gz">download</a></td>
+<td><a href="/en/news/2022/11/24/ruby-3-0-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.7</td>
+<td>2022-11-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.7.tar.gz">download</a></td>
+<td><a href="/en/news/2022/11/24/ruby-2-7-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.0-preview3</td>
+<td>2022-11-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2022/11/11/ruby-3-2-0-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.0-preview2</td>
+<td>2022-09-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2022/09/09/ruby-3-2-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.2</td>
+<td>2022-04-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.2.tar.gz">download</a></td>
+<td><a href="/en/news/2022/04/12/ruby-3-1-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.4</td>
+<td>2022-04-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.4.tar.gz">download</a></td>
+<td><a href="/en/news/2022/04/12/ruby-3-0-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.6</td>
+<td>2022-04-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.6.tar.gz">download</a></td>
+<td><a href="/en/news/2022/04/12/ruby-2-7-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.10</td>
+<td>2022-04-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.10.tar.gz">download</a></td>
+<td><a href="/en/news/2022/04/12/ruby-2-6-10-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.2.0-preview1</td>
+<td>2022-04-03</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.2/ruby-3.2.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2022/04/03/ruby-3-2-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.1</td>
+<td>2022-02-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.1.tar.gz">download</a></td>
+<td><a href="/en/news/2022/02/18/ruby-3-1-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.0</td>
+<td>2021-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.0.tar.gz">download</a></td>
+<td><a href="/en/news/2021/12/25/ruby-3-1-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.3</td>
+<td>2021-11-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.3.tar.gz">download</a></td>
+<td><a href="/en/news/2021/11/24/ruby-3-0-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.5</td>
+<td>2021-11-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.5.tar.gz">download</a></td>
+<td><a href="/en/news/2021/11/24/ruby-2-7-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.9</td>
+<td>2021-11-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.9.tar.gz">download</a></td>
+<td><a href="/en/news/2021/11/24/ruby-2-6-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.1.0-preview1</td>
+<td>2021-11-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.1/ruby-3.1.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2021/11/09/ruby-3-1-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.2</td>
+<td>2021-07-07</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.2.tar.gz">download</a></td>
+<td><a href="/en/news/2021/07/07/ruby-3-0-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.4</td>
+<td>2021-07-07</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.4.tar.gz">download</a></td>
+<td><a href="/en/news/2021/07/07/ruby-2-7-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.8</td>
+<td>2021-07-07</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.8.tar.gz">download</a></td>
+<td><a href="/en/news/2021/07/07/ruby-2-6-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.1</td>
+<td>2021-04-05</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.1.tar.gz">download</a></td>
+<td><a href="/en/news/2021/04/05/ruby-3-0-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.3</td>
+<td>2021-04-05</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.3.tar.gz">download</a></td>
+<td><a href="/en/news/2021/04/05/ruby-2-7-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.7</td>
+<td>2021-04-05</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.7.tar.gz">download</a></td>
+<td><a href="/en/news/2021/04/05/ruby-2-6-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.9</td>
+<td>2021-04-05</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.9.tar.gz">download</a></td>
+<td><a href="/en/news/2021/04/05/ruby-2-5-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.0</td>
+<td>2020-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0.tar.gz">download</a></td>
+<td><a href="/en/news/2020/12/25/ruby-3-0-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.0-rc1</td>
+<td>2020-12-20</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2020/12/20/ruby-3-0-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.0-preview2</td>
+<td>2020-12-08</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2020/12/08/ruby-3-0-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.2</td>
+<td>2020-10-02</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.2.tar.gz">download</a></td>
+<td><a href="/en/news/2020/10/02/ruby-2-7-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 3.0.0-preview1</td>
+<td>2020-09-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/3.0/ruby-3.0.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2020/09/25/ruby-3-0-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.1</td>
+<td>2020-03-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.1.tar.gz">download</a></td>
+<td><a href="/en/news/2020/03/31/ruby-2-7-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.6</td>
+<td>2020-03-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.6.tar.gz">download</a></td>
+<td><a href="/en/news/2020/03/31/ruby-2-6-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.8</td>
+<td>2020-03-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.8.tar.gz">download</a></td>
+<td><a href="/en/news/2020/03/31/ruby-2-5-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.10</td>
+<td>2020-03-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.10.tar.gz">download</a></td>
+<td><a href="/en/news/2020/03/31/ruby-2-4-10-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.0</td>
+<td>2019-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0.tar.gz">download</a></td>
+<td><a href="/en/news/2019/12/25/ruby-2-7-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.0-rc2</td>
+<td>2019-12-21</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0-rc2.tar.gz">download</a></td>
+<td><a href="/en/news/2019/12/21/ruby-2-7-0-rc2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.0-rc1</td>
+<td>2019-12-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2019/12/17/ruby-2-7-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.0-preview3</td>
+<td>2019-11-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2019/11/23/ruby-2-7-0-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.0-preview2</td>
+<td>2019-10-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2019/10/22/ruby-2-7-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.9</td>
+<td>2019-10-02</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.9.tar.gz">download</a></td>
+<td><a href="/en/news/2019/10/02/ruby-2-4-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.5</td>
+<td>2019-10-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.5.tar.gz">download</a></td>
+<td><a href="/en/news/2019/10/01/ruby-2-6-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.7</td>
+<td>2019-10-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.7.tar.gz">download</a></td>
+<td><a href="/en/news/2019/10/01/ruby-2-5-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.8</td>
+<td>2019-10-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.8.tar.gz">download</a></td>
+<td><a href="/en/news/2019/10/01/ruby-2-4-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.4</td>
+<td>2019-08-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.4.tar.gz">download</a></td>
+<td><a href="/en/news/2019/08/28/ruby-2-6-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.6</td>
+<td>2019-08-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.6.tar.gz">download</a></td>
+<td><a href="/en/news/2019/08/28/ruby-2-5-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.7</td>
+<td>2019-08-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.7.tar.gz">download</a></td>
+<td><a href="/en/news/2019/08/28/ruby-2-4-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.7.0-preview1</td>
+<td>2019-05-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.7/ruby-2.7.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2019/05/30/ruby-2-7-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.3</td>
+<td>2019-04-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.3.tar.gz">download</a></td>
+<td><a href="/en/news/2019/04/17/ruby-2-6-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.6</td>
+<td>2019-04-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.6.tar.gz">download</a></td>
+<td><a href="/en/news/2019/04/01/ruby-2-4-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.5</td>
+<td>2019-03-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.5.tar.gz">download</a></td>
+<td><a href="/en/news/2019/03/15/ruby-2-5-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.2</td>
+<td>2019-03-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.2.tar.gz">download</a></td>
+<td><a href="/en/news/2019/03/13/ruby-2-6-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.4</td>
+<td>2019-03-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.4.tar.gz">download</a></td>
+<td><a href="/en/news/2019/03/13/ruby-2-5-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.1</td>
+<td>2019-01-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.1.tar.gz">download</a></td>
+<td><a href="/en/news/2019/01/30/ruby-2-6-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.0</td>
+<td>2018-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.0.tar.gz">download</a></td>
+<td><a href="/en/news/2018/12/25/ruby-2-6-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.0-rc2</td>
+<td>2018-12-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.0-rc2.tar.gz">download</a></td>
+<td><a href="/en/news/2018/12/15/ruby-2-6-0-rc2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.0-rc1</td>
+<td>2018-12-06</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2018/12/06/ruby-2-6-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.0-preview3</td>
+<td>2018-11-06</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.0-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2018/11/06/ruby-2-6-0-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.3</td>
+<td>2018-10-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.3.tar.gz">download</a></td>
+<td><a href="/en/news/2018/10/18/ruby-2-5-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.2</td>
+<td>2018-10-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.2.tar.gz">download</a></td>
+<td><a href="/en/news/2018/10/17/ruby-2-5-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.5</td>
+<td>2018-10-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.5.tar.gz">download</a></td>
+<td><a href="/en/news/2018/10/17/ruby-2-4-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.8</td>
+<td>2018-10-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.8.tar.gz">download</a></td>
+<td><a href="/en/news/2018/10/17/ruby-2-3-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.0-preview2</td>
+<td>2018-05-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2018/05/31/ruby-2-6-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.1</td>
+<td>2018-03-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.1.tar.gz">download</a></td>
+<td><a href="/en/news/2018/03/28/ruby-2-5-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.4</td>
+<td>2018-03-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.4.tar.gz">download</a></td>
+<td><a href="/en/news/2018/03/28/ruby-2-4-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.7</td>
+<td>2018-03-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.7.tar.gz">download</a></td>
+<td><a href="/en/news/2018/03/28/ruby-2-3-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.10</td>
+<td>2018-03-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.10.tar.gz">download</a></td>
+<td><a href="/en/news/2018/03/28/ruby-2-2-10-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.6.0-preview1</td>
+<td>2018-02-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.6/ruby-2.6.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2018/02/24/ruby-2-6-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.0</td>
+<td>2017-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0.tar.gz">download</a></td>
+<td><a href="/en/news/2017/12/25/ruby-2-5-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.0-rc1</td>
+<td>2017-12-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2017/12/14/ruby-2-5-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.3</td>
+<td>2017-12-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.3.tar.gz">download</a></td>
+<td><a href="/en/news/2017/12/14/ruby-2-4-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.6</td>
+<td>2017-12-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.6.tar.gz">download</a></td>
+<td><a href="/en/news/2017/12/14/ruby-2-3-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.9</td>
+<td>2017-12-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.9.tar.gz">download</a></td>
+<td><a href="/en/news/2017/12/14/ruby-2-2-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.5.0-preview1</td>
+<td>2017-10-10</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.5/ruby-2.5.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2017/10/10/ruby-2-5-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.2</td>
+<td>2017-09-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.2.tar.gz">download</a></td>
+<td><a href="/en/news/2017/09/14/ruby-2-4-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.5</td>
+<td>2017-09-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.5.tar.gz">download</a></td>
+<td><a href="/en/news/2017/09/14/ruby-2-3-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.8</td>
+<td>2017-09-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.8.tar.gz">download</a></td>
+<td><a href="/en/news/2017/09/14/ruby-2-2-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.4</td>
+<td>2017-03-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.4.tar.gz">download</a></td>
+<td><a href="/en/news/2017/03/30/ruby-2-3-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.7</td>
+<td>2017-03-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.7.tar.gz">download</a></td>
+<td><a href="/en/news/2017/03/28/ruby-2-2-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.1</td>
+<td>2017-03-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.1.tar.gz">download</a></td>
+<td><a href="/en/news/2017/03/22/ruby-2-4-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.0</td>
+<td>2016-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0.tar.gz">download</a></td>
+<td><a href="/en/news/2016/12/25/ruby-2-4-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.0-rc1</td>
+<td>2016-12-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2016/12/12/ruby-2-4-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.3</td>
+<td>2016-11-21</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.3.tar.gz">download</a></td>
+<td><a href="/en/news/2016/11/21/ruby-2-3-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.2</td>
+<td>2016-11-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.2.tar.gz">download</a></td>
+<td><a href="/en/news/2016/11/15/ruby-2-3-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.6</td>
+<td>2016-11-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.6.tar.gz">download</a></td>
+<td><a href="/en/news/2016/11/15/ruby-2-2-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.0-preview3</td>
+<td>2016-11-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2016/11/09/ruby-2-4-0-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.0-preview2</td>
+<td>2016-09-08</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2016/09/08/ruby-2-4-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.4.0-preview1</td>
+<td>2016-06-20</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.4/ruby-2.4.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2016/06/20/ruby-2-4-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.1</td>
+<td>2016-04-26</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.1.tar.gz">download</a></td>
+<td><a href="/en/news/2016/04/26/ruby-2-3-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.5</td>
+<td>2016-04-26</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.5.tar.gz">download</a></td>
+<td><a href="/en/news/2016/04/26/ruby-2-2-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.10</td>
+<td>2016-04-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.10.tar.gz">download</a></td>
+<td><a href="/en/news/2016/04/01/ruby-2-1-10-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.9</td>
+<td>2016-03-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.9.tar.gz">download</a></td>
+<td><a href="/en/news/2016/03/30/ruby-2-1-9-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.0</td>
+<td>2015-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.0.tar.gz">download</a></td>
+<td><a href="/en/news/2015/12/25/ruby-2-3-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.4</td>
+<td>2015-12-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.4.tar.gz">download</a></td>
+<td><a href="/en/news/2015/12/16/ruby-2-2-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.8</td>
+<td>2015-12-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.8.tar.gz">download</a></td>
+<td><a href="/en/news/2015/12/16/ruby-2-1-8-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p648</td>
+<td>2015-12-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p648.tar.gz">download</a></td>
+<td><a href="/en/news/2015/12/16/ruby-2-0-0-p648-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.0-preview2</td>
+<td>2015-12-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2015/12/11/ruby-2-3-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.3.0-preview1</td>
+<td>2015-11-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.3/ruby-2.3.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2015/11/11/ruby-2-3-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.3</td>
+<td>2015-08-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.3.tar.gz">download</a></td>
+<td><a href="/en/news/2015/08/18/ruby-2-2-3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.7</td>
+<td>2015-08-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.7.tar.gz">download</a></td>
+<td><a href="/en/news/2015/08/18/ruby-2-1-7-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p647</td>
+<td>2015-08-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p647.tar.gz">download</a></td>
+<td><a href="/en/news/2015/08/18/ruby-2-0-0-p647-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.2</td>
+<td>2015-04-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.2.tar.gz">download</a></td>
+<td><a href="/en/news/2015/04/13/ruby-2-2-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.6</td>
+<td>2015-04-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.6.tar.gz">download</a></td>
+<td><a href="/en/news/2015/04/13/ruby-2-1-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p645</td>
+<td>2015-04-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p645.tar.gz">download</a></td>
+<td><a href="/en/news/2015/04/13/ruby-2-0-0-p645-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.1</td>
+<td>2015-03-03</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.1.tar.gz">download</a></td>
+<td><a href="/en/news/2015/03/03/ruby-2-2-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p643</td>
+<td>2015-02-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p643.tar.gz">download</a></td>
+<td><a href="/en/news/2015/02/25/ruby-2-0-0-p643-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.0</td>
+<td>2014-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0.tar.gz">download</a></td>
+<td><a href="/en/news/2014/12/25/ruby-2-2-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.0-rc1</td>
+<td>2014-12-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2014/12/18/ruby-2-2-0-rc1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.0-preview2</td>
+<td>2014-11-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2014/11/28/ruby-2-2-0-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.5</td>
+<td>2014-11-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.5.tar.gz">download</a></td>
+<td><a href="/en/news/2014/11/13/ruby-2-1-5-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p598</td>
+<td>2014-11-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p598.tar.gz">download</a></td>
+<td><a href="/en/news/2014/11/13/ruby-2-0-0-p598-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p551</td>
+<td>2014-11-13</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p551.tar.gz">download</a></td>
+<td><a href="/en/news/2014/11/13/ruby-1-9-3-p551-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.4</td>
+<td>2014-10-27</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.4.tar.gz">download</a></td>
+<td><a href="/en/news/2014/10/27/ruby-2-1-4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p594</td>
+<td>2014-10-27</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p594.tar.gz">download</a></td>
+<td><a href="/en/news/2014/10/27/ruby-2-0-0-p594-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p550</td>
+<td>2014-10-27</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p550.tar.gz">download</a></td>
+<td><a href="/en/news/2014/10/27/ruby-1-9-3-p550-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.3</td>
+<td>2014-09-19</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.3.tar.gz">download</a></td>
+<td><a href="/en/news/2014/09/19/ruby-2-1-3-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p576</td>
+<td>2014-09-19</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p576.tar.gz">download</a></td>
+<td><a href="/en/news/2014/09/19/ruby-2-0-0-p576-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.2.0-preview1</td>
+<td>2014-09-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.2/ruby-2.2.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2014/09/18/ruby-2-2-0-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-p330</td>
+<td>2014-08-19</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p330.tar.gz">download</a></td>
+<td><a href="/en/news/2014/08/19/ruby-1-9-2-p330-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p547</td>
+<td>2014-05-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p547.tar.gz">download</a></td>
+<td><a href="/en/news/2014/05/16/ruby-1-9-3-p547-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.2</td>
+<td>2014-05-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.2.tar.gz">download</a></td>
+<td><a href="/en/news/2014/05/09/ruby-2-1-2-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p481</td>
+<td>2014-05-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p481.tar.gz">download</a></td>
+<td><a href="/en/news/2014/05/09/ruby-2-0-0-p481-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.1</td>
+<td>2014-02-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.1.tar.gz">download</a></td>
+<td><a href="/en/news/2014/02/24/ruby-2-1-1-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p451</td>
+<td>2014-02-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p451.tar.gz">download</a></td>
+<td><a href="/en/news/2014/02/24/ruby-2-0-0-p451-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p545</td>
+<td>2014-02-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p545.tar.gz">download</a></td>
+<td><a href="/en/news/2014/02/24/ruby-1-9-3-p545-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.0</td>
+<td>2013-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0.tar.gz">download</a></td>
+<td><a href="/en/news/2013/12/25/ruby-2-1-0-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.0-rc1</td>
+<td>2013-12-20</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2013/12/20/ruby-2-1-0-rc1-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.0-preview2</td>
+<td>2013-11-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2013/11/22/ruby-2-1-0-preview2-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p353</td>
+<td>2013-11-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p353.tar.gz">download</a></td>
+<td><a href="/en/news/2013/11/22/ruby-2-0-0-p353-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p484</td>
+<td>2013-11-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p484.tar.gz">download</a></td>
+<td><a href="/en/news/2013/11/22/ruby-1-9-3-p484-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.1.0-preview1</td>
+<td>2013-09-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.1/ruby-2.1.0-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2013/09/23/ruby-2-1-0-preview1-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p247</td>
+<td>2013-06-27</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p247.tar.gz">download</a></td>
+<td><a href="/en/news/2013/06/27/ruby-2-0-0-p247-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p448</td>
+<td>2013-06-27</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p448.tar.gz">download</a></td>
+<td><a href="/en/news/2013/06/27/ruby-1-9-3-p448-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p374</td>
+<td>2013-06-27</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p374.tar.gz">download</a></td>
+<td><a href="/en/news/2013/06/27/ruby-1-8-7-p374-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-p195</td>
+<td>2013-05-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p195.tar.gz">download</a></td>
+<td><a href="/en/news/2013/05/14/ruby-2-0-0-p195-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p429</td>
+<td>2013-05-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p429.tar.gz">download</a></td>
+<td><a href="/en/news/2013/05/14/ruby-1-9-3-p429-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0</td>
+<td>2013-02-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-p0.tar.gz">download</a></td>
+<td><a href="/en/news/2013/02/24/ruby-2-0-0-p0-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p392</td>
+<td>2013-02-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p392.tar.gz">download</a></td>
+<td><a href="/en/news/2013/02/22/ruby-1-9-3-p392-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 2.0.0-rc2</td>
+<td>2013-02-08</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/2.0/ruby-2.0.0-rc2.tar.gz">download</a></td>
+<td><a href="/en/news/2013/02/08/ruby-2-0-0-rc2-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p385</td>
+<td>2013-02-06</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p385.tar.gz">download</a></td>
+<td><a href="/en/news/2013/02/06/ruby-1-9-3-p385-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p374</td>
+<td>2013-01-17</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p374.tar.gz">download</a></td>
+<td><a href="/en/news/2013/01/17/ruby-1-9-3-p374-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p362</td>
+<td>2012-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p362.tar.gz">download</a></td>
+<td><a href="/en/news/2012/12/25/ruby-1-9-3-p362-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p327</td>
+<td>2012-11-09</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p327.tar.gz">download</a></td>
+<td><a href="/en/news/2012/11/09/ruby-1-9-3-p327-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p286</td>
+<td>2012-10-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p286.tar.gz">download</a></td>
+<td><a href="/en/news/2012/10/12/ruby-1-9-3-p286-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p370</td>
+<td>2012-06-29</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p370.tar.gz">download</a></td>
+<td><a href="/en/news/2012/06/29/ruby-1-8-7-p370-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-p320</td>
+<td>2012-04-21</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p320.tar.gz">download</a></td>
+<td><a href="/en/news/2012/04/21/ruby-1-9-2-p320-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p194</td>
+<td>2012-04-20</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p194.tar.gz">download</a></td>
+<td><a href="/en/news/2012/04/20/ruby-1-9-3-p194-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-p125</td>
+<td>2012-02-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p125.tar.gz">download</a></td>
+<td><a href="/en/news/2012/02/16/ruby-1-9-3-p125-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3</td>
+<td>2011-10-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-p0.tar.gz">download</a></td>
+<td><a href="/en/news/2011/10/31/ruby-1-9-3-p0-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-rc1</td>
+<td>2011-09-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2011/09/24/ruby-1-9-3-rc1-has-been-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.3-preview1</td>
+<td>2011-08-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.3-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2011/08/01/ruby-1-9-3-preview1-has-been-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-p290</td>
+<td>2011-07-15</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p290.tar.gz">download</a></td>
+<td><a href="/en/news/2011/07/15/ruby-1-9-2-p290-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p352</td>
+<td>2011-07-02</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p352.tar.gz">download</a></td>
+<td><a href="/en/news/2011/07/02/ruby-1-8-7-p352-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-p136</td>
+<td>2010-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p136.tar.gz">download</a></td>
+<td><a href="/en/news/2010/12/25/ruby-1-9-2-p136-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p330</td>
+<td>2010-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p330.tar.gz">download</a></td>
+<td><a href="/en/news/2010/12/25/ruby-1-8-7-p330-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2</td>
+<td>2010-08-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-p0.tar.gz">download</a></td>
+<td><a href="/en/news/2010/08/18/ruby-1-9-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1-p430</td>
+<td>2010-08-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p430.tar.gz">download</a></td>
+<td><a href="/en/news/2010/08/16/ruby-1-9-1-p430-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p302</td>
+<td>2010-08-16</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p302.tar.gz">download</a></td>
+<td><a href="/en/news/2010/08/16/ruby-1-8-7-p302-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-rc2</td>
+<td>2010-07-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc2.tar.gz">download</a></td>
+<td><a href="/en/news/2010/07/11/ruby-1-9-2-rc2-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-rc1</td>
+<td>2010-07-02</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-rc1.tar.gz">download</a></td>
+<td><a href="/en/news/2010/07/02/ruby-1-9-2-rc1-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1-p429</td>
+<td>2010-07-02</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p429.tar.gz">download</a></td>
+<td><a href="/en/news/2010/07/02/ruby-1-9-1-p429-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p299</td>
+<td>2010-06-23</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p299.tar.gz">download</a></td>
+<td><a href="/en/news/2010/06/23/ruby-1-8-7-p299-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p248</td>
+<td>2009-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p248.tar.gz">download</a></td>
+<td><a href="/en/news/2009/12/25/ruby-1-8-7-p248-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1-p376</td>
+<td>2009-12-07</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p376.tar.gz">download</a></td>
+<td><a href="/en/news/2009/12/07/ruby-1-9-1-p376-is-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.2-preview1</td>
+<td>2009-07-20</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.2-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2009/07/20/ruby-1-9-2-preview-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1-p243</td>
+<td>2009-07-20</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p243.tar.gz">download</a></td>
+<td><a href="/en/news/2009/07/20/ruby-1-9-1-p243-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1-p129</td>
+<td>2009-05-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p129.tar.gz">download</a></td>
+<td><a href="/en/news/2009/05/12/ruby-1-9-1-p129-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p160</td>
+<td>2009-04-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p160.tar.gz">download</a></td>
+<td><a href="/en/news/2009/04/18/ruby-1-8-7-p160-and-1-8-6-p368-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.6-p368</td>
+<td>2009-04-18</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p368.tar.gz">download</a></td>
+<td><a href="/en/news/2009/04/18/ruby-1-8-7-p160-and-1-8-6-p368-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1</td>
+<td>2009-01-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-p0.tar.gz">download</a></td>
+<td><a href="/en/news/2009/01/30/ruby-1-9-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.1-preview1</td>
+<td>2008-10-28</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.1-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2008/10/28/ruby-1-9-1-preview-1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7-p72</td>
+<td>2008-08-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7-p72.tar.gz">download</a></td>
+<td><a href="/en/news/2008/08/11/ruby-1-8-7-p72-and-1-8-6-p287-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.6-p287</td>
+<td>2008-08-11</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6-p287.tar.gz">download</a></td>
+<td><a href="/en/news/2008/08/11/ruby-1-8-7-p72-and-1-8-6-p287-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.7</td>
+<td>2008-05-31</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.7.tar.gz">download</a></td>
+<td><a href="/en/news/2008/05/31/ruby-1-8-7-has-been-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.9.0</td>
+<td>2007-12-25</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.9/ruby-1.9.0-0.tar.gz">download</a></td>
+<td><a href="/en/news/2007/12/25/ruby-1-9-0-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.6</td>
+<td>2007-03-12</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.6.tar.gz">download</a></td>
+<td><a href="/en/news/2007/03/12/ruby-1-8-6-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.5</td>
+<td>2006-08-29</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.5.tar.gz">download</a></td>
+<td><a href="/en/news/2006/08/29/ruby-1-8-5-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.4</td>
+<td>2005-12-24</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.4.tar.gz">download</a></td>
+<td><a href="/en/news/2005/12/24/ruby-184-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.4-preview2</td>
+<td>2005-12-14</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.4-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2005/12/14/ruby-184-preview-2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.3</td>
+<td>2005-09-21</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.3.tar.gz">download</a></td>
+<td><a href="/en/news/2005/09/21/ruby-183-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.2</td>
+<td>2004-12-26</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.2.tar.gz">download</a></td>
+<td><a href="/en/news/2004/12/26/ruby-182-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.2-preview4</td>
+<td>2004-12-22</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.2-preview4.tar.gz">download</a></td>
+<td><a href="/en/news/2004/12/22/182-preview4-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.2-preview3</td>
+<td>2004-11-08</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.2-preview3.tar.gz">download</a></td>
+<td><a href="/en/news/2004/11/08/182-preview3-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.2-preview2</td>
+<td>2004-07-30</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.2-preview2.tar.gz">download</a></td>
+<td><a href="/en/news/2004/07/30/ruby-182-preview2-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.2-preview1</td>
+<td>2004-07-21</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.2-preview1.tar.gz">download</a></td>
+<td><a href="/en/news/2004/07/21/ruby-182-preview1-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.8.0</td>
+<td>2003-08-04</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.8/ruby-1.8.0.tar.gz">download</a></td>
+<td><a href="/en/news/2003/08/04/ruby-180-released/">more...</a></td>
+</tr>
+<tr>
+<td>Ruby 1.6.7</td>
+<td>2002-03-01</td>
+<td><a href="https://cache.ruby-lang.org/pub/ruby/1.6/ruby-1.6.7.tar.gz">download</a></td>
+<td><a href="/en/news/2002/03/01/167-is-released/">more...</a></td>
+</tr>
+</table>
+
+        </div>
+
+        
+
+      </article>
+    </div>
+
+      <!-- Desktop TOC (hidden below lg) -->
+      <div class="hidden lg:block lg:w-56 xl:w-64 flex-shrink-0 sticky top-24 self-start max-h-[calc(100vh-6rem)] overflow-y-auto">
+        
+
+<!-- Mobile/Tablet TOC (collapsible) -->
+<div class="toc-wrapper bg-stone-50 dark:bg-stone-800 rounded-lg border border-stone-200 dark:border-stone-700 overflow-hidden lg:bg-transparent lg:dark:bg-transparent lg:border-0 lg:rounded-none lg:overflow-visible">
+  <!-- TOC toggle header (mobile only) -->
+  <button id="toc-toggle" class="lg:hidden flex items-center justify-between w-full px-4 py-3 hover:bg-stone-100 dark:hover:bg-stone-700 transition-colors">
+    <span class="flex items-center gap-2 font-bold text-stone-900 dark:text-stone-100">
+      <span class="icon-lists" aria-hidden="true"></span>
+      Table of Contents
+    </span>
+    <span id="toc-chevron" class="icon-dropdown text-stone-500 dark:text-stone-400 transition-transform" aria-hidden="true"></span>
+  </button>
+
+  <!-- Desktop heading (desktop only) -->
+  <h3 class="hidden lg:flex font-bold text-stone-900 dark:text-stone-100 items-center gap-2 mb-6">
+    <span class="icon-lists" aria-hidden="true"></span>
+    Table of Contents
+  </h3>
+
+  <!-- TOC content panel -->
+  <div id="toc-mobile-panel" class="hidden lg:block border-t border-stone-200 dark:border-stone-700 lg:border-0">
+    <div class="px-4 pt-4 pb-6 lg:px-0 lg:pt-0 lg:pb-0">
+      <div class="toc-content not-prose">
+        <!-- TOC will be dynamically generated here -->
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  
+</div>
+
+  </div>
+
+  
+
+
+
+<!-- Footer Section -->
+<footer class="bg-gold-150 dark:bg-stone-770 mt-12 md:mt-16 pt-2 pb-8 md:pb-12 relative">
+  <!-- Wave Border at top -->
+  <div class="absolute -top-[23px] md:-top-[31px] left-0 right-0 h-6 md:h-8 text-gold-150 dark:text-stone-770">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 20" preserveAspectRatio="none" class="w-full h-full">
+      <path d="M0,10 C20,0 40,20 60,10 C80,0 100,20 120,10 C140,0 160,20 180,10 C200,0 220,20 240,10 C260,0 280,20 300,10 C320,0 340,20 360,10 C380,0 400,20 400,10 L400,20 L0,20 Z" fill="currentColor"/>
+    </svg>
+  </div>
+
+  <!-- Illustration Pattern Band -->
+  <div class="w-full h-10 mb-12 bg-repeat-x bg-center bg-[url('/images/footer/illust-pattern.svg')] bg-[length:auto_40px]" aria-hidden="true"></div>
+
+  <div class="container mx-auto px-4 md:px-6 lg:px-8">
+
+    <!-- Happy Hacking! and Footer Links -->
+    <div class="flex flex-col xl:flex-row xl:items-start xl:justify-between gap-6 xl:gap-8 mb-10">
+      <!-- Happy Hacking! (Matz's handwriting) -->
+      <div class="mb-3 xl:mb-0 relative">
+        <img src="/images/footer/happy-hacking.svg" alt="Happy Hacking!" class="h-24 md:h-28 w-auto dark:invert relative z-10">
+        <img src="/images/home/why_ruby/line.svg" alt="" class="w-72 h-auto absolute bottom-2 md:bottom-3 left-0 z-0" aria-hidden="true">
+      </div>
+
+      <!-- Footer Links -->
+      <nav class="flex flex-wrap items-center gap-x-3 gap-y-2 text-sm font-bold leading-none xl:pt-2">
+        
+        <a href="/en/security/"
+           class="mb-2 sm:mb-0 border-r border-stone-300 dark:border-stone-700 pr-3 text-stone-900 hover:text-ruby-600 dark:text-stone-300 dark:hover:text-ruby-400 transition-colors">
+          Security
+        </a>
+        
+
+        
+        <a href="/en/about/website/"
+           class="mb-2 sm:mb-0 border-r border-stone-300 dark:border-stone-700 pr-3 text-stone-900 hover:text-ruby-600 dark:text-stone-300 dark:hover:text-ruby-400 transition-colors">
+          About This Website
+        </a>
+        
+
+        
+        <a href="/en/about/logo/"
+           class="mb-2 sm:mb-0 border-r border-stone-300 dark:border-stone-700 pr-3 text-stone-900 hover:text-ruby-600 dark:text-stone-300 dark:hover:text-ruby-400 transition-colors">
+          About the Logo
+        </a>
+        
+
+        
+        <a href="/en/feeds/news.rss"
+           class="mb-2 sm:mb-0 border-r border-stone-300 dark:border-stone-700 pr-3 text-stone-900 hover:text-ruby-600 dark:text-stone-300 dark:hover:text-ruby-400 transition-colors">
+          News RSS
+        </a>
+        
+
+        
+        <a href="/en/about/license.txt"
+           class="mb-2 sm:mb-0 text-stone-900 hover:text-ruby-600 dark:text-stone-300 dark:hover:text-ruby-400 transition-colors">
+          Ruby License
+        </a>
+        
+      </nav>
+    </div>
+
+    <!-- Credits -->
+    <div class="credits text-sm text-stone-900 dark:text-stone-300">
+      <a href="/en/about/website/">This website</a> is proudly maintained by members of the Ruby community.
+    </div>
+
+  </div>
+</footer>
+
+</body>
+</html>
