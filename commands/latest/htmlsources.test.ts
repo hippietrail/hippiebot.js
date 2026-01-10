@@ -142,19 +142,17 @@ describe('HTML Sources - Sublime', () => {
 });
 
 describe('HTML Sources - Python', () => {
-    it('should parse Python version from fixture', async () => {
-        const dom = loadFixture('python.html');
-        const mockEarl = {
-            setPathname: () => {},
-            fetchDom: async () => loadFixture('python-release.html'),
-            getUrlString: () => 'https://www.python.org/release',
-        } as unknown as Earl;
+    it('should parse Python version from live site', async () => {
+        const pyEarl = new Earl('https://www.python.org');
+        const dom = await pyEarl.fetchDom();
         
-        const result = await parsePython(dom, mockEarl);
+        const result = await parsePython(dom, pyEarl);
         
         expect(result).toHaveLength(1);
         expect(result[0]).toHaveProperty('name', 'Python');
         expect(result[0]).toHaveProperty('ver');
+        expect(result[0]).toHaveProperty('link');
+        expect(result[0]).toHaveProperty('timestamp');
     });
 });
 

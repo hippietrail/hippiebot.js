@@ -594,13 +594,14 @@ export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> 
         // Navigate: #content > div > section > div:nth-child(1) > div.small-widget.download-widget > p:nth-child(3) > a
         const versionAnchor = domStroll('python', false, dom, [
             [2, 'html'],
-            [1, 'body'],
-            [1, 'div', { id: 'content' }],
-            [1, 'div'],
+            [3, 'body'],
+            [1, 'div', { id: 'touchnav-wrapper' }],
+            [11, 'div', { id: 'content' }],
+            [3, 'div', { cls: 'container' }],
             [1, 'section', { cls: 'main-content' }],
-            [1, 'div'],
-            [1, 'div', { cls: 'download-widget' }],
-            [3, 'p'],
+            [1, 'div', { cls: 'row' }],
+            [3, 'div', { cls: 'download-widget' }],
+            [5, 'p'],
             [1, 'a'],
         ])!;
 
@@ -613,13 +614,14 @@ export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> 
 
         // Navigate: #content > div > section > article > p:nth-child(2)
         const releaseParagraph = domStroll('python-release', false, releaseDom, [
-            [2, 'html'],
-            [1, 'body'],
-            [1, 'div', { id: 'content' }],
-            [1, 'div'],
+            [9, 'html'],
+            [5, 'body', { cls: 'downloads' }],
+            [1, 'div', { id: 'touchnav-wrapper' }],
+            [13, 'div', { id: 'content' }],
+            [3, 'div', { cls: 'container'}],
             [1, 'section', { cls: 'main-content' }],
-            [1, 'article'],
-            [2, 'p'],
+            [3, 'article'],
+            [3, 'p'],
         ])!;
 
         // Extract text from <strong>Release date:</strong> Dec. 5, 2025

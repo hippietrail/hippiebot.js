@@ -31,7 +31,7 @@ export function domStroll(site: string, debug: boolean, kids: DomNode[], data: D
         if (opts && typeof opts !== 'object')
             throw new Error(`[domStroll] ${site} opts must be an object`);
 
-        if (debug) kidsForStep(site, i, kids);
+        if (debug) kidsForStep(site, i, node, kids);
 
         node = kids[n];
 
@@ -83,13 +83,13 @@ export function domStroll(site: string, debug: boolean, kids: DomNode[], data: D
     return node;
 }
 
-function kidsForStep(site: string, st: number, kids: DomNode[]) {
-    console.log(`[domStroll] ${site}#${st} ${kids.map(
-        k => k.type === 'tag'
-            ? `<${k.name}${
-                    k.attribs && k.attribs.id ? `#${k.attribs.id}` : ''
+function kidsForStep(site: string, st: number, node: DomNode | null, kids: DomNode[]) {
+    console.log(`[domStroll] ${site}#${st} ${node?.name ?? 'dom'}${node?.attribs?.id ? `#${node.attribs.id}` : ''}${node?.attribs?.class ? `.${node.attribs.class.split(/\s+/).join('.')}` : ''} ->  ${kids.map(
+        (k, idx) => k.type === 'tag'
+            ? `[${idx}]<${k.name}${
+                    k.attribs?.id ? `#${k.attribs.id}` : ''
                 }${
-                    k.attribs && k.attribs.class ? `.${k.attribs.class.split(/\s+/).join('.')}` : ''
+                    k.attribs?.class ? `.${k.attribs.class.split(/\s+/).join('.')}` : ''
                 }>`
             : `#${k.type}`
     ).join(' ')}`);
