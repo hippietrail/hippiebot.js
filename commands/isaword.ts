@@ -177,6 +177,7 @@ async function ahd(word: string) {
 
 async function oxfordLearners(word: string) {
     // https://www.oxfordlearnersdictionaries.com/definition/english/WORD
+    // TODO: hippiebot.js-4q7 - user input (word) concatenated into pathname; should use setLastPathSegment/setPathname after construction
     const earl = new Earl('https://www.oxfordlearnersdictionaries.com', '/definition/english/' + word);
     try {
         const oxContainer = domStroll('ox', false, await earl.fetchDom(), [

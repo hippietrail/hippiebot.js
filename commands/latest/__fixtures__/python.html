@@ -34,6 +34,9 @@
             crossorigin="anonymous"
     ></script>
     <script src="/static/js/libs/modernizr.js"></script>
+    <script async
+            src="https://donate.python.org/fundraiser-banner/fundraiser-banner.js"></script>
+
 
     <link href="/static/stylesheets/style.a613f033861c.css" rel="stylesheet" type="text/css" media="all" title="default" />
     <link href="/static/stylesheets/mq.d40559628766.css" rel="stylesheet" type="text/css" media="not print, braille, embossed, speech, tty" />
@@ -60,7 +63,7 @@
     <meta name="msapplication-TileColor" content="#3673a5"><!-- python blue -->
     <meta name="msapplication-navbutton-color" content="#3673a5">
 
-    <title>Welcome to Python.org</title>
+    <title>Download Python | Python.org</title>
 
     <meta name="description" content="The official home of the Python Programming Language">
     <meta name="keywords" content="Python programming language object oriented web free open source software license documentation download community">
@@ -68,13 +71,13 @@
     
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Python.org">
-    <meta property="og:title" content="Welcome to Python.org">
+    <meta property="og:title" content="Download Python">
     <meta property="og:description" content="The official home of the Python Programming Language">
     
     <meta property="og:image" content="https://www.python.org/static/opengraph-icon-200x200.png">
     <meta property="og:image:secure_url" content="https://www.python.org/static/opengraph-icon-200x200.png">
     
-    <meta property="og:url" content="https://www.python.org/">
+    <meta property="og:url" content="https://www.python.org/downloads/">
 
     <link rel="author" href="/humans.txt">
 
@@ -108,7 +111,7 @@
     
 </head>
 
-<body class="python home" id="homepage">
+<body class="python download">
 
     <div id="touchnav-wrapper">
 
@@ -144,8 +147,8 @@
 
 <ul class="menu" role="tree">
     
-    <li class="python-meta current_item selectedcurrent_branch selected">
-        <a href="/" title="The Python Programming Language" class="current_item selectedcurrent_branch selected">Python</a>
+    <li class="python-meta current_branch selected">
+        <a href="/" title="The Python Programming Language" class="current_branch selected">Python</a>
     </li>
     
     <li class="psf-meta ">
@@ -267,7 +270,7 @@
     
     
     <li id="downloads" class="tier-1 element-2  " aria-haspopup="true">
-        <a href="/downloads/" title="" class="">Downloads</a>
+        <a href="/downloads/" title="" class=" selected">Downloads</a>
         
             
 
@@ -451,99 +454,87 @@
 
                 <div class="header-banner "> <!-- for optional "do-not-print" class -->
                     
-        <div id="dive-into-python" class="flex-slideshow slideshow">
+        <div class="download-for-current-os">
+            
+                <div class="download-os-android" style="display: none;">
+                    
+                    <h1 class="call-to-action">Download the latest version for Android</h1>
+                    
+                    
+                    <p class="download-buttons">
+                        
+                    </p>
+                    
+                </div>
+            
+                <div class="download-os-source" style="display: none;">
+                    
+                    <h1 class="call-to-action">Download the latest source release</h1>
+                    
+                    
+                    <p class="download-buttons">
+                        
+                        <a class="button" href="https://www.python.org/ftp/python/3.14.2/Python-3.14.2.tar.xz">Download Python 3.14.2</a>
+                        
+                    </p>
+                    
+                </div>
+            
+                <div class="download-os-windows" style="display: none;">
+                    
+                    <h1 class="call-to-action">Download the latest version for Windows</h1>
+                    
+                    
+                    <p class="download-buttons">
+                        <a class="button" href="https://www.python.org/ftp/python/pymanager/python-manager-25.2.msix">Download Python install manager</a>
+                    </p>
+                    
+                        <p>Or get the standalone installer for <a href="https://www.python.org/ftp/python/3.14.2/python-3.14.2-amd64.exe">Python 3.14.2</a></p>
+                    
+                    
+                </div>
+            
+                <div class="download-os-macos" style="display: none;">
+                    
+                    <h1 class="call-to-action">Download the latest version for macOS</h1>
+                    
+                    
+                    <p class="download-buttons">
+                        
+                        <a class="button" href="https://www.python.org/ftp/python/3.14.2/python-3.14.2-macos11.pkg">Download Python 3.14.2</a>
+                        
+                    </p>
+                    
+                </div>
+            
+            <div class="download-unknown">
+                <h1 class="call-to-action">Download the latest version of Python</h1>
+                <p class="download-buttons">
+                    
+                    <a class="button" href="/downloads/release/python-3142/">Download Python 3.14.2</a>
+                    
+                </p>
+            </div>
+            <p>
+  Looking for Python with a different OS? Python for
+  <a href="/downloads/windows/">Windows</a>,
+  <a href="/downloads/source/">Linux/Unix</a>,
+  <a href="/downloads/macos/">macOS</a>,
+  <a href="/downloads/android/">Android</a>,
+  <a href="/download/other/">other</a>
+</p>
+<p style="margin-top: 0.35em">
+  Want to help test development versions of Python 3.15?
+  <a href="/downloads/latest/prerelease/">Pre-releases</a>,
+  <a href="https://gitlab.com/python-devs/ci-images">Docker images</a>  
+</p>
 
-            <ul class="launch-shell menu" id="launch-shell">
-                <li>
-                    <a class="button prompt" id="start-shell" data-shell-container="#dive-into-python" href="/shell/">&gt;_
-                        <span class="message">Launch Interactive Shell</span>
-                    </a>
-                </li>
-            </ul>
-
-            <ul class="slides menu">
-                
-                <li>
-                    <div class="slide-code"><pre><code><span class="comment"># Python 3: Fibonacci series up to n</span>
->>> def fib(n):
->>>     a, b = 0, 1
->>>     while a &lt; n:
->>>         print(a, end=' ')
->>>         a, b = b, a+b
->>>     print()
->>> fib(1000)
-<span class="output">0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987</span></code></pre></div>
-                    <div class="slide-copy"><h1>Functions Defined</h1>
-<p>The core of extensible programming is defining functions. Python allows mandatory and optional arguments, keyword arguments, and even arbitrary argument lists. <a href="//docs.python.org/3/tutorial/controlflow.html#defining-functions">More about defining functions in Python&nbsp;3</a></p></div>
-                </li>
-                
-                <li>
-                    <div class="slide-code"><pre><code><span class="comment"># Python 3: List comprehensions</span>
->>> fruits = ['Banana', 'Apple', 'Lime']
->>> loud_fruits = [fruit.upper() for fruit in fruits]
->>> print(loud_fruits)
-<span class="output">['BANANA', 'APPLE', 'LIME']</span>
-
-<span class="comment"># List and the enumerate function</span>
->>> list(enumerate(fruits))
-<span class="output">[(0, 'Banana'), (1, 'Apple'), (2, 'Lime')]</span></code></pre></div>
-                    <div class="slide-copy"><h1>Compound Data Types</h1>
-<p>Lists (known as arrays in other languages) are one of the compound data types that Python understands. Lists can be indexed, sliced and manipulated with other built-in functions. <a href="//docs.python.org/3/tutorial/introduction.html#lists">More about lists in Python&nbsp;3</a></p></div>
-                </li>
-                
-                <li>
-                    <div class="slide-code"><pre><code><span class="comment"># Python 3: Simple arithmetic</span>
->>> 1 / 2
-<span class="output">0.5</span>
->>> 2 ** 3
-<span class="output">8</span>
->>> 17 / 3  <span class="comment"># classic division returns a float</span>
-<span class="output">5.666666666666667</span>
->>> 17 // 3  <span class="comment"># floor division</span>
-<span class="output">5</span></code></pre></div>
-                    <div class="slide-copy"><h1>Intuitive Interpretation</h1>
-<p>Calculations are simple with Python, and expression syntax is straightforward: the operators <code>+</code>, <code>-</code>, <code>*</code> and <code>/</code> work as expected; parentheses <code>()</code> can be used for grouping. <a href="http://docs.python.org/3/tutorial/introduction.html#using-python-as-a-calculator">More about simple math functions in Python&nbsp;3</a>.</p></div>
-                </li>
-                
-                <li>
-                    <div class="slide-code"><pre><code><span class="comment"># For loop on a list</span>
->>> numbers = [2, 4, 6, 8]
->>> product = 1
->>> for number in numbers:
-...    product = product * number
-... 
->>> print('The product is:', product)
-<span class="output">The product is: 384</span></code></pre></div>
-                    <div class="slide-copy"><h1>All the Flow You&rsquo;d Expect</h1>
-<p>Python knows the usual control flow statements that other languages speak &mdash; <code>if</code>, <code>for</code>, <code>while</code> and <code>range</code> &mdash; with some of its own twists, of course. <a href="//docs.python.org/3/tutorial/controlflow.html">More control flow tools in Python&nbsp;3</a></p></div>
-                </li>
-                
-                <li>
-                    <div class="slide-code"><pre><code><span class="comment"># Simple output (with Unicode)</span>
->>> print("Hello, I'm Python!")
-<span class="output">Hello, I'm Python!</span>
-<span class="comment"># Input, assignment</span>
->>> name = input('What is your name?\n')
-<span class="output">What is your name?
-Python</span>
->>> print(f'Hi, {name}.')
-<span class="output">Hi, Python.</span></code>
-</pre></div>
-                    <div class="slide-copy"><h1>Quick &amp; Easy to Learn</h1>
-<p>Experienced programmers in any other language can pick up Python very quickly, and beginners find the clean syntax and indentation structure easy to learn. <a href="//docs.python.org/3/tutorial/">Whet your appetite</a> with our Python&nbsp;3 overview.</p></div>
-                </li>
-                
-            </ul>
         </div>
-
 
                 </div>
 
                 
-        <div class="introduction">
-            <p>Python is a programming language that lets you work quickly <span class="breaker"></span>and integrate systems more effectively. <a class="readmore" href="/doc/">Learn More</a></p>
-        </div>
-
+                
 
              </div><!-- end .container -->
         </header>
@@ -560,194 +551,1975 @@ Python</span>
                     
 
                     
-
-                
-
-                <div class="row">
-
-                    <div class="small-widget get-started-widget">
-                        <h2 class="widget-title"><span aria-hidden="true" class="icon-get-started"></span>Get Started</h2>
-<p>Whether you're new to programming or an experienced developer, it's easy to learn and use Python.</p>
-<p><a href="/about/gettingstarted/">Start with our Beginner&rsquo;s Guide</a></p>
-                    </div>
-
-                    <div class="small-widget download-widget">
-                        <h2 class="widget-title"><span aria-hidden="true" class="icon-download"></span>Download</h2>
-<p>Python source code and installers are available for download for all versions!</p>
-<p>Latest: <a href="/downloads/release/python-3142/">Python 3.14.2</a></p>
-                    </div>
-
-                    <div class="small-widget documentation-widget">
-                        <h2 class="widget-title"><span aria-hidden="true" class="icon-documentation"></span>Docs</h2>
-<p>Documentation for Python's standard library, along with tutorials and guides, are available online.</p>
-<p><a href="https://docs.python.org">docs.python.org</a></p>
-                    </div>
-
-                    <div class="small-widget jobs-widget last">
-                        <h2 class="widget-title"><span aria-hidden="true" class="icon-jobs"></span>Jobs</h2>
-<p>Looking for work or have a Python related position that you're trying to hire for? Our <strong>relaunched community-run job board</strong> is the place to go.</p>
-<p><a href="//jobs.python.org">jobs.python.org</a></p>
-                    </div>
-
-                </div>
-
-                <div class="list-widgets row">
-
-                    <div class="medium-widget blog-widget">
-                        
-                        <div class="shrubbery">
-                        
-                            <h2 class="widget-title"><span aria-hidden="true" class="icon-news"></span>Latest News</h2>
-                            <p class="give-me-more"><a href="https://blog.python.org" title="More News">More</a></p>
-                            
-                            <ul class="menu">
-                                
-                                
-                                <li>
-<time datetime="2026-01-08T18:00:00.000003+00:00"><span class="say-no-more">2026-</span>01-08</time>
- <a href="https://mailchi.mp/python/python-software-foundation-july-2024-newsletter-19884314">PSF News: $500K+ Raised for Python for Everyone, PyCon US, &amp; More!</a></li>
-                                
-                                <li>
-<time datetime="2025-12-16T14:44:00.000001+00:00"><span class="say-no-more">2025-</span>12-16</time>
- <a href="https://pythoninsider.blogspot.com/2025/12/python-3150-alpha-3.html">Python 3.15.0 alpha 3</a></li>
-                                
-                                <li>
-<time datetime="2025-12-15T16:00:00+00:00"><span class="say-no-more">2025-</span>12-15</time>
- <a href="https://mailchi.mp/python/python-software-foundation-december-2025">PSF News Special Edition: Python is For Everyone &amp; PyCon US 2026</a></li>
-                                
-                                <li>
-<time datetime="2025-12-05T21:29:00.000004+00:00"><span class="say-no-more">2025-</span>12-05</time>
- <a href="https://pythoninsider.blogspot.com/2025/12/python-3142-and-31311-are-now-available.html">Python 3.14.2 and 3.13.11 are now available!</a></li>
-                                
-                                <li>
-<time datetime="2025-12-02T18:50:00.000001+00:00"><span class="say-no-more">2025-</span>12-02</time>
- <a href="https://pythoninsider.blogspot.com/2025/12/python-31310-is-now-available-too-you.html">Python 3.13.10 is now available, too, you know!</a></li>
-                                
-                            </ul>
-                        </div><!-- end .shrubbery -->
-
-                    </div>
-
-                    <div class="medium-widget event-widget last">
-                        
-                        <div class="shrubbery">
-                        
-                            <h2 class="widget-title"><span aria-hidden="true" class="icon-calendar"></span>Upcoming Events</h2>
-                            <p class="give-me-more"><a href="/events/calendars/" title="More Events">More</a></p>
-                            
-                            <ul class="menu">
-                                
-                                
-                                
-                                <li>
-<time datetime="2026-01-14T17:00:00+00:00"><span class="say-no-more">2026-</span>01-14</time>
- <a href="/events/python-user-group/2103/">Python Meeting Düsseldorf</a></li>
-                                
-                                
-                                
-                                <li>
-<time datetime="2026-01-22T18:15:00+00:00"><span class="say-no-more">2026-</span>01-22</time>
- <a href="/events/python-user-group/2125/">Python Leiden User Group</a></li>
-                                
-                                
-                                
-                                <li>
-<time datetime="2026-01-27T17:00:00+00:00"><span class="say-no-more">2026-</span>01-27</time>
- <a href="/events/python-user-group/2129/">PyLadies Amsterdam: Robotics beginner class with MicroPython</a></li>
-                                
-                                
-                                
-                                <li>
-<time datetime="2026-01-31T00:00:00+00:00"><span class="say-no-more">2026-</span>01-31</time>
- <a href="/events/python-events/2126/">Python Devroom @ FOSDEM 2026</a></li>
-                                
-                                
-                                
-                                <li>
-<time datetime="2026-02-20T00:00:00+00:00"><span class="say-no-more">2026-</span>02-20</time>
- <a href="/events/python-events/2121/">PyCon Namibia 2026</a></li>
-                                
-                                
-                            </ul>
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div class="row">
-
-                    <div class="medium-widget success-stories-widget">
-                        
-
-
-
-                        <div class="shrubbery">
-                            
-
-                            <h2 class="widget-title"><span aria-hidden="true" class="icon-success-stories"></span>Success Stories</h2>
-                            <p class="give-me-more"><a href="/success-stories/" title="More Success Stories">More</a></p>
-
-                            
-                            <div class="success-story-item" id="success-story-929">
-
-                            <blockquote>
-                                <a href="/success-stories/python-provides-convenience-and-flexibility-for-scalable-mlai/">Python&#x27;s convenience has made it the most popular language for machine learning and artificial intelligence. Python&#x27;s flexibility has allowed Anyscale to make ML/AI scalable from laptops to clusters.</a>
-                            </blockquote>
-
-                            <table cellpadding="0" cellspacing="0" border="0" width="100%" class="quote-from">
-                                <tbody>
-                                    <tr>
-                                        
-                                        <td><p><a href="/success-stories/python-provides-convenience-and-flexibility-for-scalable-mlai/">Python provides convenience and flexibility for scalable ML/AI</a> <em>by Dean Wampler</em></p></td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                            </div>
-                            
-
-                        </div><!-- end .shrubbery -->
-
-                    </div>
-
-                    <div class="medium-widget applications-widget last">
-                        <div class="shrubbery">
-                            <h2 class="widget-title"><span aria-hidden="true" class="icon-python"></span>Use Python for&hellip;</h2>
-<p class="give-me-more"><a href="/about/apps" title="More Applications">More</a></p>
-
-<ul class="menu">
-    <li><b>Web Development</b>:
-        <span class="tag-wrapper"><a class="tag" href="https://www.djangoproject.com/">Django</a>, <a class="tag" href="https://trypyramid.com/">Pyramid</a>, <a class="tag" href="https://bottlepy.org">Bottle</a>, <a class="tag" href="https://www.tornadoweb.org/">Tornado</a>, <a href="https://flask.palletsprojects.com/" class="tag">Flask</a>, <a href="https://litestar.dev/" class="tag">Litestar</a>, <a class="tag" href="https://www.web2py.com/">web2py</a></span></li>
-    <li><b>GUI Development</b>:
-        <span class="tag-wrapper"><a class="tag" href="https://wiki.python.org/moin/TkInter">tkInter</a>, <a class="tag" href="https://wiki.gnome.org/Projects/PyGObject">PyGObject</a>, <a class="tag" href="https://riverbankcomputing.com/software/pyqt/intro">PyQt</a>, <a class="tag" href="https://wiki.qt.io/Qt_for_Python">PySide</a>, <a class="tag" href="https://kivy.org/">Kivy</a>, <a class="tag" href="https://www.wxpython.org/">wxPython</a>, <a class="tag" href="https://dearpygui.readthedocs.io/en/latest/">DearPyGui</a></span></li>
-    <li><b>Scientific and Numeric</b>:
-        <span class="tag-wrapper">
-<a class="tag" href="https://scipy.org/">SciPy</a>, <a class="tag" href="https://pandas.pydata.org/">Pandas</a>, <a href="https://ipython.org/" class="tag">IPython</a></span></li>
-    <li><b>Software Development</b>:
-        <span class="tag-wrapper"><a class="tag" href="https://buildbot.net/">Buildbot</a>, <a class="tag" href="https://trac.edgewall.org/">Trac</a>, <a class="tag" href="https://www.roundup-tracker.org/">Roundup</a></span></li>
-    <li><b>System Administration</b>:
-        <span class="tag-wrapper"><a class="tag" href="https://docs.ansible.com/">Ansible</a>, <a class="tag" href="https://saltproject.io/">Salt</a>, <a class="tag" href="https://www.openstack.org/">OpenStack</a>, <a class="tag" href="https://xon.sh/">xonsh</a></span></li>
-</ul>
-                        </div><!-- end .shrubbery -->
-                    </div>
-
-                </div>
-
-                                <div class="psf-widget">
-
-                    <div class="python-logo"></div>
+                <div class="row active-release-list-widget">
                     
-                    <h2 class="widget-title">
-    <span class="prompt">&gt;&gt;&gt;</span> <a href="/psf/">Python Software Foundation</a>
-</h2>
-<p>The mission of the Python Software Foundation is to promote, protect, and advance the Python programming language, and to support and facilitate the growth of a diverse and international community of Python programmers. <a class="readmore" href="/psf/">Learn more</a> </p>
-<p class="click-these">
-    <a class="button" href="/psf/membership/">Become a Member</a>
-    <a class="button" href="/psf/donations/">Donate to the PSF</a>
-</p>
+
+                    <h2 class="widget-title">Active Python releases</h2>
+                    <p class="success-quote"><a href="https://devguide.python.org/versions/#versions">For more information visit the Python Developer's Guide</a>.</p>
+
+                    <p class="release-cycle-chart"><img src="https://devguide.python.org/_static/release-cycle.svg" alt="Python release cycle"></p>
+
+                    <div class="list-row-headings">
+    <span class="release-version">Python version</span>
+    <span class="release-status">Maintenance status</span>
+    <span class="release-dl">&nbsp;</span>
+    <span class="release-start">First released</span>
+    <span class="release-end">End of support</span>
+    <span class="release-pep">Release schedule</span>
+</div>
+<ol class="list-row-container menu">
+    <li>
+        <span class="release-version">3.15</span>
+        <span class="release-status">pre-release</span>
+        <span class="release-dl"><a href="/downloads/latest/python3.15/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2026-10-07 (planned)</span>
+        <span class="release-end">2031-10</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0790/">PEP 790</a></span>
+    </li>
+    <li>
+        <span class="release-version">3.14</span>
+        <span class="release-status">bugfix</span>
+        <span class="release-dl"><a href="/downloads/latest/python3.14/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2025-10-07</span>
+        <span class="release-end">2030-10</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0745/">PEP 745</a></span>
+    </li>
+    <li>
+        <span class="release-version">3.13</span>
+        <span class="release-status">bugfix</span>
+        <span class="release-dl"><a href="/downloads/latest/python3.13/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2024-10-07</span>
+        <span class="release-end">2029-10</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0719/">PEP 719</a></span>
+    </li>
+    <li>
+        <span class="release-version">3.12</span>
+        <span class="release-status">security</span>
+        <span class="release-dl"><a href="/downloads/latest/python3.12/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2023-10-02</span>
+        <span class="release-end">2028-10</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0693/">PEP 693</a></span>
+    </li>
+    <li>
+        <span class="release-version">3.11</span>
+        <span class="release-status">security</span>
+        <span class="release-dl"><a href="/downloads/latest/python3.11/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2022-10-24</span>
+        <span class="release-end">2027-10</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0664/">PEP 664</a></span>
+    </li>
+    <li>
+        <span class="release-version">3.10</span>
+        <span class="release-status">security</span>
+        <span class="release-dl"><a href="/downloads/latest/python3.10/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2021-10-04</span>
+        <span class="release-end">2026-10</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0619/">PEP 619</a></span>
+    </li>
+    <li>
+        <span class="release-version">3.9</span>
+        <span class="release-status">end of life, last release was <a href="https://www.python.org/downloads/release/python-3925/">3.9.25</a></span>
+        <span class="release-dl"><a href="/downloads/latest/python3.9/"><span aria-hidden="true" class="icon-download"></span>Download</a></span>
+        <span class="release-start">2020-10-05</span>
+        <span class="release-end">2025-10-31</span>
+        <span class="release-pep"><a href="https://peps.python.org/pep-0596/">PEP 596</a></span>
+    </li>
+</ol>
                 </div>
 
 
+                <div class="row download-list-widget">
+
+                    <h2 class="widget-title">Looking for a specific release?</h2>
+                    <p class="success-quote">Python releases by version number:</p>
+
+                    <div class="list-row-headings">
+                        <span class="release-number">Release version</span>
+                        <span class="release-date">Release date</span>
+                        <span class="release-download">&nbsp;</span>
+                        <span class="release-enhancements">Click for more</span>
+                    </div>
+                    <ol class="list-row-container menu">
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3142/">Python 3.14.2</a></span>
+                            <span class="release-date">Dec. 5, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3142/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.14.2/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3141/">Python 3.14.1</a></span>
+                            <span class="release-date">Dec. 2, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3141/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.14.1/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3140/">Python 3.14.0</a></span>
+                            <span class="release-date">Oct. 7, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3140/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.14/whatsnew/3.14.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31311/">Python 3.13.11</a></span>
+                            <span class="release-date">Dec. 5, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31311/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.11/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31310/">Python 3.13.10</a></span>
+                            <span class="release-date">Dec. 2, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31310/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.10/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3139/">Python 3.13.9</a></span>
+                            <span class="release-date">Oct. 14, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3139/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.9/whatsnew/changelog.html#python-3-13-9">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3138/">Python 3.13.8</a></span>
+                            <span class="release-date">Oct. 7, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3138/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.8/whatsnew/changelog.html#python-3-13-8">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3137/">Python 3.13.7</a></span>
+                            <span class="release-date">Aug. 14, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3137/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.7/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3136/">Python 3.13.6</a></span>
+                            <span class="release-date">Aug. 6, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3136/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.6/whatsnew/changelog.html#python-3-13-6">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3135/">Python 3.13.5</a></span>
+                            <span class="release-date">June 11, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3135/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.5/whatsnew/changelog.html#python-3-13-5">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3134/">Python 3.13.4</a></span>
+                            <span class="release-date">June 3, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3134/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.4/whatsnew/changelog.html#python-3-13-4">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3133/">Python 3.13.3</a></span>
+                            <span class="release-date">April 8, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3133/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.3/whatsnew/changelog.html#python-3-13-3">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3132/">Python 3.13.2</a></span>
+                            <span class="release-date">Feb. 4, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3132/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.2/whatsnew/changelog.html#python-3-13-2">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3131/">Python 3.13.1</a></span>
+                            <span class="release-date">Dec. 3, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3131/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.1/whatsnew/changelog.html#python-3-13-1">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3130/">Python 3.13.0</a></span>
+                            <span class="release-date">Oct. 7, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3130/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.13.0/whatsnew/changelog.html#python-3-13-0">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31212/">Python 3.12.12</a></span>
+                            <span class="release-date">Oct. 9, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31212/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.12/whatsnew/changelog.html#python-3-12-12">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31211/">Python 3.12.11</a></span>
+                            <span class="release-date">June 3, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31211/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.11/whatsnew/changelog.html#python-3-12-11">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31210/">Python 3.12.10</a></span>
+                            <span class="release-date">April 8, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31210/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.10/whatsnew/changelog.html#python-3-12-10">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3129/">Python 3.12.9</a></span>
+                            <span class="release-date">Feb. 4, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3129/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.9/whatsnew/changelog.html#python-3-12-9">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3128/">Python 3.12.8</a></span>
+                            <span class="release-date">Dec. 3, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3128/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.8/whatsnew/changelog.html#python-3-12-8">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3127/">Python 3.12.7</a></span>
+                            <span class="release-date">Oct. 1, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3127/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.7/whatsnew/changelog.html#python-3-12-7">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3126/">Python 3.12.6</a></span>
+                            <span class="release-date">Sept. 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3126/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.6/whatsnew/changelog.html#python-3-12-6">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3125/">Python 3.12.5</a></span>
+                            <span class="release-date">Aug. 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3125/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.5/whatsnew/changelog.html#python-3-12-5">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3124/">Python 3.12.4</a></span>
+                            <span class="release-date">June 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3124/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.4/whatsnew/changelog.html#python-3-12-4">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3123/">Python 3.12.3</a></span>
+                            <span class="release-date">April 9, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3123/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.3/whatsnew/changelog.html#python-3-12-2">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3122/">Python 3.12.2</a></span>
+                            <span class="release-date">Feb. 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3122/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.2/whatsnew/changelog.html#python-3-12-2">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3121/">Python 3.12.1</a></span>
+                            <span class="release-date">Dec. 8, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3121/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.1/whatsnew/changelog.html#python-3-12-1">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3120/">Python 3.12.0</a></span>
+                            <span class="release-date">Oct. 2, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3120/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.12.0/whatsnew/changelog.html#python-3-12-0">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31114/">Python 3.11.14</a></span>
+                            <span class="release-date">Oct. 9, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31114/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.14/whatsnew/changelog.html#python-3-11-14">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31113/">Python 3.11.13</a></span>
+                            <span class="release-date">June 3, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31113/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.13/whatsnew/changelog.html#python-3-11-13">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31112/">Python 3.11.12</a></span>
+                            <span class="release-date">April 8, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31112/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.12/whatsnew/changelog.html#python-3-11-12">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31111/">Python 3.11.11</a></span>
+                            <span class="release-date">Dec. 3, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-31111/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.11/whatsnew/changelog.html#python-3-11-11">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31110/">Python 3.11.10</a></span>
+                            <span class="release-date">Sept. 7, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-31110/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.10/whatsnew/changelog.html#python-3-11-10">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3119/">Python 3.11.9</a></span>
+                            <span class="release-date">April 2, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3119/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.9/whatsnew/changelog.html#python-3-11-9">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3118/">Python 3.11.8</a></span>
+                            <span class="release-date">Feb. 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3118/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.8/whatsnew/changelog.html#python-3-11-8">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3117/">Python 3.11.7</a></span>
+                            <span class="release-date">Dec. 4, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3117/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.7/whatsnew/changelog.html#python-3-11-7">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3116/">Python 3.11.6</a></span>
+                            <span class="release-date">Oct. 2, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3116/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.6/whatsnew/changelog.html#python-3-11-6">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3115/">Python 3.11.5</a></span>
+                            <span class="release-date">Aug. 24, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3115/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.5/whatsnew/changelog.html#python-3-11-5">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3114/">Python 3.11.4</a></span>
+                            <span class="release-date">June 6, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3114/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.4/whatsnew/changelog.html#python-3-11-4">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3113/">Python 3.11.3</a></span>
+                            <span class="release-date">April 5, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3113/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.3/whatsnew/changelog.html#python-3-11-3">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3112/">Python 3.11.2</a></span>
+                            <span class="release-date">Feb. 8, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3112/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.2/whatsnew/changelog.html#python-3-11-2">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3111/">Python 3.11.1</a></span>
+                            <span class="release-date">Dec. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3111/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.1/whatsnew/changelog.html#python-3-11-1">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3110/">Python 3.11.0</a></span>
+                            <span class="release-date">Oct. 24, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3110/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.11.0/whatsnew/changelog.html#python-3-11-0-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31019/">Python 3.10.19</a></span>
+                            <span class="release-date">Oct. 9, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31019/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.19/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31018/">Python 3.10.18</a></span>
+                            <span class="release-date">June 3, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31018/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.18/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31017/">Python 3.10.17</a></span>
+                            <span class="release-date">April 8, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-31017/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.17/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31016/">Python 3.10.16</a></span>
+                            <span class="release-date">Dec. 3, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-31016/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.16/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31015/">Python 3.10.15</a></span>
+                            <span class="release-date">Sept. 7, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-31015/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.15/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31014/">Python 3.10.14</a></span>
+                            <span class="release-date">March 19, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-31014/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.14/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31013/">Python 3.10.13</a></span>
+                            <span class="release-date">Aug. 24, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-31013/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.13/whatsnew/changelog.html#python-3-10-13-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31012/">Python 3.10.12</a></span>
+                            <span class="release-date">June 6, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-31012/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.12/whatsnew/changelog.html#python-3-10-12-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31011/">Python 3.10.11</a></span>
+                            <span class="release-date">April 5, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-31011/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.11/whatsnew/changelog.html#python-3-10-11-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-31010/">Python 3.10.10</a></span>
+                            <span class="release-date">Feb. 8, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-31010/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.10/whatsnew/changelog.html#python-3-10-10-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3109/">Python 3.10.9</a></span>
+                            <span class="release-date">Dec. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3109/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.9/whatsnew/changelog.html#python-3-10-9-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3108/">Python 3.10.8</a></span>
+                            <span class="release-date">Oct. 11, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3108/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.8/whatsnew/changelog.html#python-3-10-8-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3107/">Python 3.10.7</a></span>
+                            <span class="release-date">Sept. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3107/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.7/whatsnew/changelog.html#python-3-10-7-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3106/">Python 3.10.6</a></span>
+                            <span class="release-date">Aug. 2, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3106/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.6/whatsnew/changelog.html#python-3-10-6-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3105/">Python 3.10.5</a></span>
+                            <span class="release-date">June 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3105/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.5/whatsnew/changelog.html#python-3-10-5-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3104/">Python 3.10.4</a></span>
+                            <span class="release-date">March 24, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3104/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.4/whatsnew/changelog.html#python-3-10-4-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3103/">Python 3.10.3</a></span>
+                            <span class="release-date">March 16, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3103/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.3/whatsnew/changelog.html#python-3-10-3-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3102/">Python 3.10.2</a></span>
+                            <span class="release-date">Jan. 14, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3102/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.2/whatsnew/changelog.html#python-3-10-2-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3101/">Python 3.10.1</a></span>
+                            <span class="release-date">Dec. 6, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3101/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.1/whatsnew/changelog.html#python-3-10-1-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3100/">Python 3.10.0</a></span>
+                            <span class="release-date">Oct. 4, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3100/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.10.0/whatsnew/changelog.html#python-3-10-0-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3925/">Python 3.9.25</a></span>
+                            <span class="release-date">Oct. 31, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3925/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.25/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3924/">Python 3.9.24</a></span>
+                            <span class="release-date">Oct. 9, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3924/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.24/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3923/">Python 3.9.23</a></span>
+                            <span class="release-date">June 3, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3923/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.23/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3922/">Python 3.9.22</a></span>
+                            <span class="release-date">April 8, 2025</span>
+                            <span class="release-download"><a href="/downloads/release/python-3922/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.22/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3921/">Python 3.9.21</a></span>
+                            <span class="release-date">Dec. 3, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3921/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.21/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3920/">Python 3.9.20</a></span>
+                            <span class="release-date">Sept. 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3920/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.20/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3919/">Python 3.9.19</a></span>
+                            <span class="release-date">March 19, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3919/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.19/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3918/">Python 3.9.18</a></span>
+                            <span class="release-date">Aug. 24, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3918/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.18/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3917/">Python 3.9.17</a></span>
+                            <span class="release-date">June 6, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3917/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.17/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3916/">Python 3.9.16</a></span>
+                            <span class="release-date">Dec. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3916/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.9.16/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3915/">Python 3.9.15</a></span>
+                            <span class="release-date">Oct. 11, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3915/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.9.15/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3914/">Python 3.9.14</a></span>
+                            <span class="release-date">Sept. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3914/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.9.14/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3913/">Python 3.9.13</a></span>
+                            <span class="release-date">May 17, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3913/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.13/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3912/">Python 3.9.12</a></span>
+                            <span class="release-date">March 23, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3912/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.12/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3911/">Python 3.9.11</a></span>
+                            <span class="release-date">March 16, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3911/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.11/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3910/">Python 3.9.10</a></span>
+                            <span class="release-date">Jan. 14, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3910/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.10/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-399/">Python 3.9.9</a></span>
+                            <span class="release-date">Nov. 15, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-399/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.9/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-398/">Python 3.9.8</a></span>
+                            <span class="release-date">Nov. 5, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-398/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.8/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-397/">Python 3.9.7</a></span>
+                            <span class="release-date">Aug. 30, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-397/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.7/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-396/">Python 3.9.6</a></span>
+                            <span class="release-date">June 28, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-396/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.6/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-395/">Python 3.9.5</a></span>
+                            <span class="release-date">May 3, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-395/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.5/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-394/">Python 3.9.4</a></span>
+                            <span class="release-date">April 4, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-394/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.4/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-392/">Python 3.9.2</a></span>
+                            <span class="release-date">Feb. 19, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-392/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.2/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-391/">Python 3.9.1</a></span>
+                            <span class="release-date">Dec. 7, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-391/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.1/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-390/">Python 3.9.0</a></span>
+                            <span class="release-date">Oct. 5, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-390/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.9.0/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3820/">Python 3.8.20</a></span>
+                            <span class="release-date">Sept. 6, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3820/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.20/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3819/">Python 3.8.19</a></span>
+                            <span class="release-date">March 19, 2024</span>
+                            <span class="release-download"><a href="/downloads/release/python-3819/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.19/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3818/">Python 3.8.18</a></span>
+                            <span class="release-date">Aug. 24, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3818/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.18/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3817/">Python 3.8.17</a></span>
+                            <span class="release-date">June 6, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3817/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.8.17/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3816/">Python 3.8.16</a></span>
+                            <span class="release-date">Dec. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3816/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.8.16/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3815/">Python 3.8.15</a></span>
+                            <span class="release-date">Oct. 11, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3815/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.8.15/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3814/">Python 3.8.14</a></span>
+                            <span class="release-date">Sept. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3814/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://docs.python.org/release/3.8.14/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3813/">Python 3.8.13</a></span>
+                            <span class="release-date">March 16, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3813/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.13/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3812/">Python 3.8.12</a></span>
+                            <span class="release-date">Aug. 30, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3812/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.12/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3811/">Python 3.8.11</a></span>
+                            <span class="release-date">June 28, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3811/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.11/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3810/">Python 3.8.10</a></span>
+                            <span class="release-date">May 3, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3810/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.10/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-389/">Python 3.8.9</a></span>
+                            <span class="release-date">April 2, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-389/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.9/whatsnew/changelog.html#python-3-8-9">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-388/">Python 3.8.8</a></span>
+                            <span class="release-date">Feb. 19, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-388/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.8/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-387/">Python 3.8.7</a></span>
+                            <span class="release-date">Dec. 21, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-387/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.7/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-386/">Python 3.8.6</a></span>
+                            <span class="release-date">Sept. 24, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-386/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.6/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-385/">Python 3.8.5</a></span>
+                            <span class="release-date">July 20, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-385/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.5/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-384/">Python 3.8.4</a></span>
+                            <span class="release-date">July 13, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-384/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.4/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-383/">Python 3.8.3</a></span>
+                            <span class="release-date">May 13, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-383/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.3/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-382/">Python 3.8.2</a></span>
+                            <span class="release-date">Feb. 24, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-382/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.8.2/whatsnew/changelog.html#python-3-8-2-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-381/">Python 3.8.1</a></span>
+                            <span class="release-date">Dec. 18, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-381/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.8/whatsnew/changelog.html#python-3-8-1">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-380/">Python 3.8.0</a></span>
+                            <span class="release-date">Oct. 14, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-380/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.8/whatsnew/changelog.html#python-3-8-0-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3717/">Python 3.7.17</a></span>
+                            <span class="release-date">June 6, 2023</span>
+                            <span class="release-download"><a href="/downloads/release/python-3717/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.17/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3716/">Python 3.7.16</a></span>
+                            <span class="release-date">Dec. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3716/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.16/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3715/">Python 3.7.15</a></span>
+                            <span class="release-date">Oct. 11, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3715/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.15/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3714/">Python 3.7.14</a></span>
+                            <span class="release-date">Sept. 6, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3714/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.14/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3713/">Python 3.7.13</a></span>
+                            <span class="release-date">March 16, 2022</span>
+                            <span class="release-download"><a href="/downloads/release/python-3713/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.13/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3712/">Python 3.7.12</a></span>
+                            <span class="release-date">Sept. 4, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3712/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.12/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3711/">Python 3.7.11</a></span>
+                            <span class="release-date">June 28, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3711/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.11/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3710/">Python 3.7.10</a></span>
+                            <span class="release-date">Feb. 15, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3710/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.10/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-379/">Python 3.7.9</a></span>
+                            <span class="release-date">Aug. 17, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-379/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.9/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-378/">Python 3.7.8</a></span>
+                            <span class="release-date">June 27, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-378/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.7.8/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-377/">Python 3.7.7</a></span>
+                            <span class="release-date">March 10, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-377/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-7-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-376/">Python 3.7.6</a></span>
+                            <span class="release-date">Dec. 18, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-376/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-6-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-375/">Python 3.7.5</a></span>
+                            <span class="release-date">Oct. 15, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-375/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-5-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-374/">Python 3.7.4</a></span>
+                            <span class="release-date">July 8, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-374/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-4-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-373/">Python 3.7.3</a></span>
+                            <span class="release-date">March 25, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-373/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-3-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-372/">Python 3.7.2</a></span>
+                            <span class="release-date">Dec. 24, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-372/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-2-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-371/">Python 3.7.1</a></span>
+                            <span class="release-date">Oct. 20, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-371/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-1-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-370/">Python 3.7.0</a></span>
+                            <span class="release-date">June 27, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-370/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.7/whatsnew/changelog.html#python-3-7-0-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3615/">Python 3.6.15</a></span>
+                            <span class="release-date">Sept. 4, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3615/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.6.15/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3614/">Python 3.6.14</a></span>
+                            <span class="release-date">June 28, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3614/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.6.14/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3613/">Python 3.6.13</a></span>
+                            <span class="release-date">Feb. 15, 2021</span>
+                            <span class="release-download"><a href="/downloads/release/python-3613/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.6.13/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3612/">Python 3.6.12</a></span>
+                            <span class="release-date">Aug. 17, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-3612/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.6.12/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3611/">Python 3.6.11</a></span>
+                            <span class="release-date">June 27, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-3611/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.6.11/whatsnew/changelog.html#changelog">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3610/">Python 3.6.10</a></span>
+                            <span class="release-date">Dec. 18, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-3610/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-10-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-369/">Python 3.6.9</a></span>
+                            <span class="release-date">July 2, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-369/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-9-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-368/">Python 3.6.8</a></span>
+                            <span class="release-date">Dec. 24, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-368/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-8-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-367/">Python 3.6.7</a></span>
+                            <span class="release-date">Oct. 20, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-367/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-7-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-366/">Python 3.6.6</a></span>
+                            <span class="release-date">June 27, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-366/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-6-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-365/">Python 3.6.5</a></span>
+                            <span class="release-date">March 28, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-365/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-5-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-364/">Python 3.6.4</a></span>
+                            <span class="release-date">Dec. 19, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-364/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-4-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-363/">Python 3.6.3</a></span>
+                            <span class="release-date">Oct. 3, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-363/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-3-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-362/">Python 3.6.2</a></span>
+                            <span class="release-date">July 17, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-362/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-2-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-361/">Python 3.6.1</a></span>
+                            <span class="release-date">March 21, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-361/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-1-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-360/">Python 3.6.0</a></span>
+                            <span class="release-date">Dec. 23, 2016</span>
+                            <span class="release-download"><a href="/downloads/release/python-360/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.6/whatsnew/changelog.html#python-3-6-0-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3510/">Python 3.5.10</a></span>
+                            <span class="release-date">Sept. 5, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-3510/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-10">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-359/">Python 3.5.9</a></span>
+                            <span class="release-date">Nov. 2, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-359/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-9">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-358/">Python 3.5.8</a></span>
+                            <span class="release-date">Oct. 29, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-358/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-8">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-357/">Python 3.5.7</a></span>
+                            <span class="release-date">March 18, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-357/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-7">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-356/">Python 3.5.6</a></span>
+                            <span class="release-date">Aug. 2, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-356/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-6">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-355/">Python 3.5.5</a></span>
+                            <span class="release-date">Feb. 5, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-355/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-5-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-354/">Python 3.5.4</a></span>
+                            <span class="release-date">Aug. 8, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-354/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-4">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-353/">Python 3.5.3</a></span>
+                            <span class="release-date">Jan. 17, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-353/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-3">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-352/">Python 3.5.2</a></span>
+                            <span class="release-date">June 27, 2016</span>
+                            <span class="release-download"><a href="/downloads/release/python-352/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-2">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-351/">Python 3.5.1</a></span>
+                            <span class="release-date">Dec. 7, 2015</span>
+                            <span class="release-download"><a href="/downloads/release/python-351/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-1-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-350/">Python 3.5.0</a></span>
+                            <span class="release-date">Sept. 13, 2015</span>
+                            <span class="release-download"><a href="/downloads/release/python-350/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.5/whatsnew/changelog.html#python-3-5-0-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-3410/">Python 3.4.10</a></span>
+                            <span class="release-date">March 18, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-3410/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-10">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-349/">Python 3.4.9</a></span>
+                            <span class="release-date">Aug. 2, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-349/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-9">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-348/">Python 3.4.8</a></span>
+                            <span class="release-date">Feb. 5, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-348/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-8-final">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-347/">Python 3.4.7</a></span>
+                            <span class="release-date">Aug. 9, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-347/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-7">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-346/">Python 3.4.6</a></span>
+                            <span class="release-date">Jan. 17, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-346/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-6">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-345/">Python 3.4.5</a></span>
+                            <span class="release-date">June 27, 2016</span>
+                            <span class="release-download"><a href="/downloads/release/python-345/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-5">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-344/">Python 3.4.4</a></span>
+                            <span class="release-date">Dec. 21, 2015</span>
+                            <span class="release-download"><a href="/downloads/release/python-344/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-4">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-343/">Python 3.4.3</a></span>
+                            <span class="release-date">Feb. 25, 2015</span>
+                            <span class="release-download"><a href="/downloads/release/python-343/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-3">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-342/">Python 3.4.2</a></span>
+                            <span class="release-date">Oct. 13, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-342/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-2">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-341/">Python 3.4.1</a></span>
+                            <span class="release-date">May 19, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-341/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-1">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-340/">Python 3.4.0</a></span>
+                            <span class="release-date">March 17, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-340/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/3.4/whatsnew/changelog.html#python-3-4-0">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-337/">Python 3.3.7</a></span>
+                            <span class="release-date">Sept. 19, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-337/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.3.7/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-336/">Python 3.3.6</a></span>
+                            <span class="release-date">Oct. 12, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-336/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/file/v3.3.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-335/">Python 3.3.5</a></span>
+                            <span class="release-date">March 9, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-335/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.3.5/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-334/">Python 3.3.4</a></span>
+                            <span class="release-date">Feb. 9, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-334/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.3.4/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-333/">Python 3.3.3</a></span>
+                            <span class="release-date">Nov. 17, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-333/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.3.3/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-332/">Python 3.3.2</a></span>
+                            <span class="release-date">May 15, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-332/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.3.2/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-331/">Python 3.3.1</a></span>
+                            <span class="release-date">April 6, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-331/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://docs.python.org/release/3.3.1/whatsnew/changelog.html">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-330/">Python 3.3.0</a></span>
+                            <span class="release-date">Sept. 29, 2012</span>
+                            <span class="release-download"><a href="/downloads/release/python-330/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.3.0/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-326/">Python 3.2.6</a></span>
+                            <span class="release-date">Oct. 12, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-326/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/file/v3.2.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-325/">Python 3.2.5</a></span>
+                            <span class="release-date">May 15, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-325/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.2.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-324/">Python 3.2.4</a></span>
+                            <span class="release-date">April 6, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-324/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.2.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-323/">Python 3.2.3</a></span>
+                            <span class="release-date">April 10, 2012</span>
+                            <span class="release-download"><a href="/downloads/release/python-323/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.2.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-322/">Python 3.2.2</a></span>
+                            <span class="release-date">Sept. 3, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-322/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.2.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-321/">Python 3.2.1</a></span>
+                            <span class="release-date">July 9, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-321/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.2.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-320/">Python 3.2.0</a></span>
+                            <span class="release-date">Feb. 20, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-320/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-315/">Python 3.1.5</a></span>
+                            <span class="release-date">April 9, 2012</span>
+                            <span class="release-download"><a href="/downloads/release/python-315/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.1.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-314/">Python 3.1.4</a></span>
+                            <span class="release-date">June 11, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-314/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.1.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-313/">Python 3.1.3</a></span>
+                            <span class="release-date">Nov. 27, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-313/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.1.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-312/">Python 3.1.2</a></span>
+                            <span class="release-date">March 20, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-312/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.1.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-311/">Python 3.1.1</a></span>
+                            <span class="release-date">Aug. 17, 2009</span>
+                            <span class="release-download"><a href="/downloads/release/python-311/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.1.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-310/">Python 3.1.0</a></span>
+                            <span class="release-date">June 26, 2009</span>
+                            <span class="release-download"><a href="/downloads/release/python-310/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-301/">Python 3.0.1</a></span>
+                            <span class="release-date">Feb. 13, 2009</span>
+                            <span class="release-download"><a href="/downloads/release/python-301/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.0.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-300/">Python 3.0.0</a></span>
+                            <span class="release-date">Dec. 3, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-300/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v3.0/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2718/">Python 2.7.18</a></span>
+                            <span class="release-date">April 20, 2020</span>
+                            <span class="release-download"><a href="/downloads/release/python-2718/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2717/">Python 2.7.17</a></span>
+                            <span class="release-date">Oct. 19, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-2717/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://raw.githubusercontent.com/python/cpython/c2f86d86e6c8f5fd1ef602128b537a48f3f5c063/Misc/NEWS.d/2.7.17rc1.rst">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2716/">Python 2.7.16</a></span>
+                            <span class="release-date">March 4, 2019</span>
+                            <span class="release-download"><a href="/downloads/release/python-2716/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://raw.githubusercontent.com/python/cpython/v2.7.16/Misc/NEWS.d/2.7.16.rst">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2715/">Python 2.7.15</a></span>
+                            <span class="release-date">May 1, 2018</span>
+                            <span class="release-download"><a href="/downloads/release/python-2715/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2714/">Python 2.7.14</a></span>
+                            <span class="release-date">Sept. 16, 2017</span>
+                            <span class="release-download"><a href="/downloads/release/python-2714/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://raw.githubusercontent.com/python/cpython/84471935ed2f62b8c5758fd544c7d37076fe0fa5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2713/">Python 2.7.13</a></span>
+                            <span class="release-date">Dec. 17, 2016</span>
+                            <span class="release-download"><a href="/downloads/release/python-2713/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/raw-file/v2.7.13/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2712/">Python 2.7.12</a></span>
+                            <span class="release-date">June 25, 2016</span>
+                            <span class="release-download"><a href="/downloads/release/python-2712/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/raw-file/v2.7.12/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2711/">Python 2.7.11</a></span>
+                            <span class="release-date">Dec. 5, 2015</span>
+                            <span class="release-download"><a href="/downloads/release/python-2711/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/raw-file/53d30ab403f1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-2710/">Python 2.7.10</a></span>
+                            <span class="release-date">May 23, 2015</span>
+                            <span class="release-download"><a href="/downloads/release/python-2710/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/raw-file/15c95b7d81dc/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-279/">Python 2.7.9</a></span>
+                            <span class="release-date">Dec. 10, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-279/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="https://hg.python.org/cpython/raw-file/v2.7.9/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-278/">Python 2.7.8</a></span>
+                            <span class="release-date">July 2, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-278/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.8/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-277/">Python 2.7.7</a></span>
+                            <span class="release-date">June 1, 2014</span>
+                            <span class="release-download"><a href="/downloads/release/python-277/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.7/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-276/">Python 2.7.6</a></span>
+                            <span class="release-date">Nov. 10, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-276/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-275/">Python 2.7.5</a></span>
+                            <span class="release-date">May 12, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-275/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-274/">Python 2.7.4</a></span>
+                            <span class="release-date">April 6, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-274/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-273/">Python 2.7.3</a></span>
+                            <span class="release-date">April 9, 2012</span>
+                            <span class="release-download"><a href="/downloads/release/python-273/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-272/">Python 2.7.2</a></span>
+                            <span class="release-date">June 11, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-272/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-271/">Python 2.7.1</a></span>
+                            <span class="release-date">Nov. 27, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-271/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-270/">Python 2.7.0</a></span>
+                            <span class="release-date">July 3, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-270/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.7/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-269/">Python 2.6.9</a></span>
+                            <span class="release-date">Oct. 29, 2013</span>
+                            <span class="release-download"><a href="/downloads/release/python-269/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.9/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-268/">Python 2.6.8</a></span>
+                            <span class="release-date">April 10, 2012</span>
+                            <span class="release-download"><a href="/downloads/release/python-268/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.8/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-267/">Python 2.6.7</a></span>
+                            <span class="release-date">June 3, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-267/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.7/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-266/">Python 2.6.6</a></span>
+                            <span class="release-date">Aug. 24, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-266/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-265/">Python 2.6.5</a></span>
+                            <span class="release-date">March 18, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-265/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-264/">Python 2.6.4</a></span>
+                            <span class="release-date">Oct. 26, 2009</span>
+                            <span class="release-download"><a href="/downloads/release/python-264/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-263/">Python 2.6.3</a></span>
+                            <span class="release-date">Oct. 2, 2009</span>
+                            <span class="release-download"><a href="/downloads/release/python-263/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-262/">Python 2.6.2</a></span>
+                            <span class="release-date">April 14, 2009</span>
+                            <span class="release-download"><a href="/downloads/release/python-262/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-261/">Python 2.6.1</a></span>
+                            <span class="release-date">Dec. 4, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-261/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-260/">Python 2.6.0</a></span>
+                            <span class="release-date">Oct. 2, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-260/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-256/">Python 2.5.6</a></span>
+                            <span class="release-date">May 26, 2011</span>
+                            <span class="release-download"><a href="/downloads/release/python-256/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-255/">Python 2.5.5</a></span>
+                            <span class="release-date">Jan. 31, 2010</span>
+                            <span class="release-download"><a href="/downloads/release/python-255/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-254/">Python 2.5.4</a></span>
+                            <span class="release-date">Dec. 23, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-254/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-253/">Python 2.5.3</a></span>
+                            <span class="release-date">Dec. 19, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-253/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-252/">Python 2.5.2</a></span>
+                            <span class="release-date">Feb. 21, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-252/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-251/">Python 2.5.1</a></span>
+                            <span class="release-date">April 19, 2007</span>
+                            <span class="release-download"><a href="/downloads/release/python-251/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-250/">Python 2.5.0</a></span>
+                            <span class="release-date">Sept. 19, 2006</span>
+                            <span class="release-download"><a href="/downloads/release/python-250/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-246/">Python 2.4.6</a></span>
+                            <span class="release-date">Dec. 19, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-246/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-245/">Python 2.4.5</a></span>
+                            <span class="release-date">March 11, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-245/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-244/">Python 2.4.4</a></span>
+                            <span class="release-date">Oct. 18, 2006</span>
+                            <span class="release-download"><a href="/downloads/release/python-244/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-243/">Python 2.4.3</a></span>
+                            <span class="release-date">April 15, 2006</span>
+                            <span class="release-download"><a href="/downloads/release/python-243/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-242/">Python 2.4.2</a></span>
+                            <span class="release-date">Sept. 27, 2005</span>
+                            <span class="release-download"><a href="/downloads/release/python-242/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-241/">Python 2.4.1</a></span>
+                            <span class="release-date">March 30, 2005</span>
+                            <span class="release-download"><a href="/downloads/release/python-241/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-240/">Python 2.4.0</a></span>
+                            <span class="release-date">Nov. 30, 2004</span>
+                            <span class="release-download"><a href="/downloads/release/python-240/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-237/">Python 2.3.7</a></span>
+                            <span class="release-date">March 11, 2008</span>
+                            <span class="release-download"><a href="/downloads/release/python-237/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.7/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-236/">Python 2.3.6</a></span>
+                            <span class="release-date">Nov. 1, 2006</span>
+                            <span class="release-download"><a href="/downloads/release/python-236/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.6/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-235/">Python 2.3.5</a></span>
+                            <span class="release-date">Feb. 8, 2005</span>
+                            <span class="release-download"><a href="/downloads/release/python-235/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.5/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-234/">Python 2.3.4</a></span>
+                            <span class="release-date">May 27, 2004</span>
+                            <span class="release-download"><a href="/downloads/release/python-234/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.4/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-233/">Python 2.3.3</a></span>
+                            <span class="release-date">Dec. 19, 2003</span>
+                            <span class="release-download"><a href="/downloads/release/python-233/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-232/">Python 2.3.2</a></span>
+                            <span class="release-date">Oct. 3, 2003</span>
+                            <span class="release-download"><a href="/downloads/release/python-232/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-231/">Python 2.3.1</a></span>
+                            <span class="release-date">Sept. 23, 2003</span>
+                            <span class="release-download"><a href="/downloads/release/python-231/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.3.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-230/">Python 2.3.0</a></span>
+                            <span class="release-date">July 29, 2003</span>
+                            <span class="release-download"><a href="/downloads/release/python-230/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/15fc83c505e3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-223/">Python 2.2.3</a></span>
+                            <span class="release-date">May 30, 2003</span>
+                            <span class="release-download"><a href="/downloads/release/python-223/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.2.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-222/">Python 2.2.2</a></span>
+                            <span class="release-date">Oct. 14, 2002</span>
+                            <span class="release-download"><a href="/downloads/release/python-222/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.2.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-221/">Python 2.2.1</a></span>
+                            <span class="release-date">April 10, 2002</span>
+                            <span class="release-download"><a href="/downloads/release/python-221/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.2.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-220/">Python 2.2.0</a></span>
+                            <span class="release-date">Dec. 21, 2001</span>
+                            <span class="release-download"><a href="/downloads/release/python-220/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.2/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-213/">Python 2.1.3</a></span>
+                            <span class="release-date">April 9, 2002</span>
+                            <span class="release-download"><a href="/downloads/release/python-213/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.1.3/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                        <li>
+                            <span class="release-number"><a href="/downloads/release/python-201/">Python 2.0.1</a></span>
+                            <span class="release-date">June 22, 2001</span>
+                            <span class="release-download"><a href="/downloads/release/python-201/"><span aria-hidden="true" class="icon-download"></span> Download</a></span>
+                            <span class="release-enhancements"><a href="http://hg.python.org/cpython/raw-file/v2.0.1/Misc/NEWS">Release notes</a></span>
+                        </li>
+                        
+                    </ol>
+                    <p><a href="/download/releases/">View older releases</a><!-- removed by Frank until content available <small><em>Older releases: <a href="#">Source releases, <a href="#">binaries-1.1</a>, <a href="#">binaries-1.2</a>, <a href="#">binaries-1.3</a>, <a href="#">binaries-1.4</a>, <a href="#">binaries-1.5</a></em></small> --></p>
+
+                </div>
+
+
+                <div class="row">
+                    <div class="sidebar-widget download-widget">
+                    
+
+
+
+
+
+
+
+  <h2 class="widget-title">Sponsors</h2>
+  <p>Visionary sponsors help to host Python downloads.</p>
+  
+  
+    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/fa/94/fa94273e62dc63ae15413103778d64ed.png" alt="Google logo" style="max-height:200px;max-width:200px;height:auto;width:auto;">
+  
+  
+  
+    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/fd/b8/fdb8a556976d36cf0c79aa7645dc2457.png" alt="Bloomberg logo" style="max-height:200px;max-width:200px;height:auto;width:auto;">
+  
+  
+  
+    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/1a/5a/1a5a874923ac188688581482e0bce714.png" alt="Fastly logo" style="max-height:200px;max-width:200px;height:auto;width:auto;">
+  
+  
+  
+    <img src="https://s3.dualstack.us-east-2.amazonaws.com/pythondotorg-assets/media/cache/03/c7/03c7f16a036e91207c870cfbeceb0c2b.png" alt="NVIDIA logo" style="max-height:200px;max-width:200px;height:auto;width:auto;">
+  
+  
+
+
+
+
+                    </div>
+                </div>
+
+                <div class="row">
+
+                    <div class="small-widget download-widget1">
+                        <h2 class="widget-title">Licenses</h2>
+<p>All Python releases are <a href="https://www.opensource.org/">Open Source</a>. Historically, most, but not all, Python releases have also been GPL-compatible. The Licenses page details GPL-compatibility and Terms and Conditions. </p>
+<p><a class="readmore" href="https://docs.python.org/3/license.html#terms-and-conditions-for-accessing-or-otherwise-using-python">Read more</a></p>
+
+                    </div>
+
+                    <div class="small-widget download-widget2">
+                        <h2 class="widget-title">Sources</h2>
+<p>For most Unix systems, you must download and compile the source code. The same source code archive can also be used to build the Windows and Mac versions, and is the starting point for ports to all other platforms.</p>
+
+<p>Download the latest <a href="https://www.python.org/ftp/python/3.14.2/Python-3.14.2.tar.xz">Python 3</a> source.</p>
+
+<p><a class="readmore" href="/download/source/">Read more</a></p>
+
+                    </div>
+
+                    <div class="small-widget download-widget3">
+                        <h2 class="widget-title">Alternative implementations</h2>
+<p>This site hosts the "traditional" implementation of Python (nicknamed CPython). A number of alternative implementations are available as well. </p>
+<p><a class="readmore" href="/download/alternatives/">Read more</a></p>
+
+                    </div>
+
+                    <div class="small-widget download-widget3 last">
+                        <h2 class="widget-title">History</h2>
+<p>Python was created in the early 1990s by Guido van Rossum at Stichting Mathematisch Centrum in the Netherlands as a successor of a language called ABC. Guido remains Python’s principal author, although it includes many contributions from others. </p>
+<p><a class="readmore" href="https://docs.python.org/3/license.html">Read more</a></p>
+
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <h2>Release schedules</h2>
+
+<ul>
+<li><a href="https://peps.python.org/pep-0790/">Python 3.15 release schedule</a></li>
+<li><a href="https://peps.python.org/pep-0745/">Python 3.14 release schedule</a></li>
+<li><a href="https://peps.python.org/pep-0719/">Python 3.13 release schedule</a></li>
+<li><a href="https://peps.python.org/pep-0693/">Python 3.12 release schedule</a></li>
+<li><a href="https://peps.python.org/pep-0664/">Python 3.11 release schedule</a></li>
+<li><a href="https://peps.python.org/pep-0619/">Python 3.10 release schedule</a></li>
+<li><a href="https://peps.python.org/pep-0596/">Python 3.9 release schedule</a></li>
+</ul>
+<br>
+<p>See <a href="https://devguide.python.org/versions/">Status of Python versions</a> for all an overview of all versions, including unsupported.</p>
+                </div>
+
+                <div class="row">
+                    <h2>Information about specific ports, and developer info</h2>
+
+<ul>
+   <li><a href="/downloads/windows/">Windows</a></li>
+   <li><a href="/downloads/macos/">macOS</a></li>
+   <li><a href="/downloads/android/">Android</a></li>
+   <li><a href="/download/other/">Other platforms</a></li>
+   <li><a href="/downloads/source/">Source</a></li>
+   <li><a href="https://devguide.python.org/">Python developer's guide</a></li>
+   <li><a href="https://github.com/python/cpython/issues">Python issue tracker</a></li>
+</ul>
+                </div>
+
+                <div class="row">
+                    <h2>How to verify your downloaded files are genuine</h2>
+
+<h4 id="sigstore" style="color:#999999">Sigstore verification</h4>
+<p>
+Starting with the <a href="https://www.python.org/downloads/release/python-3110/">Python 3.11.0</a>, <a href="https://www.python.org/downloads/release/python-3107/">Python 3.10.7</a>, and <a href="https://www.python.org/downloads/release/python-3914/">Python 3.9.14</a> releases, CPython release artifacts are signed with Sigstore. See our dedicated <a href="/downloads/metadata/sigstore/">Sigstore Information</a> page for how it works.
+</p>
+<h4 id="gpg" style="color:#999999">OpenPGP verification</h4>
+<p>
+Python versions before 3.14 are also signed using OpenPGP private keys of the respective release manager. In this case, verification through the release manager's public key is also possible.
+See our dedicated <a href="/downloads/metadata/pgp/">OpenPGP Verification</a> page for how it works.
+</p>
+<p>
+<br>
+See <a href="https://peps.python.org/pep-0761/">PEP 761</a> for why OpenPGP key verification was dropped in Python 3.14.
+</p>
+<h4 id="windows" style="color:#999999">Windows</h4>
+<p>
+(Updated for Azure Trusted Signing, which applies for all releases chronologically from 3.14.0a1)
+<br>
+The Windows installers and all binaries produced as part of each Python release are signed using an <strong>Authenticode</strong> signing certificate issued to the Python Software Foundation. This can be verified by viewing the properties of any executable file, looking at the Digital Signatures tab, and confirming the name of the signer. Our full certificate subject is <code>CN = Python Software Foundation, O = Python Software Foundation, L = Beaverton, S = Oregon, C = US</code> and as of 14th October 2024 the certificate authority is <code>Microsoft Identity Verification Root Certificate Authority</code>. Our previous certificates were issued by <strong>DigiCert</strong>.
+<br>
+Note that some executables may not be signed, notably, the default <code>pip</code> command. These are not built as part of Python, but are included from third-party libraries. Files that are intended to be modified before use cannot be signed and so will not have a signature.
+
+<h4 id="macos" style="color:#999999">macOS installer packages</h4>
+<p>
+Installer packages for Python on macOS downloadable from python.org are signed with
+with an Apple Developer ID Installer certificate.
+</p>
+<p>
+As of Python 3.11.4 and 3.12.0b1 (2023-05-23), release installer packages are signed with certificates issued to the Python Software Foundation (Apple Developer ID <strong>BMM5U3QVKW</strong>).
+</p>
+<p>
+Installer packages for previous releases were signed with certificates issued to Ned Deily (<strong>DJ3H93M7VJ</strong>).
+</p>
+
+<h2>Other useful items</h2>
+<ul>
+<li>Looking for third-party <strong>Python modules</strong>?  The
+<a class="reference external" href="https://pypi.org/">Python Package Index</a> has many of them.</li>
+<li>You can <a class="reference external" href="https://docs.python.org/">view</a> the standard documentation
+online, or you can <a class="reference external" href="https://docs.python.org/3/download.html">download</a> it
+in HTML, EPUB and other formats.  See the main
+<a class="reference external" href="/doc/">Documentation</a> page.</li>
+<li><strong>Tip</strong>: even if you download a ready-made binary for your
+platform, it makes sense to also download the <a class="reference external" href="source">source</a>.
+This lets you browse the standard library (the subdirectory <strong>Lib</strong>)
+and the standard collections of tools
+(<strong>Tools</strong>) that come with it.  There's a lot you can learn from the
+source!</li>
+</ul>
+
+<h2>Want to contribute?</h2>
+
+<p>Want to contribute?  See the <a class="reference external" href="https://devguide.python.org/">Python Developer's Guide</a>
+to learn about how Python development is managed.</p>
+                </div>
 
 
                 </section>

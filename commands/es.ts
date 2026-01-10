@@ -37,6 +37,7 @@ async function es(interaction: ChatInputCommandInteraction) {
 }
 
 async function rae(word: string): Promise<number | null> {
+    // TODO: hippiebot.js-4q7 - user input (word) passed as pathname instead of using setPathname/setLastPathSegment after construction
     const raeEarl = new Earl('https://dle.rae.es', word);
     try {
         const resultados = domStroll('rae', false, await raeEarl.fetchDom(), [

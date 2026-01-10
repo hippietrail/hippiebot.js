@@ -591,44 +591,62 @@ export async function callSublime() {
 
 export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> {
     try {
-        const section = domStroll('python', false, dom, [
-            [9, 'html', { cls: 'no-js' }],
-            [5, 'body', { id: 'homepage' }],
-            [1, 'div', { id: 'touchnav-wrapper' }],
-            [13, 'div', { id: 'content' }],
-            [3, 'div', { cls: 'container' }],
-            [1, 'section', { cls: 'main-content' }],
-        ])!;
+        // Navigate to main content section by manually traversing DOM
+        const htmlEl = dom.find((node: DomNode) => node.name === 'html')!;
+        const body = htmlEl.children!.find((node: DomNode) => node.name === 'body')!;
+        const touchnavWrapper = body.children!.find((node: DomNode) => node.attribs?.id === 'touchnav-wrapper')!;
+        const contentDiv = touchnavWrapper.children!.find((node: DomNode) => node.attribs?.id === 'content')!;
+        const containerDiv = contentDiv.children!.find((node: DomNode) => node.attribs?.class?.includes('container'))!;
+        const section = containerDiv.children!.find((node: DomNode) => node.name === 'section' && node.attribs?.class?.includes('main-content'))!;
 
-        // Check for both the old and new structure of the div containing the row
-        // 'row' was section.div(1) but changes to sectionary.div(3) if there's a 'notification-bar'
-        const rowDiv = section.children!.find((child: DomNode) => child.attribs?.class?.includes('row'))!;
+        // Recursively find all ol with "list-row-container" class
+        const findAllReleaseLists = (node: DomNode): DomNode[] => {
+            const lists: DomNode[] = [];
+            if (node.name === 'ol' && node.attribs?.class?.includes('list-row-container')) {
+                lists.push(node);
+            }
+            if (node.children) {
+                for (const child of node.children) {
+                    lists.push(...findAllReleaseLists(child));
+                }
+            }
+            return lists;
+        };
+        
+        const allLists = findAllReleaseLists(section);
+        // Get the second list (first is pre-releases, second is stable)
+        const releaseList = allLists[1] || allLists[0];
+        if (!releaseList) throw new Error('No release list found');
+        
+        // Get first li element (latest release)
+        const firstReleaseLi = releaseList.children!.find((child: DomNode) => child.name === 'li');
+        if (!firstReleaseLi) throw new Error('No release li found');
 
-        const latestA = domStroll('python', false, rowDiv.children!, [
-            [3, 'div', { cls: 'download-widget' }], // also .small-widget
-            [5, 'p'],
-            [1, 'a'],
-        ])!;
+        // Extract version from span.release-number > a
+        const versionSpan = firstReleaseLi.children!.find((child: DomNode) => 
+            child.name === 'span' && child.attribs?.class?.includes('release-number')
+        );
+        if (!versionSpan) throw new Error('No version span found');
+        
+        const versionLink = versionSpan.children!.find((child: DomNode) => child.name === 'a');
+        if (!versionLink) throw new Error('No version link found');
+        
+        const aVerText = (versionLink.children![0] as any).data!.trim();
+        const aHref = versionLink.attribs!.href!.trim();
 
-        const [aVerText, aHref] = [latestA.children![0].data!.trim(), latestA.attribs!.href!.trim()];
-
-        pyEarl.setPathname(aHref);
-        const releaseDateP = domStroll('python', false, await pyEarl.fetchDom(), [
-            [9, 'html', { cls: 'no-js' }],
-            [5, 'body'],
-            [1, 'div', { id: 'touchnav-wrapper' }],
-            [13, 'div', { id: 'content' }],
-            [3, 'div', { cls: 'container' }],
-            [1, 'section', { cls: 'main-content' }],
-			[3, 'article', { cls: 'text' }],
-			[3, 'p'],
-        ])!;
+        // Extract date from span.release-date
+        const dateSpan = firstReleaseLi.children!.find((child: DomNode) => 
+            child.name === 'span' && child.attribs?.class?.includes('release-date')
+        );
+        if (!dateSpan) throw new Error('No date span found');
+        
+        const dateText = (dateSpan.children![0] as any).data!.trim();
 
         return [{
             name: 'Python',
             ver: aVerText,
-            link: pyEarl.getUrlString(),
-            timestamp: new Date(releaseDateP.children![1].data!.trim()),
+            link: `https://www.python.org${aHref}`,
+            timestamp: new Date(dateText),
             src: 'python.org',
         }];
     } catch (error) {
