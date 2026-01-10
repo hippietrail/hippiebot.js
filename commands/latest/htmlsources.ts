@@ -591,56 +591,52 @@ export async function callSublime() {
 
 export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> {
     try {
-        // Navigate to main content section by manually traversing DOM
-        const htmlEl = dom.find((node: DomNode) => node.name === 'html')!;
-        const body = htmlEl.children!.find((node: DomNode) => node.name === 'body')!;
-        const touchnavWrapper = body.children!.find((node: DomNode) => node.attribs?.id === 'touchnav-wrapper')!;
-        const contentDiv = touchnavWrapper.children!.find((node: DomNode) => node.attribs?.id === 'content')!;
-        const containerDiv = contentDiv.children!.find((node: DomNode) => node.attribs?.class?.includes('container'))!;
-        const section = containerDiv.children!.find((node: DomNode) => node.name === 'section' && node.attribs?.class?.includes('main-content'))!;
-
-        // Recursively find all ol with "list-row-container" class
-        const findAllReleaseLists = (node: DomNode): DomNode[] => {
-            const lists: DomNode[] = [];
-            if (node.name === 'ol' && node.attribs?.class?.includes('list-row-container')) {
-                lists.push(node);
+        // Find the download widget containing the latest Python version link
+        const findLatestLink = (node: DomNode): DomNode | null => {
+            if (node.name === 'a' && node.attribs?.href?.includes('/downloads/release/python-')) {
+                const text = node.children?.[0];
+                if (text && typeof (text as any).data === 'string' && (text as any).data.includes('Python')) {
+                    return node;
+                }
             }
             if (node.children) {
                 for (const child of node.children) {
-                    lists.push(...findAllReleaseLists(child));
+                    const result = findLatestLink(child);
+                    if (result) return result;
                 }
             }
-            return lists;
+            return null;
         };
-        
-        const allLists = findAllReleaseLists(section);
-        // Get the second list (first is pre-releases, second is stable)
-        const releaseList = allLists[1] || allLists[0];
-        if (!releaseList) throw new Error('No release list found');
-        
-        // Get first li element (latest release)
-        const firstReleaseLi = releaseList.children!.find((child: DomNode) => child.name === 'li');
-        if (!firstReleaseLi) throw new Error('No release li found');
 
-        // Extract version from span.release-number > a
-        const versionSpan = firstReleaseLi.children!.find((child: DomNode) => 
-            child.name === 'span' && child.attribs?.class?.includes('release-number')
-        );
-        if (!versionSpan) throw new Error('No version span found');
-        
-        const versionLink = versionSpan.children!.find((child: DomNode) => child.name === 'a');
-        if (!versionLink) throw new Error('No version link found');
-        
+        const versionLink = findLatestLink(dom[0]);
+        if (!versionLink) throw new Error('No release list found');
+
         const aVerText = (versionLink.children![0] as any).data!.trim();
         const aHref = versionLink.attribs!.href!.trim();
 
-        // Extract date from span.release-date
-        const dateSpan = firstReleaseLi.children!.find((child: DomNode) => 
-            child.name === 'span' && child.attribs?.class?.includes('release-date')
-        );
-        if (!dateSpan) throw new Error('No date span found');
-        
-        const dateText = (dateSpan.children![0] as any).data!.trim();
+        // Fetch the release page to get the date
+        pyEarl.setPathname(aHref);
+        const releaseDom = await pyEarl.fetchDom();
+
+        // Find the release date on the release page
+        const findReleaseDate = (node: DomNode): string | null => {
+            if (node.type === 'text') {
+                const text = (node as any).data?.trim();
+                // Look for date pattern like "2024-10-07" or similar
+                if (text && /^\d{4}-\d{2}-\d{2}/.test(text)) {
+                    return text;
+                }
+            }
+            if (node.children) {
+                for (const child of node.children) {
+                    const result = findReleaseDate(child);
+                    if (result) return result;
+                }
+            }
+            return null;
+        };
+
+        const dateText = findReleaseDate(releaseDom[0]) || new Date().toISOString().split('T')[0];
 
         return [{
             name: 'Python',
