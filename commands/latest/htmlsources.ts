@@ -591,58 +591,49 @@ export async function callSublime() {
 
 export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> {
     try {
-        // Find the download widget containing the latest Python version link
-        const findLatestLink = (node: DomNode): DomNode | null => {
-            if (node.name === 'a' && node.attribs?.href?.includes('/downloads/release/python-')) {
-                const text = node.children?.[0];
-                if (text && typeof (text as any).data === 'string' && (text as any).data.includes('Python')) {
-                    return node;
-                }
-            }
-            if (node.children) {
-                for (const child of node.children) {
-                    const result = findLatestLink(child);
-                    if (result) return result;
-                }
-            }
-            return null;
-        };
+        // Navigate: #content > div > section > div:nth-child(1) > div.small-widget.download-widget > p:nth-child(3) > a
+        const versionAnchor = domStroll('python', false, dom, [
+            [2, 'html'],
+            [1, 'body'],
+            [1, 'div', { id: 'content' }],
+            [1, 'div'],
+            [1, 'section', { cls: 'main-content' }],
+            [1, 'div'],
+            [1, 'div', { cls: 'download-widget' }],
+            [3, 'p'],
+            [1, 'a'],
+        ])!;
 
-        const versionLink = findLatestLink(dom[0]);
-        if (!versionLink) throw new Error('No release list found');
-
-        const aVerText = (versionLink.children![0] as any).data!.trim();
-        const aHref = versionLink.attribs!.href!.trim();
+        const aVerText = (versionAnchor.children![0] as any).data!.trim();
+        const aHref = versionAnchor.attribs!.href!.trim();
 
         // Fetch the release page to get the date
         pyEarl.setPathname(aHref);
         const releaseDom = await pyEarl.fetchDom();
 
-        // Find the release date on the release page
-        const findReleaseDate = (node: DomNode): string | null => {
-            if (node.type === 'text') {
-                const text = (node as any).data?.trim();
-                // Look for date pattern like "2024-10-07" or similar
-                if (text && /^\d{4}-\d{2}-\d{2}/.test(text)) {
-                    return text;
-                }
-            }
-            if (node.children) {
-                for (const child of node.children) {
-                    const result = findReleaseDate(child);
-                    if (result) return result;
-                }
-            }
-            return null;
-        };
+        // Navigate: #content > div > section > article > p:nth-child(2)
+        const releaseParagraph = domStroll('python-release', false, releaseDom, [
+            [2, 'html'],
+            [1, 'body'],
+            [1, 'div', { id: 'content' }],
+            [1, 'div'],
+            [1, 'section', { cls: 'main-content' }],
+            [1, 'article'],
+            [2, 'p'],
+        ])!;
 
-        const dateText = findReleaseDate(releaseDom[0]) || new Date().toISOString().split('T')[0];
+        // Extract text from <strong>Release date:</strong> Dec. 5, 2025
+        // The structure is: p > strong + text node
+        const dateText = releaseParagraph.children!
+            .filter(c => c.type === 'text')
+            .map(c => ((c as any).data as string).trim())
+            .find(text => text.length > 0);
 
         return [{
             name: 'Python',
             ver: aVerText,
             link: `https://www.python.org${aHref}`,
-            timestamp: new Date(dateText),
+            timestamp: dateText ? new Date(dateText) : new Date(),
             src: 'python.org',
         }];
     } catch (error) {
