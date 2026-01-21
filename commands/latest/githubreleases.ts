@@ -45,11 +45,14 @@ const ownerRepos: StringFunctionTuple[] = [
     /*['elixir-lang/elixir', xformRepoCapTag],*/
     // ['exiftool/exiftool', xformNameSplit],
     // ['gleam-lang/gleam', xformRepoCapTag],
+    // ['gpui-ce/gpui-ce'], // No GitHub releases or tags yet
     ['JetBrains/kotlin', xformNameSplit],
     // ['JuliaLang/julia', xformRepoCapTag],    // not interested for now
     // ['lampepfl/dotty', (_: string, __: string, jt: string) => ['Scala 3', jt]],     // "tag_name": "3.3.1", "name": "3.3.1",
-    ['llvm/llvm-project', xformNameSplit],
-    ['lua/lua', xformNameSplit],
+    // ['llvm/llvm-project', xformNameSplit],
+    ['longbridge/gpui-component', (_owri, jn, _jt) => ["GPUI Component", jn]],
+    // ['lua/lua', xformNameSplit],
+    ['LuanRT/YouTube.js', (owri, jn, _jt) => [owri.split('/')[1], jn]],
     ['mamedev/mame', xformNameSplit],
     ['microsoft/TypeScript', xformRepoTag],
     ['NationalSecurityAgency/ghidra', xformNameSplit],
@@ -59,10 +62,11 @@ const ownerRepos: StringFunctionTuple[] = [
     // ['rakudo/rakudo', xformRepoCapTag],  // not interested for now
     /*['ruby/ruby', xformRepoCapTagVersionUnderscore],*/
     // ['scala/scala', (_: string, __: string, jt: string) => ['Scala 2', jt]],        // "tag_name": "v2.13.12", "name": "Scala 2.13.12",
-    ['libsdl-org/SDL', xformRepoName],
-    ['raysan5/raylib', xformNameSplit],
+    // ['libsdl-org/SDL', xformRepoName],
+    // ['raysan5/raylib', xformNameSplit],
     ['rust-lang/rust', xformRepoCapTag],
-    ['unicode-org/icu', xformNameSplit],
+    ['tauri-apps/tauri', (owri, jn, _jt) => [owri.split('/')[1].charAt(0).toUpperCase() + owri.split('/')[1].slice(1), jn]],
+    // ['unicode-org/icu', xformNameSplit],
     // ['vlang/v', xformRepoCapTag],    // not interested for now
     ['zed-industries/zed', xformRepoTag],
     ['ziglang/zig', xformRepoCapTag],
