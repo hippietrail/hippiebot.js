@@ -40,12 +40,14 @@ type StringFunctionTuple = [string, (gor: string, jn: string, jt: string) => str
 const ownerRepos: StringFunctionTuple[] = [
     ['apple/swift', xformNameSplit],
     ['audacity/audacity', xformNameSplit],
-    ['steveyegge/beads', xformRepoCapTag],
+    ['ccbrown/iocraft', (_owri, _jn, jt) => jt.split('-')],
+    ['crossterm-rs/crossterm', (owri, jn, _jt) => { const r = owri.split('/')[1]; return [r.charAt(0).toUpperCase() + r.slice(1), jn]; }],
     ['discordjs/discord.js', xformRepoCapTag],
     /*['elixir-lang/elixir', xformRepoCapTag],*/
     // ['exiftool/exiftool', xformNameSplit],
     // ['gleam-lang/gleam', xformRepoCapTag],
     // ['gpui-ce/gpui-ce'], // No GitHub releases or tags yet
+    ['gyscos/cursive', (owri, _jn, jt) => { const r = owri.split('/')[1]; return [r.charAt(0).toUpperCase() + r.slice(1), jt.split('-')[2]]; }],
     ['JetBrains/kotlin', xformNameSplit],
     // ['JuliaLang/julia', xformRepoCapTag],    // not interested for now
     // ['lampepfl/dotty', (_: string, __: string, jt: string) => ['Scala 3', jt]],     // "tag_name": "3.3.1", "name": "3.3.1",
@@ -63,8 +65,10 @@ const ownerRepos: StringFunctionTuple[] = [
     /*['ruby/ruby', xformRepoCapTagVersionUnderscore],*/
     // ['scala/scala', (_: string, __: string, jt: string) => ['Scala 2', jt]],        // "tag_name": "v2.13.12", "name": "Scala 2.13.12",
     // ['libsdl-org/SDL', xformRepoName],
+    ['ratatui/ratatui', (_owri, jn, _jt) => { const [n, v] = jn.split('-'); return [n.charAt(0).toUpperCase() + n.slice(1), v] }],
     // ['raysan5/raylib', xformNameSplit],
     ['rust-lang/rust', xformRepoCapTag],
+    ['steveyegge/beads', xformRepoCapTag],
     ['tauri-apps/tauri', (owri, jn, _jt) => [owri.split('/')[1].charAt(0).toUpperCase() + owri.split('/')[1].slice(1), jn]],
     // ['unicode-org/icu', xformNameSplit],
     // ['vlang/v', xformRepoCapTag],    // not interested for now
