@@ -42,9 +42,12 @@ const ownerRepos: StringFunctionTuple[] = [
     ['audacity/audacity', xformNameSplit],
     ['ccbrown/iocraft', (_owri, _jn, jt) => jt.split('-')],
     ['crossterm-rs/crossterm', (owri, jn, _jt) => { const r = owri.split('/')[1]; return [r.charAt(0).toUpperCase() + r.slice(1), jn]; }],
+    ['dirkwhoffmann/vAmiga', (owri, _jn, jt) => [owri.split('/')[1], jt]],
     ['discordjs/discord.js', xformRepoCapTag],
     /*['elixir-lang/elixir', xformRepoCapTag],*/
     // ['exiftool/exiftool', xformNameSplit],
+    ['FrodeSolheim/fs-uae', (owri, _jn, jt) => [owri.split('/')[1].toUpperCase(), jt]],
+    ['FrodeSolheim/fs-uae-launcher', (_owri, _jn, jt) => ["FS-UAE Launcher", jt]],
     // ['gleam-lang/gleam', xformRepoCapTag],
     // ['gpui-ce/gpui-ce'], // No GitHub releases or tags yet
     ['gyscos/cursive', (owri, _jn, jt) => { const r = owri.split('/')[1]; return [r.charAt(0).toUpperCase() + r.slice(1), jt.split('-')[2]]; }],
