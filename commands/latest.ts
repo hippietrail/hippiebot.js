@@ -3,8 +3,8 @@ import { ago } from '../ute/ago';
 import { callGithubReleases } from './latest/githubreleases';
 import { callGithubTags } from './latest/githubtags';
 import { callWikiDump } from './latest/wikidump';
-import { callAS, callC3, callD, /*callEclipse,*/ /*callElixir,*/ callExifTool, callGo, callIdea, callPython, callRuby, callRustRover, callRvm, callSdlMame, callSublime } from './latest/htmlsources';
-import { callNodejs, callGimp, callXcode, callMame, callDart, callPhp, callEclipse } from './latest/jsonsources';
+import { callAS, callC3, callD, /*callEclipse,*/ /*callElixir,*/ callExifTool, callGimp, callGo, callIdea, callPython, callRuby, callRustRover, callRvm, callSdlMame, callSublime, callHarperChrome, callHarperFirefox } from './latest/htmlsources';
+import { callNodejs, /*callGimp,*/ callXcode, callMame, callDart, callPhp, callEclipse } from './latest/jsonsources';
 import { callAmpcode, callHarper } from './latest/textsources';
 
 export const data = new SlashCommandBuilder()
@@ -73,12 +73,12 @@ interface VersionInfoTight {
 interface VersionInfoTightArray extends Array<VersionInfoTight> {
     toSorted(compareFn: (a: VersionInfoTight, b: VersionInfoTight) => number): VersionInfoTight[];
 }
-  
+
 function toSorted(arr: VersionInfoTight[], compareFn: (a: VersionInfoTight, b: VersionInfoTight) => number): VersionInfoTight[] {
     const sortedArr = [...arr].sort(compareFn);
     return sortedArr;
 }
-    
+
 async function latest(interaction: ChatInputCommandInteraction) {
     await interaction.deferReply();
 
@@ -183,7 +183,7 @@ async function latest(interaction: ChatInputCommandInteraction) {
                 console.log(`[latest] trimmed ${numRemoved} lines (${initialReplyLength - reply.length} chars) from end of reply`);
 
             if (reply === '') reply = 'Odd. Nothing found.';
-            
+
             await interaction.editReply(reply);
         }
 
@@ -200,18 +200,18 @@ async function latest(interaction: ChatInputCommandInteraction) {
 
         if (useGithubTags)
             sourcePromises.push(callGithubTags(false).then(async arr => await updateReply([arr], 'GitHub Tags')));
-        
+
         if (useJson) {
-            sourcePromises.push(Promise.all([
-                //callNodejs(), // doing it another way
-                callGimp(),
-                callXcode(),
-                //callMame(),   // doing it another way
-                callDart(),
-                callEclipse(),
-                // callPhp(),   // not interested for now
-            ]).then(async arr => await updateReply(arr, 'JSON')));
-        }
+             sourcePromises.push(Promise.all([
+                 //callNodejs(), // doing it another way
+                 //callGimp(),    // temp disabled - dom scraping instead
+                 callXcode(),
+                 //callMame(),   // doing it another way
+                 callDart(),
+                 callEclipse(),
+                 // callPhp(),   // not interested for now
+             ]).then(async arr => await updateReply(arr, 'JSON')));
+         }
 
         if (useHtml) {
             sourcePromises.push(Promise.all([
@@ -220,7 +220,10 @@ async function latest(interaction: ChatInputCommandInteraction) {
                 callD(),
                 // callElixir(),    // not interested for now
                 callExifTool(),
+                callGimp(),
                 callGo(),
+                callHarperChrome(),
+                callHarperFirefox(),
                 callIdea(),
                 callPython(),
                 // callRuby(),      // not interested for now

@@ -277,7 +277,7 @@ export function parseExifTool(dom: DomNode[]): any[] {
                     }
                 }
             }
-            
+
             if (isProdRelease) {
                 if (latestProdRelease === null) {
                     latestProdRelease = {
@@ -603,10 +603,14 @@ export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> 
             [3, 'div', { cls: 'download-widget' }],
             [5, 'p'],
             [1, 'a'],
-        ])!;
+        ]);
 
-        const aVerText = (versionAnchor.children![0] as any).data!.trim();
-        const aHref = versionAnchor.attribs!.href!.trim();
+        if (!versionAnchor?.children?.[0]?.data || !versionAnchor.attribs?.href) {
+            throw new Error('Could not find version information in the page');
+        }
+
+        const aVerText = versionAnchor.children[0].data.trim();
+        const aHref = versionAnchor.attribs.href.trim();
 
         // Fetch the release page to get the date
         pyEarl.setPathname(aHref);
@@ -614,22 +618,26 @@ export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> 
 
         // Navigate: #content > div > section > article > p:nth-child(2)
         const releaseParagraph = domStroll('python-release', false, releaseDom, [
-            [9, 'html'],
-            [5, 'body', { cls: 'downloads' }],
+            [2, 'html'],
+            [3, 'body', { cls: 'downloads' }],
             [1, 'div', { id: 'touchnav-wrapper' }],
-            [13, 'div', { id: 'content' }],
+            [11, 'div', { id: 'content' }],
             [3, 'div', { cls: 'container'}],
             [1, 'section', { cls: 'main-content' }],
             [3, 'article'],
             [3, 'p'],
-        ])!;
+        ]);
+
+        if (!releaseParagraph?.children) {
+            throw new Error('Could not find release date information');
+        }
 
         // Extract text from <strong>Release date:</strong> Dec. 5, 2025
         // The structure is: p > strong + text node
-        const dateText = releaseParagraph.children!
-            .filter(c => c.type === 'text')
-            .map(c => ((c as any).data as string).trim())
-            .find(text => text.length > 0);
+        const dateText = releaseParagraph.children
+            .filter((c: any) => c.type === 'text')
+            .map((c: any) => (c.data || '').trim())
+            .find((text: string) => text.length > 0);
 
         return [{
             name: 'Python',
@@ -640,8 +648,8 @@ export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> 
         }];
     } catch (error) {
         console.error(`[Python]`, error);
+        return [];
     }
-    return [];
 }
 
 export async function callPython() {
@@ -744,6 +752,111 @@ export async function callC3() {
 }
 
 // ============================================================================
+// CHROME EXTENSION
+// ============================================================================
+export function parseChrome(dom: DomNode[], broEarl: Earl): any[] {
+  try {
+    const ul = domStroll('chrome', false, dom, [
+      [1, 'html'],
+      [1, 'body'],
+      [3, 'c-wiz'],
+      [0, 'div', { cls: 'T4LgNb' }],
+      [0, 'div', { cls: 'kFwPee' }],
+      [0, 'main', { cls: 'LDZgRb' }],
+      [0, 'div', { cls: 'P2YWP' }],
+      [4, 'section', { cls: 'MHH2Z' }],
+      [1, 'div', { cls: 'im4wIf' }],
+      [0, 'ul', { cls: 'TKAMQe' }],
+    ])!;
+
+    const v = domStroll('chromeV', false, ul.children!, [
+      [0, 'li', { cls: 'ecmXy' }],
+      [1, 'div', { cls: 'nBZElf' }],
+    ])!;
+
+    const version = v.children![0].data;
+
+    const d = domStroll('chromeD', false, ul.children!, [
+      [1, 'li', { cls: 'uBIrad' }],
+      [1, 'div' ],
+    ])!;
+
+    const date = d.children![0].data!;
+
+    // console.warn(`[Chrome] ok so far`);
+    return [{
+      name: 'Harper Chrome extension',
+      ver: version,
+      link: 'https://chromewebstore.google.com/detail/private-grammar-checker-h/lodbfhdipoipcjmlebjbgmmgekckhpfb',
+      timestamp: new Date(date),
+      src: 'google.com',
+    }];
+  } catch (error) {
+    console.error(`[Chrome]`, error);
+  }
+  return [];
+}
+
+export async function callHarperChrome() {
+  const chromeEarl = new Earl('https://chromewebstore.google.com', '/detail/private-grammar-checker-h/lodbfhdipoipcjmlebjbgmmgekckhpfb');
+  return parseChrome(await chromeEarl.fetchDom(), chromeEarl);
+}
+
+// ============================================================================
+// FIREFOX EXTENSION
+// ============================================================================
+export function parseFirefox(dom: DomNode[], broEarl: Earl): any[] {
+  try {
+    const dl = domStroll('firefox', false, dom, [
+      [2, 'html'],
+      [1, 'body'],
+      [0, 'div', { id: 'react-view' }],
+      [0, 'div', { cls: 'Page-amo' }],
+      [1, 'div', { cls: 'Page-content' }],
+      [0, 'div', { cls: 'Page' }],
+      [1, 'div', { cls: 'Addon' }],
+      [0, 'section', { cls: 'Card' }],
+      [0, 'div', { cls: 'Card-contents' }],
+      [4, 'section', { cls: 'AddonMoreInfo' }],
+      [1, 'div', { cls: 'Card-contents' }],
+      [0, 'dl', { cls: 'DefinitionList' }],
+    ])!;
+
+    const v = domStroll('firefoxDL.A', false, dl.children!, [
+      [1, 'div'],
+      [1, 'dd', { cls: 'Definition-dd' }],  // firefoxDL.A#0 not dd
+    ])!;
+
+    const version = v.children![0].data;
+
+    const d = domStroll('firefoxDL.B', false, dl.children!, [
+      [3, 'div'],
+      [1, 'dd', { cls: 'Definition-dd' }],
+    ])!;
+
+    const match = d.children![0].data!.match(/\(([^)]+)\)/);
+
+    if (match) {
+      return [{
+          name: 'Harper Firefox extension',
+          ver: version,
+          link: 'https://addons.mozilla.org/en-US/firefox/addon/private-grammar-checker-harper/',
+          timestamp: new Date(match[1]),
+          src: 'mozilla.org',
+      }];
+    }
+  } catch (error) {
+    console.error(`[Firefox]`, error);
+  }
+  return [];
+}
+
+export async function callHarperFirefox() {
+  const firefoxEarl = new Earl('https://addons.mozilla.org', '/en-US/firefox/addon/private-grammar-checker-harper/');
+  return parseFirefox(await firefoxEarl.fetchDom(), firefoxEarl);
+}
+
+// ============================================================================
 // ECLIPSE (DEPRECATED - NOW IN JSON SOURCES)
 // ============================================================================
 // NOTE: Eclipse changed architecture from static HTML to JavaScript + data.json
@@ -772,12 +885,12 @@ export function parseEclipse(dom: DomNode[], eclipseEarl: Earl): any[] {
         const [datePart, timePart] = rawDateStr.split(' -- ');
         const [timeStr, tzStr] = timePart.split(' ');
         const tz = tzStr.substring(1, tzStr.length - 1);
-            
+
         return [{
             name: 'Eclipse',
             ver: verAnchor.children![0].data!.trim(),
             link: new URL(verAnchor.attribs!.href!, eclipseEarl.getUrlString()).href,
-            timestamp: new Date(`${datePart} ${timeStr} ${tz}`),            
+            timestamp: new Date(`${datePart} ${timeStr} ${tz}`),
             src: 'eclipse.org',
         }]
     } catch (error) {
@@ -791,3 +904,47 @@ export async function callEclipse() {
     return parseEclipse(await eclipseEarl.fetchDom(), eclipseEarl);
 }
 */
+
+// ============================================================================
+// GIMP
+// ============================================================================
+
+export function parseGimp(dom: DomNode[], broGimp): any[] {
+    try {
+        const p = domStroll('gimp', false, dom, [
+            [2, 'html'],
+            [3, 'body', { id: 'index' }],
+            [8, 'div', { id: 'pushPage' }],
+            [3, 'section', { cls: 'page_content' }],
+            [1, 'div', { cls: 'container' }],
+            [1, 'div', { cls: 'row' }],
+            [1, 'div', { cls: 'column' }],
+            [5, 'p'],
+        ])!;
+
+        const b = domStroll('gimp.B', false, p.children!, [
+            [1, 'b'],
+        ])!;
+
+        const [versionStr, dateStr] = [b.children![0].data, p.children![2].data];
+
+        const dateMatch = dateStr.match(/\d{4}-\d{2}-\d{2}/);
+        if (!dateMatch) throw new Error(`[Gimp] could not find date in ${dateStr}`);
+
+        return [{
+            name: 'Gimp',
+            ver: versionStr,
+            link: broGimp.getUrlString(),
+            timestamp: new Date(dateMatch[0]),
+            src: 'gimp.org',
+        }];
+    } catch (error) {
+        console.error(`[Gimp]`, error);
+    }
+    return [];
+}
+
+export async function callGimp() {
+    const gimpEarl = new Earl('https://www.gimp.org', '/downloads/');
+    return parseGimp(await gimpEarl.fetchDom(), gimpEarl);
+}

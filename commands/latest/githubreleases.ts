@@ -41,8 +41,8 @@ const ownerRepos: StringFunctionTuple[] = [
     ['apple/swift', xformNameSplit],
     ['audacity/audacity', xformNameSplit],
     ['ccbrown/iocraft', (_owri, _jn, jt) => jt.split('-')],
-    ['crossterm-rs/crossterm', (owri, jn, _jt) => { const r = owri.split('/')[1]; return [r.charAt(0).toUpperCase() + r.slice(1), jn]; }],
-    ['dirkwhoffmann/vAmiga', (owri, _jn, jt) => [owri.split('/')[1], jt]],
+    ['crossterm-rs/crossterm', xformRepoCapTag],
+    ['dirkwhoffmann/vAmiga', xformRepoTag],
     ['discordjs/discord.js', xformRepoCapTag],
     /*['elixir-lang/elixir', xformRepoCapTag],*/
     // ['exiftool/exiftool', xformNameSplit],
@@ -57,7 +57,7 @@ const ownerRepos: StringFunctionTuple[] = [
     // ['llvm/llvm-project', xformNameSplit],
     ['longbridge/gpui-component', (_owri, jn, _jt) => ["GPUI Component", jn]],
     // ['lua/lua', xformNameSplit],
-    ['LuanRT/YouTube.js', (owri, jn, _jt) => [owri.split('/')[1], jn]],
+    ['LuanRT/YouTube.js', xformRepoName],
     ['mamedev/mame', xformNameSplit],
     ['microsoft/TypeScript', xformRepoTag],
     ['NationalSecurityAgency/ghidra', xformNameSplit],
@@ -72,7 +72,7 @@ const ownerRepos: StringFunctionTuple[] = [
     // ['raysan5/raylib', xformNameSplit],
     ['rust-lang/rust', xformRepoCapTag],
     ['steveyegge/beads', xformRepoCapTag],
-    ['tauri-apps/tauri', (owri, jn, _jt) => [owri.split('/')[1].charAt(0).toUpperCase() + owri.split('/')[1].slice(1), jn]],
+    ['tauri-apps/tauri', xformRepoCapTag],
     // ['unicode-org/icu', xformNameSplit],
     // ['vlang/v', xformRepoCapTag],    // not interested for now
     ['zed-industries/zed', xformRepoTag],
