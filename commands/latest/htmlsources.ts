@@ -625,7 +625,8 @@ export async function parsePython(dom: DomNode[], pyEarl: Earl): Promise<any[]> 
             [3, 'div', { cls: 'container'}],
             [1, 'section', { cls: 'main-content' }],
             [3, 'article'],
-            [3, 'p'],
+            // [3, 'p'],
+            [5, 'p'],
         ]);
 
         if (!releaseParagraph?.children) {

@@ -24,11 +24,12 @@ export async function callWikiDump() {
     wikidumpEarl.setPathname('/backup-index.html');
 
     try {
-        const ul = domStroll('Wikidump.1', false, await wikidumpEarl.fetchDom(), [
+        const ul = domStroll('Wikidump.1', true, await wikidumpEarl.fetchDom(), [
             [2, 'html'],
             [3, 'body'],
             [1, 'div', { cls: 'lang-list-button-wrapper' }],
-            [25, 'ul'],
+            // [25, 'ul'],
+            [23, 'ul'],
         ]);
 
         const chosen = [];
