@@ -37,7 +37,6 @@ async function isaword(interaction: ChatInputCommandInteraction) {
         ['OED', oed, false],
         ['Oxford Learners', oxfordLearners, false],
         //['Scrabble', scrabble, false],
-        ['Wordnet', wordNet, false],
         ['Wordnik', wordnik, false],
 
         // dictionaries that anyone can contribute to, in order of trustworthiness
@@ -365,32 +364,6 @@ async function dictCom(word: string) {
         }        
     } catch (error) {
         console.error(`[ISAWORD/dict.com]`, error);
-    }
-    return null;
-}
-
-async function wordNet(word: string) {
-    // http://wordnetweb.princeton.edu/perl/webwn?s=WORD
-    const earl = new Earl('http://wordnetweb.princeton.edu', '/perl/webwn', {
-        s: word,
-    });
-    try {
-        const body = domStroll('wordnet', false, await earl.fetchDom(), [
-            [2, 'html'],
-            [3, 'body'],
-        ])!;
-        const tagNodes = body.children!.filter(e => e.type === 'tag');
-        const tagNames = tagNodes.map(e => e.name);
-
-        if (['form', 'form', 'h3'].every((e, i) => tagNames[i] === e))
-            return false;
-
-        const classNames = tagNodes.map(e => e.attribs!['class']);
-        if (['div', 'div'].every((e, i) => tagNames[i] === e) && ['header', 'form'].every((e, i) => classNames[i] === e)) {
-            return true;
-        }
-    } catch (error) {
-        console.error(`[ISAWORD/wordnet]`, error);
     }
     return null;
 }
