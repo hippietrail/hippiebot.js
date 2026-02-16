@@ -242,18 +242,25 @@ async function mw(word: string) {
     const earl = new Earl('https://www.merriam-webster.com', '/dictionary/');
     earl.setLastPathSegment(word);
     try {
-        const body = domStroll('mw', false, await earl.fetchDom(), [
+        const body = domStroll('mw.1', false, await earl.fetchDom(), [
             [2, 'html'],
-            [3, 'body'],
-        ])!;
+            [3, 'body'], // cls: 'definitions-page' 'dictionary-lookup'
+        ]);
 
-        const bodyClasses: string[] = body.attribs!.class!.trim().split(/ +/);
+        if (!body) return null;
+        if (!body.attribs) return null;
+        if (!body.attribs.class) return null;
+
+        const bodyClasses: string[] = body.attribs.class.trim().split(/ +/);
         console.log(`[ISAWORD/mw] ${word} body class: ${bodyClasses.map(x => `'.${x}'`).join(', ')}`);
 
         if (bodyClasses.includes('definitions-page')) {
+            if (!body.children) return null;
+            
             // check for partial matches, they lack the 'redesign-container' div
-            const maybeRedesignContainer = domStroll('mw', false, body.children!, [
-                [17, 'div', { cls: 'outer-container' }],
+            const maybeRedesignContainer = domStroll('mw.2', false, body.children, [
+                // [17, 'div', { cls: 'outer-container' }],
+                [15, 'div', { cls: 'outer-container' }],
                 [1, 'div', { cls: 'main-container' }],
                 [3, 'div', { cls: 'redesign-container', optional: true }],
             ]);
@@ -265,7 +272,7 @@ async function mw(word: string) {
             return false;
         }
     } catch (error) {
-        console.error(`[ISAWORD/mw]`, error);
+        console.error('[ISAWORD/mw]', error);
     }
     return null;
 }
