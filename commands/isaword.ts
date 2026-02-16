@@ -350,20 +350,42 @@ async function dictCom(word: string) {
     const earl = new Earl('https://www.dictionary.com', '/browse/');
     earl.setLastPathSegment(word);
     try {
-        const main = domStroll('dict.com', false, await earl.fetchDom(), [
-            [3, 'html'],
-            [3, 'body'],
-            [1, 'div', { id: 'root' }],
-            [0, 'div', { cls: 'dictionary-site' }],
-            [1, 'main'],
-        ])!;
+        const html = domStroll('dict.com.1', false, await earl.fetchDom(), [
+            [2, 'html' ],
+        ]);
 
-        if ('children' in main) {
-            if (main.children!.length === 3) return false;
-            else if (main.children!.length === 4) return true;
-        }        
+        if (!html) return null;
+        if (!html.children) return null;
+        if (html.children.length < 4) return null;
+        if (!html.children[3]) return null;
+        if (!html.children[3].attribs) return null;
+
+        // word is not in the dictionary and not a short edit distance away from a word in the dictionary
+        if (html.children[3].name === 'body' && html.children[3].attribs.class === 'pg-dcom-noresult') {
+            return false;
+        }
+
+        const boxContentPrimary = domStroll('dict.com.2', false, html.children, [
+            [3, 'body', { cls: 'pg-dcom-entry' }],
+            [9, 'div', { cls: 'wrapper-site-main' }],
+            [1, 'main', { id: 'main' }],
+            [3, 'div', { cls: 'box-content' }],
+            [1, 'div', { cls: 'box-content-primary' }],
+        ]);
+
+        if (!boxContentPrimary) return null;
+        if (!boxContentPrimary.children) return null;
+        if (boxContentPrimary.children.length < 2) return null;
+        if (!boxContentPrimary.children[1].attribs) return null;
+
+        // site assumes word is a misspelling and redirects to a word a short edit distance away
+        if (boxContentPrimary.children[1].attribs.class === 'sec-redirect-tip') {
+            return false;
+        }
+
+        return true;
     } catch (error) {
-        console.error(`[ISAWORD/dict.com]`, error);
+        console.error('[ISAWORD/dict.com]', error);
     }
     return null;
 }
