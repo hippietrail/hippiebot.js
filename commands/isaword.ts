@@ -460,8 +460,34 @@ async function oed(word: string) {
     return null;
 }
 
-async function etymonline(word: string) {
-    const result: boolean | null = (await etym(word))?.[0];
-    console.log(`[ISAWORD/etymonline] ${word} result: ${result}`);
-    return result;
+// async function etymonline(word: string) {
+//     const result: boolean | null = (await etym(word))?.[0];
+//     console.log(`[ISAWORD/etymonline] ${word} result: ${result}`);
+//     return result;
+// }
+
+export async function etymonline(word: string) {
+    try {
+        const earl = new Earl('https://etymonline.com', '/word/');
+        earl.setLastPathSegment(word!);
+
+        const main = domStroll('etym', false, await earl.fetchDom(), [
+            [1, 'html'],
+            [1, 'body'],
+            [1, 'div'],
+            [1, 'div', { cls: 'flex-col' }],
+            [1, 'main', { cls: 'container' }],
+        ]);
+
+        if (!main) return null;
+        if (!main.children) return null;
+
+        // if the 2nd child is <template> it's not a word, if it's <script> it is a word, anything else return null
+        if (main.children[2].name === 'template') return false;
+        if (main.children[2].name === 'script') return true;
+        return null;
+    } catch (error) {
+        console.error('[ISAWORD/etymonline]', error);
+    }
+    return null;
 }
