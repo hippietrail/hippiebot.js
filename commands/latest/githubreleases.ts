@@ -40,6 +40,7 @@ type StringFunctionTuple = [string, (gor: string, jn: string, jt: string) => str
 const ownerRepos: StringFunctionTuple[] = [
     ['apple/swift', xformNameSplit],
     ['audacity/audacity', xformNameSplit],
+    ['BlitterStudio/amiberry', xformRepoCapTag],
     ['ccbrown/iocraft', (_owri, _jn, jt) => jt.split('-')],
     ['crossterm-rs/crossterm', xformRepoCapTag],
     ['dirkwhoffmann/vAmiga', xformRepoTag],
@@ -73,6 +74,7 @@ const ownerRepos: StringFunctionTuple[] = [
     ['rust-lang/rust', xformRepoCapTag],
     ['steveyegge/beads', xformRepoCapTag],
     ['tauri-apps/tauri', xformRepoCapTag],
+    ['TomHarte/CLK', (owri, _jn, jt) => [owri.split('/')[1], jt]],
     // ['unicode-org/icu', xformNameSplit],
     // ['vlang/v', xformRepoCapTag],    // not interested for now
     ['zed-industries/zed', xformRepoTag],

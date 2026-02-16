@@ -7,10 +7,13 @@ const regexMajMinPatch = /^(\d+)\.(\d+)\.(\d+)$/
 const regexVmajMinPatch = /^v(\d+)\.(\d+)\.(\d+)$/
 
 const ownerRepos: [string, string, RegExp][] = [
+    // mxmlnkn/indexed_bzip2
+    ['Indexed bzip2', 'mxmlnkn/indexed_bzip2', regexVmajMinPatch],
     //['Nim', 'nim-lang/Nim', regexVmajMinPatch],
+    ['bzip2-rs', 'paolobarbolini/bzip2-rs', regexVmajMinPatch],
     //['Perl', 'Perl/perl5', regexVmajMinPatch],
     //['Python', 'python/cpython', regexVmajMinPatch],
-    ['V8', 'v8/v8', regexMajMinPatch],
+    // ['V8', 'v8/v8', regexMajMinPatch],
 ];
 
 export async function callGithubTags(debug = false) {
