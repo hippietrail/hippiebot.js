@@ -75,32 +75,32 @@ let gimpCache: any[] | null = null;
 let gimpCacheTime = 0;
 
 export async function callGimp() {
-     // Return cached version if less than 24 hours old
-     if (gimpCache && Date.now() - gimpCacheTime < 86400000) {
-         return gimpCache;
-     }
+    // Return cached version if less than 24 hours old
+    if (gimpCache && Date.now() - gimpCacheTime < 86400000) {
+        return gimpCache;
+    }
 
-     try {
-         const gimpEarl = new Earl('https://gitlab.gnome.org',
-             '/Infrastructure/gimp-web/-/raw/testing/content/gimp_versions.json',
-             undefined,
-             {
-                 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
-                 'Accept': 'application/json',
-                 'Accept-Language': 'en-US,en;q=0.9',
-                 'Referer': 'https://www.gitlab.gnome.org/'
-             });
-         const text = await gimpEarl.fetchText();
-         const json = JSON.parse(text);
-         gimpCache = parseGimp(json as GimpJson);
-         gimpCacheTime = Date.now();
-         return gimpCache;
-     } catch (error) {
-         console.error(`[Gimp]`, error);
-         // Return stale cache if fetch fails
-         if (gimpCache) return gimpCache;
-     }
-     return [];
+    try {
+        const gimpEarl = new Earl('https://gitlab.gnome.org',
+            '/Infrastructure/gimp-web/-/raw/testing/content/gimp_versions.json',
+            undefined,
+            {
+                'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36',
+                'Accept': 'application/json',
+                'Accept-Language': 'en-US,en;q=0.9',
+                'Referer': 'https://www.gitlab.gnome.org/'
+            });
+        const text = await gimpEarl.fetchText();
+        const json = JSON.parse(text);
+        gimpCache = parseGimp(json as GimpJson);
+        gimpCacheTime = Date.now();
+        return gimpCache;
+    } catch (error) {
+        console.error(`[Gimp]`, error);
+        // Return stale cache if fetch fails
+        if (gimpCache) return gimpCache;
+    }
+    return [];
 }
 
 // ============================================================================
@@ -302,4 +302,34 @@ export function parseEclipse(ej: EclipseJson): any[] {
 export async function callEclipse() {
     const eclipseEarl = new Earl('https://download.eclipse.org', '/eclipse/downloads/data.json');
     return parseEclipse(await eclipseEarl.fetchJson() as EclipseJson);
+}
+
+// ============================================================================
+// HARPER-CORE
+// ============================================================================
+
+interface HarperCore {
+    vers: string;
+    pubtime: string;
+}
+
+export async function callHarperCore() {
+    const harperEarl = new Earl('https://index.crates.io', '/ha/rp/harper-core');
+    try {
+        const text = await harperEarl.fetchText();
+        const lines = text.split('\n');
+        const lastEntry = JSON.parse(lines[lines.length - 2]) as HarperCore;
+        return [
+            {
+                name: 'harper-core',
+                ver: lastEntry.vers,
+                link: undefined,
+                timestamp: new Date(lastEntry.pubtime),
+                src: 'crates.io',
+            },
+        ];
+    } catch (error) {
+        console.error(`[harper-core]`, error);
+    }
+    return [];
 }

@@ -4,7 +4,7 @@ import { callGithubReleases } from './latest/githubreleases';
 import { callGithubTags } from './latest/githubtags';
 import { callWikiDump } from './latest/wikidump';
 import { callAS, callC3, callD, /*callEclipse,*/ /*callElixir,*/ callExifTool, callGimp, callGo, callIdea, callPython, callRuby, callRustRover, callRvm, callSdlMame, callSublime, callHarperChrome, callHarperFirefox } from './latest/htmlsources';
-import { callNodejs, /*callGimp,*/ callXcode, callMame, callDart, callPhp, callEclipse } from './latest/jsonsources';
+import { callNodejs, /*callGimp,*/ callXcode, callMame, callDart, callPhp, callEclipse, callHarperCore } from './latest/jsonsources';
 import { callAmpcode, callHarper } from './latest/textsources';
 
 export const data = new SlashCommandBuilder()
@@ -202,16 +202,17 @@ async function latest(interaction: ChatInputCommandInteraction) {
             sourcePromises.push(callGithubTags(false).then(async arr => await updateReply([arr], 'GitHub Tags')));
 
         if (useJson) {
-             sourcePromises.push(Promise.all([
-                 //callNodejs(), // doing it another way
-                 //callGimp(),    // temp disabled - dom scraping instead
-                 callXcode(),
-                 //callMame(),   // doing it another way
-                 callDart(),
-                 callEclipse(),
-                 // callPhp(),   // not interested for now
-             ]).then(async arr => await updateReply(arr, 'JSON')));
-         }
+            sourcePromises.push(Promise.all([
+                //callNodejs(), // doing it another way
+                //callGimp(),    // temp disabled - dom scraping instead
+                callXcode(),
+                //callMame(),   // doing it another way
+                callDart(),
+                callEclipse(),
+                // callPhp(),   // not interested for now
+                callHarperCore(),
+            ]).then(async arr => await updateReply(arr, 'JSON')));
+        }
 
         if (useHtml) {
             sourcePromises.push(Promise.all([
