@@ -333,3 +333,24 @@ export async function callHarperCore() {
     }
     return [];
 }
+
+// ============================================================================
+// HARPER-EDGE
+// ============================================================================
+
+export function parseEdge(json: any) {
+    return [
+        {
+            name: 'harper-edge',
+            ver: json.version,
+            link: undefined,
+            timestamp: new Date(json.lastUpdateDate * 1000),
+            src: 'microsoftedge.microsoft.com',
+        },
+    ];
+}
+
+export async function callHarperEdge() {
+    const harperEarl = new Earl('https://microsoftedge.microsoft.com', '/addons/getproductdetailsbycrxid/ihjkkjfembmnjldmdchmadigpmapkpdh');
+    return parseEdge(await harperEarl.fetchJson() as EdgeJson);
+}
