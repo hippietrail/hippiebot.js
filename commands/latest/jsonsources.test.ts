@@ -3,7 +3,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import {
     parseNodejs,
-    parseGimp,
+    // parseGimp,
     parseXcode,
     parseMame,
     parseDart,
